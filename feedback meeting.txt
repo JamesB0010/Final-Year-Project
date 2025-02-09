@@ -1,0 +1,11 @@
+think about what wiol be engaging in the game win condition, partivle effects audio etc...
+
+highlight how this links with controls
+
+gamw will last 10 mins
+
+configurable length of play session
+
+also consider length of playsession
+
+test both single and multi player gameplay
