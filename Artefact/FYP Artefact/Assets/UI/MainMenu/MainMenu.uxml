@@ -9,11 +9,11 @@
     </ui:VisualElement>
     <ui:VisualElement name="InteractionsParent" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; justify-content: center;">
         <ui:VisualElement name="BufferStart" style="flex-grow: 0; width: 35%; height: 12%;" />
-        <ui:VisualElement name="PlaySinglePlayerContainer" class="InteractionOption MoveInteractionOffScreen">
+        <ui:VisualElement name="PlaySinglePlayerContainer" class="InteractionOption MoveInteractionOffScreen" style="-unity-text-outline-width: 0;">
             <ui:Label tabindex="-1" text="Play Singleplayer" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 49px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&amp;guid=4bc533e1c6b6190428ea64e1b2a0ecf7&amp;type=2#Kenney Future SDF&quot;); color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
         </ui:VisualElement>
         <ui:VisualElement name="BufferBetween" style="flex-grow: 0; width: 35%; height: 12%;" />
-        <ui:VisualElement name="PlayMultiplayerContainer" class="InteractionOption MoveInteractionOffScreen">
+        <ui:VisualElement name="PlayMultiplayerContainer" class="InteractionOption MoveInteractionOffScreen" style="border-top-width: 7px; border-right-width: 7px; border-bottom-width: 7px; border-left-width: 7px;">
             <ui:Label tabindex="-1" text="Play Multiplayer" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 49px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&amp;guid=4bc533e1c6b6190428ea64e1b2a0ecf7&amp;type=2#Kenney Future SDF&quot;); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 1px; color: rgb(255, 255, 255);" />
         </ui:VisualElement>
     </ui:VisualElement>
