@@ -37,7 +37,7 @@ public class MainMenuUi : MonoBehaviour
 
             this.leftSelectedContainer %= 2;
             
-            this.playSinglePlayerContainer[this.leftSelectedContainer].AddToClassList("Player1Focused");
+            this.playOptionContainers[this.leftSelectedContainer].AddToClassList("Player1Focused");
         }
     }
     private int rightSelectedContainer = 0;
@@ -47,20 +47,22 @@ public class MainMenuUi : MonoBehaviour
         get => this.rightSelectedContainer;
         set
         {
-            bool noChangeDetected = this.rightSelectedContainer == value;
+            bool noChangeDetected = this.rightSelectedContainer== value;
             if (noChangeDetected)
                 return;
+ 
+            this.playOptionContainers[this.rightSelectedContainer].RemoveFromClassList("Player2Focused");
 
-            this.rightSelectedContainer = value;
+            this.rightSelectedContainer= value;
 
             if (value == -1)
             {
-                this.rightSelectedContainer = 1;
+                this.rightSelectedContainer= 1;
             }
 
             this.rightSelectedContainer %= 2;
             
-            
+            this.playOptionContainers[this.rightSelectedContainer].AddToClassList("Player2Focused");
         }
     }
 
@@ -88,6 +90,11 @@ public class MainMenuUi : MonoBehaviour
         this.playSinglePlayerContainer.AddToClassList("Player2Focused");
         Invoke(nameof(this.SlideInInteractionButtons), 1f);
 
+        Invoke(nameof(this.ListenToTrackpadEvents), 0.1f);
+    }
+
+    private void ListenToTrackpadEvents()
+    {
         this.eteeTrackpadEvents.LeftTrackpadEvents.up += LeftDeviceTrackpadUp;
         this.eteeTrackpadEvents.LeftTrackpadEvents.down += LeftDeviceTrackpadDown;
 
