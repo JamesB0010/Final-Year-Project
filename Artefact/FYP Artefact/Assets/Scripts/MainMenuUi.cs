@@ -25,7 +25,7 @@ public class MainMenuUi : MonoBehaviour
             bool noChangeDetected = this.leftSelectedContainer == value;
             if (noChangeDetected)
                 return;
- 
+
             this.playOptionContainers[this.leftSelectedContainer].RemoveFromClassList("Player1Focused");
 
             this.leftSelectedContainer = value;
@@ -36,7 +36,7 @@ public class MainMenuUi : MonoBehaviour
             }
 
             this.leftSelectedContainer %= 2;
-            
+
             this.playOptionContainers[this.leftSelectedContainer].AddToClassList("Player1Focused");
         }
     }
@@ -65,7 +65,7 @@ public class MainMenuUi : MonoBehaviour
             this.playOptionContainers[this.rightSelectedContainer].AddToClassList("Player2Focused");
         }
     }
-
+    
     private void Awake()
     {
         this.UiRoot = GetComponent<UIDocument>().rootVisualElement;
@@ -104,12 +104,12 @@ public class MainMenuUi : MonoBehaviour
 
     private void RightDeviceTrackpadDown()
     {
-        Debug.Log("Right device trackpad down");
+        this.RightSelectedContainer++;
     }
 
     private void RightDeviceTrackpadUp()
     {
-        Debug.Log("Right device trackpad up");
+        this.RightSelectedContainer--;
     }
 
 

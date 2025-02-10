@@ -22,23 +22,15 @@
 }
 
 .Player1Focused {
-    border-left-color: rgb(0, 236, 255);
-    border-right-color: rgb(0, 236, 255);
-    border-top-color: rgb(0, 236, 255);
-    border-bottom-color: rgb(0, 236, 255);
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-top-width: 7px;
-    border-right-width: 7px;
-    border-bottom-width: 7px;
-    border-left-width: 7px;
+    border-left-color: rgb(0, 227, 255);
+    border-right-color: rgb(0, 227, 255);
+    border-top-color: rgb(0, 227, 255);
+    border-bottom-color: rgb(0, 227, 255);
 }
 
 .Player2Focused {
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-left-color: rgb(255, 0, 0);
+    border-right-color: rgb(255, 0, 0);
+    border-top-color: rgb(255, 0, 0);
+    border-bottom-color: rgb(255, 0, 0);
 }
