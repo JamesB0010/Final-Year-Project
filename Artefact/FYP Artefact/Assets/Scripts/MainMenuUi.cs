@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Playables;
+using UnityEngine.SceneManagement;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -103,6 +104,7 @@ public class MainMenuUi : MonoBehaviour
     {
         Debug.Log("Play singleplayer");
         CoverScreen();
+        StartCoroutine(this.ChangeSceneAfter(0.5f, this.playSinglePlayerContainer.SceneToChangeTo));
     }
 
     private void CoverScreen()
@@ -115,6 +117,15 @@ public class MainMenuUi : MonoBehaviour
     private void PlayMultiplayerPressed()
     {
         Debug.Log("Play multiplayer");
+        CoverScreen();
+        StartCoroutine(this.ChangeSceneAfter(0.5f, this.playMultiplayerContainer.SceneToChangeTo));
+    }
+
+    public IEnumerator ChangeSceneAfter(float timeToWait, string scene)
+    {
+        yield return new WaitForSeconds(timeToWait);
+
+        SceneManager.LoadScene(scene);
     }
 
     private void Start()

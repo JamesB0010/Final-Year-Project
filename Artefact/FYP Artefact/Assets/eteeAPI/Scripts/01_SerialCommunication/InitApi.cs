@@ -11,6 +11,7 @@ public static class InitApi
         eteeApiSettings eteeApiSettings = Resources.Load<eteeApiSettings>("eteeApiSettings/eteeApiSettings");
         if (eteeApiSettings.ApiEnabled == false)
         {
+            Debug.LogWarning("etee api is disabled, etee api calls will only return dummy data \n You can re enable the etee api inside of the etee api settings object located in Assets/Resources/eteeApiSettings");
             CSharpSerialManager.SetCSharpSerial(new DummyCSharpSerial());
             var s = CSharpSerialManager.CSharpSerial;
             eteeDevice lDevice = new GameObject("Left etee Device").AddComponent<eteeDevice>();

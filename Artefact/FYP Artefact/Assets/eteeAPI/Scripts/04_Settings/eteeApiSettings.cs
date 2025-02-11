@@ -9,6 +9,22 @@ public class eteeApiSettings : ScriptableObject
     public bool ApiEnabled
     {
         get => this.apiEnabled;
-        set => this.apiEnabled = value;
+        set
+        {
+            bool noChangeDetected = this.apiEnabled == value;
+            if (noChangeDetected)
+                return;
+            
+            this.apiEnabled = value;
+
+            if (this.apiEnabled == true)
+            {
+                Debug.Log("etee api enabled");
+            }
+            else
+            {
+                Debug.Log("etee api disabled");
+            }
+        }
     }
 }
