@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -16,6 +17,11 @@ class SqueezeSelectButton : VisualElement
             name = "Player1SqueezeAmount", defaultValue = 0
         };
 
+        private UxmlUnsignedIntAttributeDescription Player2SqueezeAmount = new UxmlUnsignedIntAttributeDescription()
+        {
+            name = "Player2SqueezeAmount", defaultValue = 0
+        };
+
         public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription
         {
             get { yield break; }
@@ -28,6 +34,7 @@ class SqueezeSelectButton : VisualElement
 
             ate.ButtonTextValue = ButtonTextValue.GetValueFromBag(bag, cc);
             ate.Player1SqueezeAmount = Player1SqueezeAmount.GetValueFromBag(bag, cc);
+            ate.Player2SqueezeAmount = Player2SqueezeAmount.GetValueFromBag(bag, cc);
         }
     }
 
@@ -37,34 +44,52 @@ class SqueezeSelectButton : VisualElement
         base.AddToClassList("InteractionOption");
         this.buttonName = this.Q<TextElement>("ButtonText");
         this.player1SqueezeSlider = this.Q<VisualElement>("Slider1");
+        this.player2SqueezeSlider = this.Q<VisualElement>("Slider2");
     }
 
     
     private TextElement buttonName;
     private VisualElement player1SqueezeSlider;
     private VisualElement player2SqueezeSlider;
+    private bool pressed = false;
+    public event Action ButtonPressed;
 
     public string ButtonTextValue
     {
         get => this.buttonName.text;
-        set
-        {
-            this.buttonName.text = value;
-        }
+        set => this.buttonName.text = value;
     }
-
-    private uint player1SqueezeAmount = 0;
 
     public uint Player1SqueezeAmount
     {
-        get => this.player1SqueezeAmount;
+        get => (uint)this.player1SqueezeSlider.style.width.value.value;
         set
         {
-            this.player1SqueezeAmount = value;
+            this.player1SqueezeSlider.style.width = Length.Percent(value);
+            this.CheckIfBothPlayersAreFullySqueezed();
+        }
+    }
 
-            float pixelWidthOfParent = this.player1SqueezeSlider.parent.resolvedStyle.width;
-            uint percentageMultiplier = value / 100;
-            this.player1SqueezeSlider.style.width = pixelWidthOfParent * percentageMultiplier;
+    public uint Player2SqueezeAmount
+    {
+        get => (uint)this.player2SqueezeSlider.style.width.value.value;
+        set
+        {
+            this.player2SqueezeSlider.style.width = Length.Percent(value);
+            this.CheckIfBothPlayersAreFullySqueezed();
+        }
+    }
+
+    private void CheckIfBothPlayersAreFullySqueezed()
+    {
+        if (this.Player1SqueezeAmount == 100 && this.Player2SqueezeAmount == 100)
+        {
+            if (this.pressed)
+                return;
+
+            this.pressed = true;
+            
+            ButtonPressed?.Invoke();
         }
     }
 }

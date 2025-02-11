@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -16,6 +18,9 @@ public class MainMenuUi : MonoBehaviour
     private SqueezeSelectButton playMultiplayerContainer;
     private SqueezeSelectButton [] playOptionContainers = new SqueezeSelectButton[2];
     private int leftSelectedContainer = 0;
+    [SerializeField] private FingerTotalForceGetter fingerTotalForceGetter;
+    private VisualElement screenCover;
+    [SerializeField] private TimelineAsset fillScreenTimeline;
 
     private int LeftSelectedContainer
     {
@@ -27,6 +32,7 @@ public class MainMenuUi : MonoBehaviour
                 return;
 
             this.playOptionContainers[this.leftSelectedContainer].RemoveFromClassList("Player1Focused");
+            this.playOptionContainers[this.leftSelectedContainer].Player1SqueezeAmount = 0;
 
             this.leftSelectedContainer = value;
 
@@ -52,6 +58,7 @@ public class MainMenuUi : MonoBehaviour
                 return;
  
             this.playOptionContainers[this.rightSelectedContainer].RemoveFromClassList("Player2Focused");
+            this.playOptionContainers[this.rightSelectedContainer].Player2SqueezeAmount = 0;
 
             this.rightSelectedContainer= value;
 
@@ -74,12 +81,40 @@ public class MainMenuUi : MonoBehaviour
         this.playOptionContainers[1] = this.playMultiplayerContainer;
     }
 
+    private void Update()
+    {
+        this.playOptionContainers[this.leftSelectedContainer].Player1SqueezeAmount = (uint)this.fingerTotalForceGetter.GetGenerousPullPercent(0);
+        this.playOptionContainers[this.rightSelectedContainer].Player2SqueezeAmount = (uint)this.fingerTotalForceGetter.GetGenerousPullPercent(1);
+    }
+
     private void SetupDependencies()
     {
+        this.screenCover = this.UiRoot.Q<VisualElement>("ScreenCover");
         this.rotatingStars[0] = this.UiRoot.Q<VisualElement>("RotatingStar1");
         this.rotatingStars[1] = this.UiRoot.Q<VisualElement>("RotatingStar2");
         this.playSinglePlayerContainer = this.UiRoot.Q<SqueezeSelectButton>("PlaySinglePlayerContainer");
         this.playMultiplayerContainer = this.UiRoot.Q<SqueezeSelectButton>("PlayMultiplayerContainer");
+
+        this.playSinglePlayerContainer.ButtonPressed += PlaySinglePlayerPressed;
+        this.playMultiplayerContainer.ButtonPressed += PlayMultiplayerPressed;
+    }
+
+    private void PlaySinglePlayerPressed()
+    {
+        Debug.Log("Play singleplayer");
+        CoverScreen();
+    }
+
+    private void CoverScreen()
+    {
+        PlayableDirector director = GetComponentInChildren<PlayableDirector>();
+        director.playableAsset = this.fillScreenTimeline;
+        director.Play();
+    }
+
+    private void PlayMultiplayerPressed()
+    {
+        Debug.Log("Play multiplayer");
     }
 
     private void Start()

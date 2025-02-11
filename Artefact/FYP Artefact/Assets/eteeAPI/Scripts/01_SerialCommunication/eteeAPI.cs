@@ -10,9 +10,9 @@ public class eteeAPI
     private static eteeAPI
         instance; // Singleton pattern used here static properties and methods used to access fields and methods on this instance
 
-    public CSharpSerial serialRead; // Serial reader class component reference.
+    public I_CSharpSerial serialRead; // Serial reader class component reference.
 
-    public static CSharpSerial SerialRead // Static get and set to expose the instance serial read to users 
+    public static I_CSharpSerial SerialRead // Static get and set to expose the instance serial read to users 
     {
         get => instance.serialRead;
         set => instance.serialRead = value;
