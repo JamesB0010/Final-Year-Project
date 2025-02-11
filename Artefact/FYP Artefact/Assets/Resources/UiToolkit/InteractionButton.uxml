@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainMenu/MainMenuStyles.uss?fileID=7433441132597879392&amp;guid=9a2ab781685f40c42898e49244bc6dc9&amp;type=3#MainMenuStyles" />
-    <ui:VisualElement class="OptionsButtonTextPositioner">
-        <ui:Label text="Play Singleplayer" class="unity-text-element unity-label OptionButtonText" />
+    <ui:VisualElement name="TextPositioner" class="OptionsButtonTextPositioner">
+        <ui:Label text="Play Singleplayer" name="ButtonText" class="unity-text-element unity-label OptionButtonText" />
     </ui:VisualElement>
 </ui:UXML>

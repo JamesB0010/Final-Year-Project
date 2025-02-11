@@ -1,5 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="InteractionButton" src="project://database/Assets/UI/MainMenu/InteractionButton.uxml?fileID=9197481963319205126&amp;guid=78ac72e61ab144e45b16ea3f3ff227d2&amp;type=3#InteractionButton" />
     <Style src="project://database/Assets/UI/MainMenu/MainMenuStyles.uss?fileID=7433441132597879392&amp;guid=9a2ab781685f40c42898e49244bc6dc9&amp;type=3#MainMenuStyles" />
     <ui:VisualElement name="BackgroundImage" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Ui/MainMenu/main%20menu%20background.png?fileID=2800000&amp;guid=cb701e8d0fc09fa40904234d7943c2c9&amp;type=3#main menu background&quot;); justify-content: flex-start; -unity-background-image-tint-color: rgb(153, 153, 153);">
         <ui:VisualElement name="GameTitleBuffer" style="flex-grow: 0; height: 9%;" />
@@ -13,8 +12,8 @@
     </ui:VisualElement>
     <ui:VisualElement name="InteractionsParent" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; justify-content: center;">
         <ui:VisualElement name="BufferStart" style="flex-grow: 0; width: 35%; height: 12%;" />
-        <ui:Instance template="InteractionButton" name="playSinglePlayerContainer" class="InteractionOption MoveInteractionOffScreen" />
+        <SqueezeSelectButton name="PlaySinglePlayerContainer" Button_Text="Play Singleplayer" class="MoveInteractionOffScreen" />
         <ui:VisualElement name="BufferBetween" style="flex-grow: 0; width: 35%; height: 12%;" />
-        <ui:Instance template="InteractionButton" name="PlayMultiplayerContainer" class="InteractionOption MoveInteractionOffScreen" />
+        <SqueezeSelectButton name="PlayMultiplayerContainer" Button_Text="Play Multiplayer" class="MoveInteractionOffScreen" />
     </ui:VisualElement>
 </ui:UXML>

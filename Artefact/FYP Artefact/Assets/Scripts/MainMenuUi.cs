@@ -12,9 +12,9 @@ public class MainMenuUi : MonoBehaviour
     
     private VisualElement UiRoot;
     private VisualElement[] rotatingStars = new VisualElement[2];
-    private VisualElement playSinglePlayerContainer;
-    private VisualElement playMultiplayerContainer;
-    private VisualElement[] playOptionContainers = new VisualElement[2];
+    private SqueezeSelectButton playSinglePlayerContainer;
+    private SqueezeSelectButton playMultiplayerContainer;
+    private SqueezeSelectButton [] playOptionContainers = new SqueezeSelectButton[2];
     private int leftSelectedContainer = 0;
 
     private int LeftSelectedContainer
@@ -78,8 +78,8 @@ public class MainMenuUi : MonoBehaviour
     {
         this.rotatingStars[0] = this.UiRoot.Q<VisualElement>("RotatingStar1");
         this.rotatingStars[1] = this.UiRoot.Q<VisualElement>("RotatingStar2");
-        this.playSinglePlayerContainer = this.UiRoot.Q<VisualElement>("PlaySinglePlayerContainer");
-        this.playMultiplayerContainer = this.UiRoot.Q<VisualElement>("PlayMultiplayerContainer");
+        this.playSinglePlayerContainer = this.UiRoot.Q<SqueezeSelectButton>("PlaySinglePlayerContainer");
+        this.playMultiplayerContainer = this.UiRoot.Q<SqueezeSelectButton>("PlayMultiplayerContainer");
     }
 
     private void Start()
