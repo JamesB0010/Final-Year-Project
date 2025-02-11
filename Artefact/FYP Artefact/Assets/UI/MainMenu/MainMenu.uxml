@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="InteractionButton" src="project://database/Assets/UI/MainMenu/InteractionButton.uxml?fileID=9197481963319205126&amp;guid=78ac72e61ab144e45b16ea3f3ff227d2&amp;type=3#InteractionButton" />
     <Style src="project://database/Assets/UI/MainMenu/MainMenuStyles.uss?fileID=7433441132597879392&amp;guid=9a2ab781685f40c42898e49244bc6dc9&amp;type=3#MainMenuStyles" />
     <ui:VisualElement name="BackgroundImage" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Ui/MainMenu/main%20menu%20background.png?fileID=2800000&amp;guid=cb701e8d0fc09fa40904234d7943c2c9&amp;type=3#main menu background&quot;); justify-content: flex-start; -unity-background-image-tint-color: rgb(153, 153, 153);">
         <ui:VisualElement name="GameTitleBuffer" style="flex-grow: 0; height: 9%;" />
@@ -12,16 +13,8 @@
     </ui:VisualElement>
     <ui:VisualElement name="InteractionsParent" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; justify-content: center;">
         <ui:VisualElement name="BufferStart" style="flex-grow: 0; width: 35%; height: 12%;" />
-        <ui:VisualElement name="PlaySinglePlayerContainer" class="InteractionOption MoveInteractionOffScreen Player1Focused Player2Focused" style="-unity-text-outline-width: 0; background-image: none; background-color: rgba(255, 255, 255, 0); display: flex; visibility: visible; overflow: visible; border-top-width: 9px; border-right-width: 9px; border-bottom-width: 9px; border-left-width: 9px; border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px;">
-            <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center; background-image: url(&quot;project://database/Assets/Sprites/KenneyUiAssetPack/Yellow/Double/button_rectangle_depth_flat.png?fileID=2800000&amp;guid=5e2b8de06f2b54d4fb00ee3f063c2b10&amp;type=3#button_rectangle_depth_flat&quot;);">
-                <ui:Label tabindex="-1" text="Play Singleplayer" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 49px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&amp;guid=4bc533e1c6b6190428ea64e1b2a0ecf7&amp;type=2#Kenney Future SDF&quot;); color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
-            </ui:VisualElement>
-        </ui:VisualElement>
+        <ui:Instance template="InteractionButton" name="playSinglePlayerContainer" class="InteractionOption MoveInteractionOffScreen" />
         <ui:VisualElement name="BufferBetween" style="flex-grow: 0; width: 35%; height: 12%;" />
-        <ui:VisualElement name="PlayMultiplayerContainer" class="InteractionOption MoveInteractionOffScreen" style="-unity-text-outline-width: 0; background-image: none; background-color: rgba(255, 255, 255, 0); display: flex; visibility: visible; overflow: visible; border-top-width: 9px; border-right-width: 9px; border-bottom-width: 9px; border-left-width: 9px; border-top-left-radius: 13px; border-top-right-radius: 13px; border-bottom-right-radius: 13px; border-bottom-left-radius: 13px;">
-            <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center; background-image: url(&quot;project://database/Assets/Sprites/KenneyUiAssetPack/Yellow/Double/button_rectangle_depth_flat.png?fileID=2800000&amp;guid=5e2b8de06f2b54d4fb00ee3f063c2b10&amp;type=3#button_rectangle_depth_flat&quot;);">
-                <ui:Label tabindex="-1" text="Play Multiplayer  " parse-escape-sequences="true" display-tooltip-when-elided="true" name="Label" style="font-size: 49px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&amp;guid=4bc533e1c6b6190428ea64e1b2a0ecf7&amp;type=2#Kenney Future SDF&quot;); color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
-            </ui:VisualElement>
-        </ui:VisualElement>
+        <ui:Instance template="InteractionButton" name="PlayMultiplayerContainer" class="InteractionOption MoveInteractionOffScreen" />
     </ui:VisualElement>
 </ui:UXML>
