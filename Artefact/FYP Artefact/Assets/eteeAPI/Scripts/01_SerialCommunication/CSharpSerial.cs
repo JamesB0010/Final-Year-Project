@@ -83,6 +83,7 @@ public class CSharpSerial : I_CSharpSerial
 
     public Vector3 magLeftOffset = new Vector3();
     public Vector3 magRightOffset = new Vector3();
+    public bool SuppressCommandSentDebugLog { get; set; }
 
 
     public CSharpSerial(int baudRate = 115200, int bufferSize = 43, bool looping = true, int disconnectedThreshold = 85)
@@ -649,7 +650,10 @@ public class CSharpSerial : I_CSharpSerial
             {
                 streamingData = true;
             }
-            Debug.Log("Command sent to devices: " + command);
+
+            if (!SuppressCommandSentDebugLog)
+                Debug.Log("Command sent to devices: " + command);
+                
             stream.WriteLine(command);
             stream.BaseStream.Flush();
         }

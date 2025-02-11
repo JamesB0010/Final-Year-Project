@@ -33,6 +33,7 @@ public static class InitApi
         
         //get a reference tp the CSharpSerial Object
         var serial = CSharpSerialManager.CSharpSerial;
+        ((CSharpSerial)serial).SuppressCommandSentDebugLog = eteeApiSettings.SuppressCommandSentDebugLog;
         
         //Create the left and right devices
         eteeDevice leftDevice = new GameObject("Left etee Device").AddComponent<eteeDevice>();

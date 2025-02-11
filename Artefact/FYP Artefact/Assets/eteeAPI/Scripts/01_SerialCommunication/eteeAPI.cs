@@ -57,6 +57,16 @@ public class eteeAPI
         instance._ResetControllerValues(device);
     }
 
+    public static void SuppressCommandSentDebugLog()
+    {
+        ((CSharpSerial)SerialRead).SuppressCommandSentDebugLog = true;
+    }
+
+    public static void UnsuppressCommandSentDebugLog()
+    {
+        ((CSharpSerial)SerialRead).SuppressCommandSentDebugLog = false;
+    }
+
     /// <summary>
     /// Reset the controller parameters to 0
     /// </summary>
