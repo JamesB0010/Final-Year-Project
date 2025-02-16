@@ -22,11 +22,6 @@ class SqueezeSelectButton : VisualElement
             name = "Player2SqueezeAmount", defaultValue = 0
         };
 
-        private UxmlStringAttributeDescription SceneToChngeTo = new UxmlStringAttributeDescription()
-        {
-            name = "Scene_To_Change_To", defaultValue = "MindOurDust"
-        };
-
         public override IEnumerable<UxmlChildElementDescription> uxmlChildElementsDescription
         {
             get { yield break; }
@@ -40,7 +35,6 @@ class SqueezeSelectButton : VisualElement
             ate.ButtonTextValue = ButtonTextValue.GetValueFromBag(bag, cc);
             ate.Player1SqueezeAmount = Player1SqueezeAmount.GetValueFromBag(bag, cc);
             ate.Player2SqueezeAmount = Player2SqueezeAmount.GetValueFromBag(bag, cc);
-            ate.SceneToChangeTo = SceneToChngeTo.GetValueFromBag(bag, cc);
         }
     }
 
@@ -58,7 +52,6 @@ class SqueezeSelectButton : VisualElement
     private VisualElement player1SqueezeSlider;
     private VisualElement player2SqueezeSlider;
     private bool pressed = false;
-    public string SceneToChangeTo { get; set; }
     public event Action ButtonPressed;
 
     public string ButtonTextValue

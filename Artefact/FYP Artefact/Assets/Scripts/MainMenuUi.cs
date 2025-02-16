@@ -104,7 +104,7 @@ public class MainMenuUi : MonoBehaviour
     {
         Debug.Log("Play singleplayer");
         CoverScreen();
-        StartCoroutine(this.ChangeSceneAfter(0.5f, this.playSinglePlayerContainer.SceneToChangeTo));
+        StartCoroutine(this.ChangeSceneAfter(0.5f, "Main Scene"));
     }
 
     private void CoverScreen()
@@ -118,7 +118,7 @@ public class MainMenuUi : MonoBehaviour
     {
         Debug.Log("Play multiplayer");
         CoverScreen();
-        StartCoroutine(this.ChangeSceneAfter(0.5f, this.playMultiplayerContainer.SceneToChangeTo));
+        StartCoroutine(this.ChangeSceneAfter(0.5f, "MindOurDust"));
     }
 
     public IEnumerator ChangeSceneAfter(float timeToWait, string scene)
