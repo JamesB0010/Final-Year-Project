@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: cedb8150a750dc440a79a246403c1f15
   - enabled: 1
+    path: Assets/Scenes/Main Scene.unity
+    guid: c2c6cf6fd21a82c4b8644e69e8bd8e71
+  - enabled: 1
     path: Assets/Scenes/MindOurDust.unity
     guid: ec2b7709e6320054c9b8c14a1437aa45
   m_configObjects: {}
