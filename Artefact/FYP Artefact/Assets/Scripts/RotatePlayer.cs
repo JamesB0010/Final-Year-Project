@@ -24,6 +24,8 @@ public class RotatePlayer : MonoBehaviour
 
     [SerializeField] private float minRotation, maxRotation;
 
+    [SerializeField] private float softClampSpeed;
+
     private void Start()
     {
         int deviceIndex = this.device == eteeAPI.LeftDevice? 0: 1;
@@ -31,9 +33,17 @@ public class RotatePlayer : MonoBehaviour
     }
 
 
+    private Vector3 lastDeviceEuler = new Vector3();
     void Update()
     {
-        this.thingToRotate.localRotation = Quaternion.Euler( (Device.euler.z * this.rotationMultiplier) + this.rotationOffset,0, 0);
+        float delta = (device.euler - lastDeviceEuler).magnitude;
+        Debug.Log((device.euler - lastDeviceEuler).magnitude);
+        lastDeviceEuler = device.euler;
+        if (delta > 0.1)
+        { 
+            this.thingToRotate.localRotation = Quaternion.Euler( (Device.euler.z * this.rotationMultiplier) + this.rotationOffset,0, 0);
+        }
+        
         this.ClampRotation();
     }
 
@@ -47,16 +57,25 @@ public class RotatePlayer : MonoBehaviour
 
         if (remapRequired)
         {
+            if (remappedRotX < this.minRotation)
+            {
+                float newRotationOffset = this.minRotation - remappedRotX;
+                if (newRotationOffset > rotationOffset)
+                    rotationOffset = newRotationOffset;
+                //Debug.Log($"Difference is {this.minRotation - remappedRotX}");
+            }
             remappedRotX = Mathf.Max(remappedRotX, this.minRotation);
             thingToRotate.localRotation = Quaternion.Euler(remappedRotX + 360, startRotation.y, startRotation.z);
-            Debug.Log($"Remap required, current = {remappedRotX}");
         }
         else
         {
+            if (remappedRotX > this.maxRotation)
+            {
+                rotationOffset = this.maxRotation - remappedRotX;
+            }
             remappedRotX = Mathf.Min(remappedRotX, this.maxRotation);
             thingToRotate.localRotation = Quaternion.Euler(remappedRotX, startRotation.y, startRotation.z);
-            Debug.Log($"Remap not required, current = {remappedRotX}");
         }
-        Debug.Log(remappedRotX);
+        //Debug.Log(remappedRotX);
     }
 }
