@@ -12,7 +12,7 @@ public class SinglePlayerGameMode : GameMode
     }
     public eteeDevice PlayerDevice { get; private set; }
 
-    public GameObject playerPrefab;
+    public readonly GameObject playerPrefab;
     
     
     public override void Setup(SceneSpawnPoints spawnPoints)
@@ -21,6 +21,6 @@ public class SinglePlayerGameMode : GameMode
         RotatePlayer rotatePlayer = player.GetComponent<RotatePlayer>();
         rotatePlayer.Device = this.PlayerDevice;
 
-        player.transform.position = spawnPoints.GetSpawnPoint(SceneSpawnPoints.PlayerSpawnPoints.player2);
+        player.transform.position = spawnPoints.GetSpawnPoint(SceneSpawnPoints.PlayerSpawnPoints.player1);
     }
 }
