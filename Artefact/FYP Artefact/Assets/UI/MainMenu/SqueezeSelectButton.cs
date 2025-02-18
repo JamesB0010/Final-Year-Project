@@ -54,6 +54,12 @@ class SqueezeSelectButton : VisualElement
     private bool pressed = false;
     public event Action ButtonPressed;
 
+    private bool pressedPlayer1Only = false;
+    public event Action Player1Pressed;
+    
+    private bool pressedPlayer2Only = false;
+    public event Action Player2Pressed;
+
     public string ButtonTextValue
     {
         get => this.buttonName.text;
@@ -90,6 +96,31 @@ class SqueezeSelectButton : VisualElement
             this.pressed = true;
             
             ButtonPressed?.Invoke();
+        }
+        else
+        {
+            this.pressed = false;
+            if (this.Player1SqueezeAmount == 100)
+            {
+                this.pressedPlayer2Only = false;
+                if (pressedPlayer1Only)
+                    return;
+
+                this.pressedPlayer1Only = true;
+                
+                this.Player1Pressed?.Invoke();
+            }
+
+            if (this.Player2SqueezeAmount == 100)
+            {
+                this.pressedPlayer1Only = false;
+                if (pressedPlayer2Only)
+                    return;
+
+                pressedPlayer2Only = true;
+                
+                this.Player2Pressed?.Invoke();
+            }
         }
     }
 }

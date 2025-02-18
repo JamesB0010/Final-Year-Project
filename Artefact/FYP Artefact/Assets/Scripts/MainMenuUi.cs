@@ -22,6 +22,7 @@ public class MainMenuUi : MonoBehaviour
     [SerializeField] private FingerTotalForceGetter fingerTotalForceGetter;
     private VisualElement screenCover;
     [SerializeField] private TimelineAsset fillScreenTimeline;
+    [SerializeField] private GameModeHolder gameModeHolder;
 
     private int LeftSelectedContainer
     {
@@ -96,12 +97,21 @@ public class MainMenuUi : MonoBehaviour
         this.playSinglePlayerContainer = this.UiRoot.Q<SqueezeSelectButton>("PlaySinglePlayerContainer");
         this.playMultiplayerContainer = this.UiRoot.Q<SqueezeSelectButton>("PlayMultiplayerContainer");
 
-        this.playSinglePlayerContainer.ButtonPressed += PlaySinglePlayerPressed;
+        this.playSinglePlayerContainer.Player1Pressed += () =>
+        {
+            this.PlaySinglePlayerPressed(eteeAPI.LeftDevice);
+        };
+        
+        this.playSinglePlayerContainer.Player2Pressed += () =>
+        {
+            this.PlaySinglePlayerPressed(eteeAPI.RightDevice);
+        };
         this.playMultiplayerContainer.ButtonPressed += PlayMultiplayerPressed;
     }
 
-    private void PlaySinglePlayerPressed()
+    private void PlaySinglePlayerPressed(eteeDevice device)
     {
+        this.gameModeHolder.GameMode = new SinglePlayerGameMode(device);
         Debug.Log("Play singleplayer");
         CoverScreen();
         StartCoroutine(this.ChangeSceneAfter(0.5f, "Main Scene"));
