@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: eteeApiSettings
   m_EditorClassIdentifier: 
   apiEnabled: 1
-  suppressCommandSentDebugLog: 0
+  suppressCommandSentDebugLog: 1

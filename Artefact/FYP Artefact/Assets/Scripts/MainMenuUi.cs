@@ -111,7 +111,7 @@ public class MainMenuUi : MonoBehaviour
 
     private void PlaySinglePlayerPressed(eteeDevice device)
     {
-        this.gameModeHolder.GameMode = new SinglePlayerGameMode(device);
+        this.gameModeHolder.GameMode = new SinglePlayerGameMode(device, gameModeHolder.playerPrefab);
         Debug.Log("Play singleplayer");
         CoverScreen();
         StartCoroutine(this.ChangeSceneAfter(0.5f, "Main Scene"));

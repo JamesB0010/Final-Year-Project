@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,9 +17,11 @@ public class GameModeHolder : ScriptableObject
             else
             {
                 Debug.LogWarning("Using default game mode");
-                return new SinglePlayerGameMode(eteeAPI.LeftDevice);
+                return new SinglePlayerGameMode(eteeAPI.LeftDevice, this.playerPrefab);
             }
         }
         set => this.gameMode = value;
     }
+
+    [SerializeField] public GameObject playerPrefab;
 }

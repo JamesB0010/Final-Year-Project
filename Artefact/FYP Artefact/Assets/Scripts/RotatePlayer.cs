@@ -33,8 +33,8 @@ public class RotatePlayer : MonoBehaviour
     private Vector3 lastDeviceEuler = new Vector3();
     private void Start()
     {
-        int deviceIndex = this.device == eteeAPI.LeftDevice? 0: 1;
-        deviceIndex = this.device.isLeft ? 0 : 1;
+        this.deviceIndex = this.device == eteeAPI.LeftDevice? 0: 1;
+        this.deviceIndex = this.device.isLeft ? 0 : 1;
         eteeAPI.ResetControllerValues(deviceIndex);
     }
 
