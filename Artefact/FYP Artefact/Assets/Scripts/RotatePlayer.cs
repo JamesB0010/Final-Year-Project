@@ -26,22 +26,34 @@ public class RotatePlayer : MonoBehaviour
 
     [SerializeField] private float softClampSpeed;
 
+    [SerializeField] private float minimumInputMagnitude;
+
+    private int deviceIndex = 0;
+
+    private Vector3 lastDeviceEuler = new Vector3();
     private void Start()
     {
         int deviceIndex = this.device == eteeAPI.LeftDevice? 0: 1;
+        deviceIndex = this.device.isLeft ? 0 : 1;
         eteeAPI.ResetControllerValues(deviceIndex);
     }
 
+    private float offset;
 
-    private Vector3 lastDeviceEuler = new Vector3();
     void Update()
     {
+        if (eteeAPI.GetIsPinchTrackpadGesture(this.deviceIndex))
+        {
+            Debug.Log("Pinch");
+            offset = -Device.euler.z;
+            eteeAPI.ResetControllerValues(this.deviceIndex);
+        }
         float delta = (device.euler - lastDeviceEuler).magnitude;
-        Debug.Log((device.euler - lastDeviceEuler).magnitude);
+        //Debug.Log((device.euler - lastDeviceEuler).magnitude);
         lastDeviceEuler = device.euler;
-        if (delta > 0.1)
+        if (delta > this.minimumInputMagnitude)
         { 
-            this.thingToRotate.localRotation = Quaternion.Euler( (Device.euler.z * this.rotationMultiplier) + this.rotationOffset,0, 0);
+            this.thingToRotate.localRotation = Quaternion.Euler( ((Device.euler.z + offset) * this.rotationMultiplier) + this.rotationOffset,0, 0);
         }
         
         this.ClampRotation();
@@ -61,7 +73,7 @@ public class RotatePlayer : MonoBehaviour
             {
                 float newRotationOffset = this.minRotation - remappedRotX;
                 if (newRotationOffset > rotationOffset)
-                    rotationOffset = newRotationOffset;
+                    rotationOffset = Mathf.Lerp(rotationOffset, newRotationOffset, Time.deltaTime * this.softClampSpeed);
                 //Debug.Log($"Difference is {this.minRotation - remappedRotX}");
             }
             remappedRotX = Mathf.Max(remappedRotX, this.minRotation);
@@ -71,7 +83,7 @@ public class RotatePlayer : MonoBehaviour
         {
             if (remappedRotX > this.maxRotation)
             {
-                rotationOffset = this.maxRotation - remappedRotX;
+                rotationOffset = Mathf.Lerp(rotationOffset, this.maxRotation - remappedRotX, Time.deltaTime * this.softClampSpeed);
             }
             remappedRotX = Mathf.Min(remappedRotX, this.maxRotation);
             thingToRotate.localRotation = Quaternion.Euler(remappedRotX, startRotation.y, startRotation.z);

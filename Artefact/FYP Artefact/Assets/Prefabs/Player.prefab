@@ -251,6 +251,8 @@ MonoBehaviour:
   thingToRotate: {fileID: 1736869589947088543}
   minRotation: -45
   maxRotation: 45
+  softClampSpeed: 3
+  minimumInputMagnitude: 0.2
 --- !u!4 &1736869589947088543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
