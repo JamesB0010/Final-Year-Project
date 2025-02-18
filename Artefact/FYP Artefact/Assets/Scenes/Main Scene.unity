@@ -125,6 +125,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &278096105 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1736869589947088543, guid: 14202991410137142a49c726a8fc3a05,
+    type: 3}
+  m_PrefabInstance: {fileID: 1924098041811082267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &312863023
 GameObject:
   m_ObjectHideFlags: 0
@@ -6819,8 +6825,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5857768493032841212, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
+      propertyPath: maxRotation
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5857768493032841212, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
       propertyPath: minRotation
-      value: 30
+      value: -45
       objectReference: {fileID: 0}
     - target: {fileID: 5857768493032841212, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -6829,8 +6840,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5857768493032841212, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
+      propertyPath: thingToRotate
+      value: 
+      objectReference: {fileID: 278096105}
+    - target: {fileID: 5857768493032841212, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
       propertyPath: rotationOffset
-      value: -90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5857768493032841212, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}

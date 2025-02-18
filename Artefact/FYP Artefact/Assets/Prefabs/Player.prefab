@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8646868185287605084}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18909559, y: -0.007847249, z: 0.0015271155, w: 0.9819262}
-  m_LocalPosition: {x: -17, y: 409, z: -487}
-  m_LocalScale: {x: 117.29942, y: 117.29944, z: 117.29942}
+  m_LocalRotation: {x: 0.6238177, y: -0.34390056, z: 0.61664206, w: 0.33516666}
+  m_LocalPosition: {x: -390.99277, y: 419.82037, z: -16.994036}
+  m_LocalScale: {x: 117.29942, y: 117.29947, z: 117.29944}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 436594559330059244}
+  m_Father: {fileID: 1736869589947088543}
   m_LocalEulerAnglesHint: {x: 21.801, y: -0.915, z: 0.002}
 --- !u!20 &7757700367343017491
 Camera:
@@ -218,7 +218,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5433669d1d6d08b499b21d6944174cbd,
+    - targetCorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7976180500724741727}
@@ -228,12 +228,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5857768493032841212}
   m_SourcePrefab: {fileID: 100100000, guid: 5433669d1d6d08b499b21d6944174cbd, type: 3}
---- !u!4 &436594559330059244 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5433669d1d6d08b499b21d6944174cbd,
-    type: 3}
-  m_PrefabInstance: {fileID: 109670844170626055}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &956109871769246038 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 5433669d1d6d08b499b21d6944174cbd,
@@ -252,3 +246,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5703a585233d962469a82e8f21669df6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotationMultiplier: 1
+  rotationOffset: 0
+  thingToRotate: {fileID: 1736869589947088543}
+  minRotation: -45
+  maxRotation: 45
+--- !u!4 &1736869589947088543 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
+    type: 3}
+  m_PrefabInstance: {fileID: 109670844170626055}
+  m_PrefabAsset: {fileID: 0}

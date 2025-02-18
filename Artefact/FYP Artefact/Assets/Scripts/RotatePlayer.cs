@@ -20,6 +20,7 @@ public class RotatePlayer : MonoBehaviour
     [SerializeField] private float rotationMultiplier;
     [SerializeField] private float rotationOffset;
 
+    [SerializeField] private Transform thingToRotate;
 
     [SerializeField] private float minRotation, maxRotation;
 
@@ -32,21 +33,30 @@ public class RotatePlayer : MonoBehaviour
 
     void Update()
     {
-        this.transform.rotation = Quaternion.Euler(0, (-Device.euler.z * this.rotationMultiplier) + this.rotationOffset, 0);
+        this.thingToRotate.localRotation = Quaternion.Euler( (Device.euler.z * this.rotationMultiplier) + this.rotationOffset,0, 0);
         this.ClampRotation();
     }
 
     private void ClampRotation()
     {
-        float yRot = transform.eulerAngles.y;
+        Vector3 startRotation = thingToRotate.localRotation.eulerAngles;
+        float rotX = thingToRotate.localRotation.eulerAngles.x;
 
-        if (yRot > 290 || yRot < 200)
+        bool remapRequired = (rotX > 180);
+        float remappedRotX =  remapRequired ? rotX - 360 : rotX;
+
+        if (remapRequired)
         {
-            Debug.Log("Clamp");
-
-            // Clamping the value to stay within [200, 290] degrees
-            float clampedY = Mathf.Clamp(yRot, 200f, 290f);
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, clampedY, transform.eulerAngles.z);
+            remappedRotX = Mathf.Max(remappedRotX, this.minRotation);
+            thingToRotate.localRotation = Quaternion.Euler(remappedRotX + 360, startRotation.y, startRotation.z);
+            Debug.Log($"Remap required, current = {remappedRotX}");
         }
+        else
+        {
+            remappedRotX = Mathf.Min(remappedRotX, this.maxRotation);
+            thingToRotate.localRotation = Quaternion.Euler(remappedRotX, startRotation.y, startRotation.z);
+            Debug.Log($"Remap not required, current = {remappedRotX}");
+        }
+        Debug.Log(remappedRotX);
     }
 }
