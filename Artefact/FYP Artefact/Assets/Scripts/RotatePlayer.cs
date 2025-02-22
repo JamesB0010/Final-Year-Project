@@ -30,7 +30,6 @@ public class RotatePlayer : MonoBehaviour
 
     private int deviceIndex = 0;
 
-    private Vector3 lastDeviceEuler = new Vector3();
     private void Start()
     {
         this.deviceIndex = this.device == eteeAPI.LeftDevice? 0: 1;
@@ -48,13 +47,8 @@ public class RotatePlayer : MonoBehaviour
             offset = -Device.euler.z;
             eteeAPI.ResetControllerValues(this.deviceIndex);
         }
-        float delta = (device.euler - lastDeviceEuler).magnitude;
-        //Debug.Log((device.euler - lastDeviceEuler).magnitude);
-        lastDeviceEuler = device.euler;
-        if (delta > this.minimumInputMagnitude)
-        { 
-            this.thingToRotate.localRotation = Quaternion.Euler( ((Device.euler.z + offset) * this.rotationMultiplier) + this.rotationOffset,0, 0);
-        }
+        
+        this.thingToRotate.localRotation = Quaternion.Euler( ((Device.euler.z + offset) * this.rotationMultiplier) + this.rotationOffset,0, 0);
         
         this.ClampRotation();
     }

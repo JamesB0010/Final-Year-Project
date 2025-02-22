@@ -16,7 +16,7 @@ PrefabInstance:
     - target: {fileID: 163001635005565903, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: maxRipples
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
