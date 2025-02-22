@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2489203842270523285}
   - component: {fileID: 163001635005565903}
+  - component: {fileID: 1342347329541434248}
   m_Layer: 0
   m_Name: RippleSpawner
   m_TagString: Untagged
@@ -42,5 +43,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1572ed92b294c9542886c2ea3b9981db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxRipples: 0
+  spawnRate: 0
+  ripplePrefab: {fileID: -2039898593446078159, guid: 10fbc6798646ee343a6d4324f889f726,
+    type: 3}
+--- !u!114 &1342347329541434248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5836297899373429962}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 969b557e3ad5b5845be2abe281691ad2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

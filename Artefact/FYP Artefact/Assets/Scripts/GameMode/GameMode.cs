@@ -9,6 +9,8 @@ public class GameMode : ScriptableObject
     [SerializeField] protected RippleSpawner rippleSpawnerPrefab;
 
     [SerializeField] private Vector3 rippleSpawnerSpawnLocation;
+
+    [SerializeField] private float waterHeight;
     
     [SerializeField] protected GameObject playerPrefab;
 
@@ -19,6 +21,8 @@ public class GameMode : ScriptableObject
 
     protected void SpawnRippleSpawner()
     {
-        //Instantiate(this.rippleSpawnerPrefab, this.rippleSpawnerSpawnLocation, Quaternion.identity);
+        RippleSpawner rippleSpawner = Instantiate(this.rippleSpawnerPrefab, this.rippleSpawnerSpawnLocation, Quaternion.identity);
+        rippleSpawner.Initialize(this.waterHeight);
+        
     }
 }

@@ -8,40 +8,65 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 163001635005565903, guid: d29826f8e895dfa48925e9e34cab6b3b,
+        type: 3}
+      propertyPath: spawnRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 163001635005565903, guid: d29826f8e895dfa48925e9e34cab6b3b,
+        type: 3}
+      propertyPath: maxRipples
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 13.204033
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.2875
+      objectReference: {fileID: 0}
+    - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 26.682747
+      objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -397.04
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 4.98
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -52.78
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.98412246
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.17749108
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
@@ -51,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -20.447
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
@@ -61,7 +86,7 @@ PrefabInstance:
     - target: {fileID: 5836297899373429962, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_Name
-      value: RippleSpawner
+      value: SinglePlayerRippleSpawner
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

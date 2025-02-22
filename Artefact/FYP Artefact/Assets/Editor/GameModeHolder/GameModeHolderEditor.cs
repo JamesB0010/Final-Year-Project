@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Unity.Properties;
 using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -15,28 +16,44 @@ public class GameModeHolderEditor : Editor
     private GameModeHolder gameModeHolder;
 
     private Dictionary<string, GameMode> gameModes;
+    private VisualElement root;
+
+    private InspectorElement currentGameModeInspector;
 
     public override VisualElement CreateInspectorGUI()
     {
         this.gameModeHolder = (GameModeHolder)target;
         
-        VisualElement root = this.visualTreeAsset.CloneTree();
+        root = this.visualTreeAsset.CloneTree();
 
         this.gameModes = new Dictionary<string, GameMode>();
-        this.SetDropDownCurrentValueText(root);
+
+        this.currentGameModeInspector = null;
+        this.SetDropDownCurrentValueText();
 
         this.DiscoverGameModeNames();
 
-        this.PopulateDropDownListOptions(root);
+        this.PopulateDropDownListOptions();
 
-        this.ListenToDropdownEvents(root);
+        this.ListenToDropdownEvents();
+
+        this.DrawCurrentGameModeInspector();
         
         return root;
     }
 
+    private void DrawCurrentGameModeInspector()
+    {
+        var inspectorParent = root.Q<VisualElement>("InfoAboutGameMode");
+        if(this.currentGameModeInspector != null)
+            inspectorParent.Remove(this.currentGameModeInspector);
+        
+        this.currentGameModeInspector = new InspectorElement(this.gameModeHolder.GameMode);
+        inspectorParent.Add(this.currentGameModeInspector);
+    }
 
 
-    private void SetDropDownCurrentValueText(VisualElement root)
+    private void SetDropDownCurrentValueText()
     {
         root.Q<DropdownField>("CurrentSelectedGameModeDropdown").value = this.gameModeHolder.GameMode.name;
     }
@@ -50,12 +67,12 @@ public class GameModeHolderEditor : Editor
             this.gameModes.Add(gameMode.name, gameMode);
         }
     }
-    private void PopulateDropDownListOptions(VisualElement root)
+    private void PopulateDropDownListOptions()
     {
         DropdownField dropdownField = root.Q<DropdownField>("CurrentSelectedGameModeDropdown");
         dropdownField.choices = this.gameModes.Keys.ToList();
     }
-    private void ListenToDropdownEvents(VisualElement root)
+    private void ListenToDropdownEvents()
     {
         DropdownField dropdownField = root.Q<DropdownField>("CurrentSelectedGameModeDropdown");
         dropdownField.RegisterCallback<ChangeEvent<string>>(this.SelectedGameModeDropdownChanged);
@@ -64,5 +81,6 @@ public class GameModeHolderEditor : Editor
     private void SelectedGameModeDropdownChanged(ChangeEvent<string> evt)
     {
         this.gameModeHolder.GameMode = this.gameModes[evt.newValue];
+        this.DrawCurrentGameModeInspector();
     }
 }

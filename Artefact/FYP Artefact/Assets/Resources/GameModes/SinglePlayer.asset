@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dc3f6684aea5354482f0510d6d37a6b, type: 3}
   m_Name: SinglePlayer
   m_EditorClassIdentifier: 
-  rippleSpawnerPrefab: {fileID: 0}
+  rippleSpawnerPrefab: {fileID: 4392288030359769152, guid: 3d37ec7217063b64280047d2b04cbde7,
+    type: 3}
+  rippleSpawnerSpawnLocation: {x: -397.04, y: 4.98, z: -52.78}
+  waterHeight: 3.646678
   playerPrefab: {fileID: 956109871769246038, guid: 14202991410137142a49c726a8fc3a05,
     type: 3}

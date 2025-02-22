@@ -6,7 +6,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class GameModeHolder : ScriptableObject
 {
-    private GameMode gameMode;
+    [SerializeField, HideInInspector] private GameMode gameMode;
 
     public GameMode GameMode
     {
@@ -17,9 +17,10 @@ public class GameModeHolder : ScriptableObject
             else
             {
                 Debug.LogWarning("Using default game mode");
-                var GameMode = Resources.Load<GameMode>("GameModes/SinglePlayer");
+                var defaultMode = Resources.Load<GameMode>("GameModes/SinglePlayer");
                 ((SinglePlayerGameMode)GameMode).Initialize(eteeAPI.LeftDevice);
-                return GameMode;
+                this.gameMode = defaultMode;
+                return this.gameMode;
             }
         }
         set => this.gameMode = value;
