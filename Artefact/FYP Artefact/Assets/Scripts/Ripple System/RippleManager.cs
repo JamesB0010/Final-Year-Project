@@ -19,7 +19,6 @@ public class RippleManager : MonoBehaviour
         {
             instance = null;
             Destroy(this.gameObject);
-            return;
         }
     }
 
@@ -37,5 +36,12 @@ public class RippleManager : MonoBehaviour
     {
         instance = null;
         Destroy(this.gameObject);
+    }
+
+    public void DestroyRipple(Ripple bestRipple)
+    {
+        this.ripples.Remove(bestRipple);
+        Destroy(bestRipple);
+        FindObjectOfType<RippleSpawner>().SetCurrentActiveRippleCount(this.ripples.Count);
     }
 }

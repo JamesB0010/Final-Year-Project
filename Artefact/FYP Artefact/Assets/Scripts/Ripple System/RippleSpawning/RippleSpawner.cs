@@ -24,6 +24,11 @@ public class RippleSpawner : MonoBehaviour
 
     private Bounds spawnBounds;
 
+    public void SetCurrentActiveRippleCount(int count)
+    {
+        this.currentActiveRipples = count;
+    }
+
     public void Initialize(float waterHeight)
     {
         this.waterHeight = waterHeight;
