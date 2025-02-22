@@ -6972,8 +6972,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints:
-  - {x: -391.937, y: 5.88, z: -44.105}
   - {x: -385.15, y: 6.458, z: -50.63}
+  - {x: -391.937, y: 5.88, z: -44.105}
   playerMesh: {fileID: -2124705421725058983, guid: 5433669d1d6d08b499b21d6944174cbd,
     type: 3}
   spawnPointDrawColor: {r: 1, g: 0.6526622, b: 0, a: 1}

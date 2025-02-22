@@ -17,7 +17,9 @@ public class GameModeHolder : ScriptableObject
             else
             {
                 Debug.LogWarning("Using default game mode");
-                return new SinglePlayerGameMode(eteeAPI.LeftDevice, this.playerPrefab);
+                var GameMode = Resources.Load<GameMode>("GameModes/SinglePlayer");
+                ((SinglePlayerGameMode)GameMode).Initialize(eteeAPI.LeftDevice);
+                return GameMode;
             }
         }
         set => this.gameMode = value;
@@ -25,3 +27,4 @@ public class GameModeHolder : ScriptableObject
 
     [SerializeField] public GameObject playerPrefab;
 }
+

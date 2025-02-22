@@ -20,7 +20,6 @@ public class MainMenuUi : MonoBehaviour
     private SqueezeSelectButton [] playOptionContainers = new SqueezeSelectButton[2];
     private int leftSelectedContainer = 0;
     [SerializeField] private FingerTotalForceGetter fingerTotalForceGetter;
-    private VisualElement screenCover;
     [SerializeField] private TimelineAsset fillScreenTimeline;
     [SerializeField] private GameModeHolder gameModeHolder;
 
@@ -91,7 +90,6 @@ public class MainMenuUi : MonoBehaviour
 
     private void SetupDependencies()
     {
-        this.screenCover = this.UiRoot.Q<VisualElement>("ScreenCover");
         this.rotatingStars[0] = this.UiRoot.Q<VisualElement>("RotatingStar1");
         this.rotatingStars[1] = this.UiRoot.Q<VisualElement>("RotatingStar2");
         this.playSinglePlayerContainer = this.UiRoot.Q<SqueezeSelectButton>("PlaySinglePlayerContainer");
@@ -111,7 +109,9 @@ public class MainMenuUi : MonoBehaviour
 
     private void PlaySinglePlayerPressed(eteeDevice device)
     {
-        this.gameModeHolder.GameMode = new SinglePlayerGameMode(device, gameModeHolder.playerPrefab);
+        var gameMode = Resources.Load<GameMode>("GameModes/SinglePlayer");
+        this.gameModeHolder.GameMode = gameMode;
+        ((SinglePlayerGameMode)gameMode).Initialize(device);
         Debug.Log("Play singleplayer");
         CoverScreen();
         StartCoroutine(this.ChangeSceneAfter(0.5f, "Main Scene"));
@@ -126,9 +126,10 @@ public class MainMenuUi : MonoBehaviour
 
     private void PlayMultiplayerPressed()
     {
+        this.gameModeHolder.GameMode = Resources.Load<GameMode>("GameModes/Multiplayer");
         Debug.Log("Play multiplayer");
         CoverScreen();
-        StartCoroutine(this.ChangeSceneAfter(0.5f, "MindOurDust"));
+        StartCoroutine(this.ChangeSceneAfter(0.5f, "Main Scene"));
     }
 
     public IEnumerator ChangeSceneAfter(float timeToWait, string scene)

@@ -1,22 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable, CreateAssetMenu]
 public class MultiplayerGameMode : GameMode
 {
     public eteeDevice player1Device { get; set; }
     public eteeDevice player2Device { get; set; }
 
-    private readonly GameObject playerPrefab;
-    public MultiplayerGameMode(GameObject playerPrefab)
+    public override void Setup(SceneSpawnPoints spawnPoints)
     {
         this.player1Device = eteeAPI.LeftDevice;
         this.player2Device = eteeAPI.RightDevice;
-
-        this.playerPrefab = playerPrefab;
-    }
-    public override void Setup(SceneSpawnPoints spawnPoints)
-    {
+                
         GameObject player1 = GameObject.Instantiate(this.playerPrefab);
         RotatePlayer rotatePlayer = player1.GetComponent<RotatePlayer>();
         rotatePlayer.Device = this.player1Device;
@@ -27,5 +24,7 @@ public class MultiplayerGameMode : GameMode
         rotatePlayer = player2.GetComponent<RotatePlayer>();
         rotatePlayer.Device = this.player2Device;
         player2.transform.position = spawnPoints.GetSpawnPoint(SceneSpawnPoints.PlayerSpawnPoints.player2);
+        
+        this.SpawnRippleSpawner();
     }
 }
