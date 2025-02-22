@@ -23,6 +23,8 @@ public class GameModeHolderEditor : Editor
     public override VisualElement CreateInspectorGUI()
     {
         this.gameModeHolder = (GameModeHolder)target;
+
+        var _ = this.gameModeHolder.GameMode;
         
         root = this.visualTreeAsset.CloneTree();
 

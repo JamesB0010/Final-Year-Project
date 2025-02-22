@@ -53,6 +53,7 @@ public class RippleSpawner : MonoBehaviour
         Ripple ripple = Instantiate(this.ripplePrefab, this.GenerateRandomRippleSpawnPosition(), Quaternion.identity);
         ripple.transform.parent = transform;
         ripple.Initialize(this.spawnBounds);
+        RippleManager.instance.NewRipple(ripple);
     }
 
     private Vector3 GenerateRandomRippleSpawnPosition()
