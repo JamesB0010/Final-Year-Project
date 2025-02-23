@@ -14,7 +14,6 @@ public class GameMode : ScriptableObject
 
     [SerializeField] private float waterHeight;
     
-    [SerializeField] protected GameObject playerPrefab;
 
     public virtual void Setup(SceneSpawnPoints spawnPoints)
     {

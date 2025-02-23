@@ -41,7 +41,7 @@ public class RippleManager : MonoBehaviour
     public void DestroyRipple(Ripple bestRipple)
     {
         this.ripples.Remove(bestRipple);
-        Destroy(bestRipple);
+        Destroy(bestRipple.gameObject);
         FindObjectOfType<RippleSpawner>().SetCurrentActiveRippleCount(this.ripples.Count);
     }
 }

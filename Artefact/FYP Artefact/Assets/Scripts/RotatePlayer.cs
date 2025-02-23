@@ -6,17 +6,6 @@ using UnityEngine;
 
 public class RotatePlayer : MonoBehaviour
 {
-    private eteeDevice device;
-    public eteeDevice Device
-    {
-        get => this.device;
-        set
-        {
-            this.device = value;
-            this.device.CalibrateGyro();
-        }
-    }
-    
     [SerializeField] private float rotationMultiplier;
     [SerializeField] private float rotationOffset;
 
@@ -30,10 +19,13 @@ public class RotatePlayer : MonoBehaviour
 
     private int deviceIndex = 0;
 
+    private eteeDeviceHolder eteeDeviceHolder;
+
     private void Start()
     {
-        this.deviceIndex = this.device == eteeAPI.LeftDevice? 0: 1;
-        this.deviceIndex = this.device.isLeft ? 0 : 1;
+        this.eteeDeviceHolder = GetComponent<eteeDeviceHolder>();
+        this.deviceIndex = this.eteeDeviceHolder.Device == eteeAPI.LeftDevice? 0: 1;
+        this.deviceIndex = this.eteeDeviceHolder.Device.isLeft ? 0 : 1;
         eteeAPI.ResetControllerValues(deviceIndex);
     }
 
@@ -44,11 +36,11 @@ public class RotatePlayer : MonoBehaviour
         if (eteeAPI.GetIsPinchTrackpadGesture(this.deviceIndex))
         {
             Debug.Log("Pinch");
-            offset = -Device.euler.z;
+            offset = -this.eteeDeviceHolder.Device.euler.z;
             eteeAPI.ResetControllerValues(this.deviceIndex);
         }
         
-        this.thingToRotate.localRotation = Quaternion.Euler( ((Device.euler.z + offset) * this.rotationMultiplier) + this.rotationOffset,0, 0);
+        this.thingToRotate.localRotation = Quaternion.Euler( ((eteeDeviceHolder.Device.euler.z + offset) * this.rotationMultiplier) + this.rotationOffset,0, 0);
         
         this.ClampRotation();
     }

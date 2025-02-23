@@ -729,13 +729,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7570842615177837521}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.022347044, y: -0.6674152, z: 0.020044547, w: 0.74408054}
-  m_LocalPosition: {x: 276.81854, y: 138.16061, z: 39.68925}
-  m_LocalScale: {x: 117.29952, y: 117.29944, z: 117.29951}
+  m_LocalRotation: {x: 0.7212378, y: -0.6899119, z: 0.05987001, w: 0.015914328}
+  m_LocalPosition: {x: -32.811024, y: -42.403202, z: 276.8258}
+  m_LocalScale: {x: 117.29956, y: 117.29945, z: 117.29951}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1684229350172812571}
-  m_Father: {fileID: 436594559330059244}
+  m_Father: {fileID: 1736869589947088543}
   m_LocalEulerAnglesHint: {x: 21.801, y: -0.915, z: 0.002}
 --- !u!114 &6362059280582948126
 MonoBehaviour:
@@ -1796,10 +1796,6 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3116551272742931187}
-    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5433669d1d6d08b499b21d6944174cbd,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3362726679527243205}
     - targetCorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
         type: 3}
       insertIndex: -1
@@ -1808,6 +1804,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8015611289471266535}
+    - targetCorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3362726679527243205}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5433669d1d6d08b499b21d6944174cbd,
         type: 3}
@@ -1817,6 +1817,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6268044346797546919}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5433669d1d6d08b499b21d6944174cbd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -973369689345276713}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5433669d1d6d08b499b21d6944174cbd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6562730203894406549}
   m_SourcePrefab: {fileID: 100100000, guid: 5433669d1d6d08b499b21d6944174cbd, type: 3}
 --- !u!4 &436594559330059244 stripped
 Transform:
@@ -1917,6 +1925,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: -973369689345276713}
+        m_TargetAssemblyTypeName: PlayerArmRaiser, Assembly-CSharp
+        m_MethodName: EnteredArmRaisePhase
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   StartedLockingOntoFish:
     m_PersistentCalls:
       m_Calls:
@@ -1947,6 +1967,34 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-973369689345276713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956109871769246038}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2a51bdd1032954c90cc9ce53958cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delayBeforeStartup: 2
+  arm: {fileID: 0}
+  armAngleStart: {x: 0, y: 0, z: 0}
+  armAngleEnd: {x: 0, y: 0, z: 0}
+--- !u!114 &6562730203894406549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 956109871769246038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d8847b9e81dc2344bae90f153f09251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1736869589947088543 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
