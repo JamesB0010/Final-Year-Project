@@ -17,12 +17,18 @@ public class LockOnToFish : MonoBehaviour
 
     [SerializeField] private float timeRequiredToLockOntoFish;
 
+    [SerializeField] private float lockOnThreashold;
 
     [SerializeField] private UnityEvent LockedOntoFish;
+
+    [SerializeField] private UnityEvent<float> StartedLockingOntoFish;
+
+    [SerializeField] private UnityEvent LostLockOntoFish;
 
     private float startedLockOntimestamp;
 
     private bool lockingOn = false;
+
 
     private void Start()
     {
@@ -53,13 +59,14 @@ public class LockOnToFish : MonoBehaviour
         mappedDotProduct = Mathf.Pow(mappedDotProduct, this.dotProductExponent);
         directionArrowMaterial.SetFloat("_Alignment", mappedDotProduct);
 
-
-        if (mappedDotProduct >= 0.9f)
+        
+        if (mappedDotProduct >= this.lockOnThreashold)
         {
             if (lockingOn == false)
             {
                 this.startedLockOntimestamp = Time.timeSinceLevelLoad;
                 this.lockingOn = true;
+                this.StartedLockingOntoFish?.Invoke(this.timeRequiredToLockOntoFish);
             }
 
             if (Time.timeSinceLevelLoad - startedLockOntimestamp >= timeRequiredToLockOntoFish)
@@ -73,6 +80,7 @@ public class LockOnToFish : MonoBehaviour
         else
         {
             this.lockingOn = false;
+            this.LostLockOntoFish?.Invoke();
         }
     }
 

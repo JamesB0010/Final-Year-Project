@@ -54,8 +54,11 @@ public class GlobalLerpProcessor : MonoBehaviour
         this.lerpProcessor.Update();
     }
 
-    public static bool RemovePackage(LerpPackage package)
+    public static void RemovePackage(LerpPackage package)
     {
-        return instance.lerpProcessor.RemovePackage(package);
+        if (package == null)
+            return;
+        
+        instance.lerpProcessor.RemovePackage(package);
     }
 }

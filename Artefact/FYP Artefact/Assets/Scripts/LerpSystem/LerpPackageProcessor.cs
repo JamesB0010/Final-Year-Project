@@ -54,8 +54,9 @@ public class LerpPackageProcessor
         }
     }
 
-    public bool RemovePackage(LerpPackage package)
+    public void RemovePackage(LerpPackage package)
     {
-        return this.packageList.Remove(package);
+        if(this.packageList.Contains(package))
+            this.packageList.Remove(package);
     }
 }

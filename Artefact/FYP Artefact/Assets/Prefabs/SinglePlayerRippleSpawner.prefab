@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 163001635005565903, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: spawnRate
-      value: 3
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 163001635005565903, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
