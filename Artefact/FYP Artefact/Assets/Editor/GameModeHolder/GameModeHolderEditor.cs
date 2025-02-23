@@ -22,7 +22,7 @@ public class GameModeHolderEditor : Editor
 
     public override VisualElement CreateInspectorGUI()
     {
-        this.gameModeHolder = (GameModeHolder)target;
+        this.gameModeHolder = target as GameModeHolder;
 
         var _ = this.gameModeHolder.GameMode;
         

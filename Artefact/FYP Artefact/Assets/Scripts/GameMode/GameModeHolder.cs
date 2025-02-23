@@ -18,7 +18,8 @@ public class GameModeHolder : ScriptableObject
             {
                 Debug.LogWarning("Using default game mode");
                 var defaultMode = Resources.Load<GameMode>("GameModes/SinglePlayer");
-                ((SinglePlayerGameMode)GameMode).Initialize(eteeAPI.LeftDevice);
+                SinglePlayerGameMode castedMode = defaultMode as SinglePlayerGameMode;
+                castedMode.Initialize(eteeAPI.LeftDevice);
                 this.gameMode = defaultMode;
                 return this.gameMode;
             }
