@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class PlayerArmRaiser : MonoBehaviour
@@ -15,6 +16,10 @@ public class PlayerArmRaiser : MonoBehaviour
     private Animator animator;
 
     [SerializeField] private float armRaiseOffset;
+
+    [SerializeField] private UnityEvent StartArmRaiseGameSection;
+
+    [SerializeField] private UnityEvent<float> ArmRaiseAmountChanged;
 
     private void Awake()
     {
@@ -35,6 +40,7 @@ public class PlayerArmRaiser : MonoBehaviour
     private void Startup()
     {
         this.enabled = true;
+        this.StartArmRaiseGameSection?.Invoke();
     }
     
     private void Update()
@@ -49,6 +55,9 @@ public class PlayerArmRaiser : MonoBehaviour
             interpLocalRot.z = Mathf.Lerp(oldLocalRot.z, newLocalRot.z, interp);
             interpLocalRot.w = Mathf.Lerp(oldLocalRot.w, newLocalRot.w, interp);
             
-            this.animator.SetFloat("ArmRaiseAmount", 1 - (interpLocalRot.x * -5 + this.armRaiseOffset));
+            float armRaiseAmount = Mathf.Clamp01(1 - (interpLocalRot.x * -5 + this.armRaiseOffset));
+
+            this.ArmRaiseAmountChanged?.Invoke(armRaiseAmount);
+            this.animator.SetFloat("ArmRaiseAmount", armRaiseAmount);
     }
 }
