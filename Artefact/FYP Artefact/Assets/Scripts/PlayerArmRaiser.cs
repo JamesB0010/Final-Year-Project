@@ -10,38 +10,45 @@ public class PlayerArmRaiser : MonoBehaviour
 
     [SerializeField] private Transform arm;
 
-    private Quaternion armRotationStart;
-
-    [SerializeField] private Quaternion armRotationEnd;
-
     private eteeDeviceHolder eteeDeviceHolder;
 
-    private void Start()
+    private Animator animator;
+
+    [SerializeField] private float armRaiseOffset;
+
+    private void Awake()
     {
         this.eteeDeviceHolder = GetComponent<eteeDeviceHolder>();
-        this.armRotationStart = this.arm.localRotation;
+        this.animator = GetComponent<Animator>();
     }
-
     public void EnteredArmRaisePhase()
     {
         StartCoroutine(nameof(StartUpDelayed));
 
+    }
+    private IEnumerator StartUpDelayed()
+    {
+        yield return new WaitForSeconds(delayBeforeStartup);
         this.Startup();
     }
 
     private void Startup()
     {
         this.enabled = true;
-        this.arm.localRotation= this.armRotationStart;
     }
-
-    private IEnumerator StartUpDelayed()
-    {
-        yield return new WaitForSeconds(delayBeforeStartup);
-    }
-
+    
     private void Update()
     {
-        
+            Quaternion newLocalRot = eteeDeviceHolder.Device.offsetToHand * eteeDeviceHolder.Device.quaternions;
+            Quaternion oldLocalRot = transform.localRotation;
+            float interp = 0.2f;
+
+            Quaternion interpLocalRot = Quaternion.identity;
+            interpLocalRot.x = Mathf.Lerp(oldLocalRot.x, newLocalRot.x, interp);
+            interpLocalRot.y = Mathf.Lerp(oldLocalRot.y, newLocalRot.y, interp);
+            interpLocalRot.z = Mathf.Lerp(oldLocalRot.z, newLocalRot.z, interp);
+            interpLocalRot.w = Mathf.Lerp(oldLocalRot.w, newLocalRot.w, interp);
+            
+            this.animator.SetFloat("ArmRaiseAmount", 1 - (interpLocalRot.x * -5 + this.armRaiseOffset));
     }
 }

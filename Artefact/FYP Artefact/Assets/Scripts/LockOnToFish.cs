@@ -65,9 +65,6 @@ public class LockOnToFish : MonoBehaviour
         
         directionArrowMaterial.SetFloat("_Alignment", mappedDotProduct);
         
-        Debug.Log(mappedDotProduct);
-
-        
         if (mappedDotProduct >= this.lockOnThreashold)
         {
             if (lockingOn == false)

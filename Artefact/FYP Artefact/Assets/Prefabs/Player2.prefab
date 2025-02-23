@@ -757,6 +757,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -29.71
       objectReference: {fileID: 0}
+    - target: {fileID: 5409906204596510693, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: AwakeEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409906204596510693, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: AwakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409906204596510693, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: AwakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 4219807370100165554}
+    - target: {fileID: 5409906204596510693, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: AwakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409906204596510693, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: AwakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409906204596510693, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: AwakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409906204596510693, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: AwakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: SetToRightHandedAnims
+      objectReference: {fileID: 0}
+    - target: {fileID: 5409906204596510693, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: AwakeEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5590438227482384767, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -1083,6 +1123,12 @@ PrefabInstance:
       addedObject: {fileID: 1004405403306313495}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14202991410137142a49c726a8fc3a05, type: 3}
+--- !u!95 &4219807370100165554 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1143072360860710647, guid: 14202991410137142a49c726a8fc3a05,
+    type: 3}
+  m_PrefabInstance: {fileID: 3842351356976184645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7270011872236238512 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5888038097128344565, guid: 14202991410137142a49c726a8fc3a05,
