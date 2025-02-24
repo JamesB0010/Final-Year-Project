@@ -10,7 +10,7 @@ public class PlayerArmRaiser : MonoBehaviour
     [SerializeField] private float delayBeforeStartup;
 
     [SerializeField] private Transform arm;
-
+    
     private eteeDeviceHolder eteeDeviceHolder;
 
     private Animator animator;

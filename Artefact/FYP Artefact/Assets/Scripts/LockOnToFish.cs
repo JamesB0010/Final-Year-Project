@@ -92,6 +92,8 @@ public class LockOnToFish : MonoBehaviour
         LockedOntoFish?.Invoke();
         RippleManager.instance.DestroyRipple(bestRipple);
         this.enabled = false;
+        this.lockingOn = false;
+        this.startedLockOntimestamp = -90000;
     }
 
     private float RemapDotProduct(float bestDotProduct)

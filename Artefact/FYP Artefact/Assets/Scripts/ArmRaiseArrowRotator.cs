@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ArmRaiseArrowRotator : MonoBehaviour
 {
@@ -10,20 +11,23 @@ public class ArmRaiseArrowRotator : MonoBehaviour
 
     [SerializeField] private ArmRaiseBox[] boxes;
 
-    private int currentlyFillingBox = -1;
+    [SerializeField] private UnityEvent allBoxesFull;
+
+    private int currentlyFillingBox = 4;
+
+    private int filledBoxes;
 
     public void ArmRaisedValueChanged(float newVal)
     {
         transform.rotation = Quaternion.Euler(0,0,Mathf.Lerp(minRot, maxRot, newVal));
-        this.StopFillingAllBoxes();
         
         if (newVal >= 0 && newVal < 0.2)
         {
             if (this.currentlyFillingBox != 0)
             {
+                this.boxes[currentlyFillingBox].StopFilling();
                 this.currentlyFillingBox = 0;
                 this.boxes[currentlyFillingBox].StartFilling();
-                Debug.Log("First box");
             }
         }
 
@@ -31,9 +35,9 @@ public class ArmRaiseArrowRotator : MonoBehaviour
         {
             if (this.currentlyFillingBox != 1)
             {
+                this.boxes[currentlyFillingBox].StopFilling();
                 this.currentlyFillingBox = 1;
                 this.boxes[currentlyFillingBox].StartFilling();
-                Debug.Log("Second box");
             }
         }
 
@@ -41,9 +45,9 @@ public class ArmRaiseArrowRotator : MonoBehaviour
         {
             if (this.currentlyFillingBox != 2)
             {
+                this.boxes[currentlyFillingBox].StopFilling();
                 this.currentlyFillingBox = 2;
                 this.boxes[currentlyFillingBox].StartFilling();
-                Debug.Log("third box");
             }
         }
 
@@ -51,9 +55,9 @@ public class ArmRaiseArrowRotator : MonoBehaviour
         {
             if (this.currentlyFillingBox != 3)
             {
+                this.boxes[currentlyFillingBox].StopFilling();
                 this.currentlyFillingBox = 3;
                 this.boxes[currentlyFillingBox].StartFilling();
-                Debug.Log("fouth box");
             }
         }
 
@@ -61,18 +65,21 @@ public class ArmRaiseArrowRotator : MonoBehaviour
         {
             if (this.currentlyFillingBox != 4)
             {
+                this.boxes[currentlyFillingBox].StopFilling();
                 this.currentlyFillingBox = 4;
                 this.boxes[currentlyFillingBox].StartFilling();
-                Debug.Log("Fifth box");
             }
         }
     }
 
-    private void StopFillingAllBoxes()
+    public void BoxFilled()
     {
-        foreach (ArmRaiseBox box in boxes)
+        this.filledBoxes++;
+
+        if (this.filledBoxes == this.boxes.Length)
         {
-            box.StopFilling();
+            this.allBoxesFull?.Invoke();
+            Debug.Log("Boxes full");
         }
     }
 }

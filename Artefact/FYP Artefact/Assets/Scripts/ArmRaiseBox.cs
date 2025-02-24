@@ -19,6 +19,7 @@ public class ArmRaiseBox : MonoBehaviour
     private bool filling;
 
     [SerializeField] private UnityEvent Full;
+    
 
     private Image image;
 
@@ -50,14 +51,10 @@ public class ArmRaiseBox : MonoBehaviour
 
         this.fillAmount += Time.deltaTime;
         
-        Debug.Log($"Fill amount: {fillAmount}");
-
         if (this.fillAmount >= timeRequiredToFill)
         {
             this.Full?.Invoke();
             this.filling = false;
-            
-            Debug.Log("fouth box");
         }
 
         this.image.color = Color.Lerp(Color.red, Color.green, Mathf.Clamp01(ValueInRangeMapper.MapRange(this.fillAmount, 0, this.timeRequiredToFill, 0, 1)));

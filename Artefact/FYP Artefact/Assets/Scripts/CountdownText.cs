@@ -27,7 +27,7 @@ public class CountdownText : MonoBehaviour
 
         countFrom += 1;
 
-        this.countdownPackage = countFrom.LerpTo(1f, countFrom, val => this.TMPROText.text = ((int)val).ToString());
+        this.countdownPackage = countFrom.LerpTo(0f, countFrom, val => this.TMPROText.text = ((int)val).ToString());
     }
 
     public void LostLockOn()

@@ -27,6 +27,23 @@ public static class TypeLerpExtensions
 
         return package;
     }
+
+    public static QuaternionLerpPackage LerpTo(this Quaternion value, Quaternion target, float timeToTake = 1.0f,
+        Action<Quaternion> stepCallback = null, Action<LerpPackage> finishedCb = null, AnimationCurve animCurve = null)
+    {
+        stepCallback ??= (Quaternion val) => { };
+        
+        finishedCb ??= pkg => { };
+        
+        animCurve ??= GlobalLerpProcessor.linearCurve;
+
+        QuaternionLerpPackage package =
+            new QuaternionLerpPackage(value, target, stepCallback, finishedCb, timeToTake, animCurve);
+        
+        GlobalLerpProcessor.AddLerpPackage(package);
+
+        return package;
+    }
     
     public static void LerpTo(this Vector3 value, Vector3 target, float timeToTake = 1.0f,
         Action<Vector3> updateCallback = null, Action<LerpPackage> finishedCb = null, AnimationCurve animCurve = null)
