@@ -6874,6 +6874,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1923764721}
   - component: {fileID: 1923764722}
+  - component: {fileID: 1923764723}
   m_Layer: 0
   m_Name: SpawnPoints
   m_TagString: Untagged
@@ -6911,10 +6912,22 @@ MonoBehaviour:
   spawnPoints:
   - {x: -385.15, y: 6.458, z: -50.63}
   - {x: -391.937, y: 5.88, z: -44.105}
+--- !u!114 &1923764723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923764720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b9ea4602c6ce7242abcf236795e927c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   playerMesh: {fileID: -2124705421725058983, guid: 5433669d1d6d08b499b21d6944174cbd,
     type: 3}
-  spawnPointDrawColor: {r: 1, g: 0.6526622, b: 0, a: 1}
-  spawnPointVisualisationRotation: {x: -90, y: -108.71, z: 0}
+  spawnPointDrawColor: {r: 1, g: 0.7293758, b: 0, a: 1}
+  spawnPointVisualisationRotation: {x: -90, y: -106.5, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

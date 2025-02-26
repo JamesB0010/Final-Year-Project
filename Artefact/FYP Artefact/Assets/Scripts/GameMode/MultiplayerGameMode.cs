@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using PlayerSpawning;
 using UnityEngine;
 
 [Serializable, CreateAssetMenu]
@@ -15,20 +16,16 @@ public class MultiplayerGameMode : GameMode
 
     public override void Setup(SceneSpawnPoints spawnPoints)
     {
+        base.Setup(spawnPoints);
         this.player1Device = eteeAPI.LeftDevice;
         this.player2Device = eteeAPI.RightDevice;
-                
-        GameObject player1 = GameObject.Instantiate(this.Player1Prefab);
-        eteeDeviceHolder playerDeviceHolder = player1.GetComponent<eteeDeviceHolder>();
-        playerDeviceHolder.Device = this.player1Device;
-        player1.transform.position = spawnPoints.GetSpawnPoint(SceneSpawnPoints.PlayerSpawnPoints.player1);
         
+        Vector3 spawnPos = spawnPoints.GetSpawnPoint(PlayerSpawnPoints.Player1);
+        base.SpawnPlayer(this.Player1Prefab, this.player1Device, spawnPos);
+
+        spawnPos = spawnPoints.GetSpawnPoint(PlayerSpawnPoints.Player2);
+        base.SpawnPlayer(this.Player2Prefab, this.player2Device, spawnPos);
         
-        GameObject player2 = GameObject.Instantiate(this.Player2Prefab);
-        playerDeviceHolder = player2.GetComponent<eteeDeviceHolder>();
-        playerDeviceHolder.Device = this.player2Device;
-        player2.transform.position = spawnPoints.GetSpawnPoint(SceneSpawnPoints.PlayerSpawnPoints.player2);
-        
-        this.SpawnRippleSpawner();
+        base.SpawnRippleSpawner();
     }
 }

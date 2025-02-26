@@ -6,18 +6,18 @@ using UnityEngine;
 public class Ripple : MonoBehaviour
 {
     public Bounds wanderBounds;
+    
+    [SerializeField] private float speed;
 
     [SerializeField] private float timeBetweenNewWanderPos;
 
-    private float lastGenerateWanderPosTimestamp = -90000;
-
-    [SerializeField] private float speed;
     private Vector3 wanderPos = new Vector3();
 
-    public void Initialize(Bounds wanderBounds)
-    {
-        this.wanderBounds = wanderBounds;
-    }
+    private float lastGenerateWanderPosTimestamp = -90000;
+
+    public void Initialize(Bounds wanderBounds) => this.wanderBounds = wanderBounds;
+
+    private void Start() => RippleManager.RegisterNewRipple(this);
 
     private void Update()
     {
@@ -27,18 +27,14 @@ public class Ripple : MonoBehaviour
     }
     private void TryGenerateNewWanderPos()
     {
-        if (Time.timeSinceLevelLoad - lastGenerateWanderPosTimestamp >= timeBetweenNewWanderPos)
+        bool newWanderTimeDeltaSufficient = Time.timeSinceLevelLoad - lastGenerateWanderPosTimestamp >= timeBetweenNewWanderPos;
+        if (newWanderTimeDeltaSufficient)
         {
             this.lastGenerateWanderPosTimestamp = Time.timeSinceLevelLoad;
             this.wanderPos = this.GenerateWanderPos();
         }
     }
-    private Vector3 GenerateWanderPos()
-    {
-        Vector3 wanderPos = this.wanderBounds.RandomXZInBounds();
-        wanderPos.y = 0;
-        return wanderPos;
-    }
+    private Vector3 GenerateWanderPos() => this.wanderBounds.RandomXZInBounds();
 
     private void MoveTowardsWanderPos()
     {

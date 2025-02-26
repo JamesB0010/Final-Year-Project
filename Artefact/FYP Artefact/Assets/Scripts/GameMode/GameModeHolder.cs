@@ -26,7 +26,5 @@ public class GameModeHolder : ScriptableObject
         }
         set => this.gameMode = value;
     }
-
-    [SerializeField] public GameObject playerPrefab;
 }
 

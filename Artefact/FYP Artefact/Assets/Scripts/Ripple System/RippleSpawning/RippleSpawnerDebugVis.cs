@@ -6,7 +6,7 @@ public class RippleSpawnerDebugVis : MonoBehaviour
 {
     private Mesh cubeMeshForVisualisation;
 
-    private void Start()
+    private void Awake()
     {
         this.InitCubeMeshForVis();
     }
@@ -23,9 +23,6 @@ public class RippleSpawnerDebugVis : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        if (cubeMeshForVisualisation == null)
-            this.InitCubeMeshForVis();
-
         Gizmos.DrawWireMesh(cubeMeshForVisualisation, transform.position, transform.rotation, transform.localScale);
     }
 }

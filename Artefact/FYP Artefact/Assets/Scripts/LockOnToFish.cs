@@ -43,9 +43,9 @@ public class LockOnToFish : MonoBehaviour
         forwardsDir.y = 0;
         bestDotProduct = 0;
         bestRipple = null;
-        for (int i = 0; i < RippleManager.instance.ripples.Count; i++)
+        
+        RippleManager.VisitRipples(ripple =>
         {
-            Ripple ripple = RippleManager.instance.ripples[i];
             Vector3 directionToRipple = (ripple.transform.position - rotatingPart.position);
             directionToRipple.y = 0;
             directionToRipple.Normalize();
@@ -54,9 +54,9 @@ public class LockOnToFish : MonoBehaviour
             {
                 bestDotProduct = dot;
                 bestRipple = ripple;
-            }
-        }
-
+            } 
+        });
+           
         float mappedDotProduct = this.RemapDotProduct(bestDotProduct);
         mappedDotProduct = Mathf.Clamp01(Mathf.Pow(mappedDotProduct, this.dotProductExponent));
 
@@ -90,7 +90,7 @@ public class LockOnToFish : MonoBehaviour
     {
         Debug.Log("Fish locked onto!");
         LockedOntoFish?.Invoke();
-        RippleManager.instance.DestroyRipple(bestRipple);
+        RippleManager.DestroyRipple(bestRipple);
         this.enabled = false;
         this.lockingOn = false;
         this.startedLockOntimestamp = -90000;

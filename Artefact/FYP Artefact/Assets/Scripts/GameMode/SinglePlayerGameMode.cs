@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using PlayerSpawning;
 
 [Serializable, CreateAssetMenu]
 public class SinglePlayerGameMode : GameMode
@@ -17,14 +17,13 @@ public class SinglePlayerGameMode : GameMode
     
     public override void Setup(SceneSpawnPoints spawnPoints)
     {
+        base.Setup(spawnPoints);
+        
         if (this.PlayerDevice == null)
             this.PlayerDevice = eteeAPI.LeftDevice;
         
-        GameObject player = GameObject.Instantiate(this.playerPrefab);
-        eteeDeviceHolder playerDeviceHolder = player.GetComponent<eteeDeviceHolder>();
-        playerDeviceHolder.Device = this.PlayerDevice;
-
-        player.transform.position = spawnPoints.GetSpawnPoint(SceneSpawnPoints.PlayerSpawnPoints.player1);
+        Vector3 spawnPos = spawnPoints.GetSpawnPoint(PlayerSpawnPoints.Player1);
+        GameObject player = base.SpawnPlayer(this.playerPrefab, this.PlayerDevice, spawnPos);
         
         DisableSplitScreenOnPlayer(player);
 
