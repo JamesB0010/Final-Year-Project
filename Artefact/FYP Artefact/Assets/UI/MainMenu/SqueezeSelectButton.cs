@@ -88,7 +88,8 @@ class SqueezeSelectButton : VisualElement
 
     private void CheckIfBothPlayersAreFullySqueezed()
     {
-        if (this.Player1SqueezeAmount == 100 && this.Player2SqueezeAmount == 100)
+        bool bothPlayersSqueezing = this.Player1SqueezeAmount == 100 && this.Player2SqueezeAmount == 100;
+        if (bothPlayersSqueezing)
         {
             if (this.pressed)
                 return;
@@ -100,27 +101,28 @@ class SqueezeSelectButton : VisualElement
         else
         {
             this.pressed = false;
+            
             if (this.Player1SqueezeAmount == 100)
             {
-                this.pressedPlayer2Only = false;
-                if (pressedPlayer1Only)
-                    return;
-
-                this.pressedPlayer1Only = true;
-                
-                this.Player1Pressed?.Invoke();
+                this.PlayerSoloButtonPress(Player1Pressed, ref pressedPlayer1Only, ref pressedPlayer2Only);
             }
 
             if (this.Player2SqueezeAmount == 100)
             {
-                this.pressedPlayer1Only = false;
-                if (pressedPlayer2Only)
-                    return;
-
-                pressedPlayer2Only = true;
-                
-                this.Player2Pressed?.Invoke();
+                this.PlayerSoloButtonPress(Player2Pressed, ref pressedPlayer2Only, ref pressedPlayer1Only);
             }
         }
+    }
+
+    private void PlayerSoloButtonPress(Action toTriggerEvent, ref bool thisPlayerSoloSqueezeFlag, ref bool otherPlayerSoloSqueezeFlag)
+    {
+        otherPlayerSoloSqueezeFlag = false;
+
+        if (thisPlayerSoloSqueezeFlag)
+            return;
+
+        thisPlayerSoloSqueezeFlag = true;
+        
+        toTriggerEvent?.Invoke();
     }
 }
