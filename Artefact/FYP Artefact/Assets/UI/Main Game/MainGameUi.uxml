@@ -1,5 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="FillScreen" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
-        <ui:Label tabindex="-1" text="Time Remaining" parse-escape-sequences="true" display-tooltip-when-elided="true" />
-    </ui:VisualElement>
+    <ui:VisualElement name="FillScreen" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0;" />
+    <ui:VisualElement name="ScreenCover" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Sprites/Ui/MoveOverScreen.jpg?fileID=2800000&amp;guid=33d8e798f456f3947891e9a7de9a6b4c&amp;type=3#MoveOverScreen&quot;); translate: -100% 0;" />
 </ui:UXML>
