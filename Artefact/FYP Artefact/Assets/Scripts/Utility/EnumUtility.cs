@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public static class EnumUtility 
+namespace Utility
 {
-    public static IEnumerable<T> GetValues<T>()
+    public static class EnumUtility 
     {
-        return Enum.GetValues(typeof(T)).Cast<T>();
+        public static IEnumerable<T> GetValues<T>() => Enum.GetValues(typeof(T)).Cast<T>();
     }
 }

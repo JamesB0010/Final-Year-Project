@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using Utility;
 using Random = UnityEngine.Random;
 
 public class ArmRaiseBox : MonoBehaviour
