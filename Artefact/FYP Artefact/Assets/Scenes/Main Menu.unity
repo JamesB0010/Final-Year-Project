@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 928407811}
   - component: {fileID: 928407812}
   - component: {fileID: 928407813}
+  - component: {fileID: 928407814}
   m_Layer: 5
   m_Name: ------ UI ------
   m_TagString: Untagged
@@ -264,6 +265,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &928407814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928407808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 51b068ec7193f9c4798938a1e8647ab1, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: b76e110b64149344d8481b95ec02cce4, type: 2}
+          m_TargetAssemblyTypeName: Utility.SceneChanger, Assembly-CSharp
+          m_MethodName: ChangeScene
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Main Scene
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1215867344
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +650,6 @@ GameObject:
   - component: {fileID: 2135840593}
   - component: {fileID: 2135840594}
   - component: {fileID: 2135840595}
-  - component: {fileID: 2135840596}
   m_Layer: 5
   m_Name: Main Menu Timeline
   m_TagString: Untagged
@@ -656,7 +686,9 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: 4494627757208523402, guid: 72c56ebc84d38b045936584434c46b30, type: 2}
+    value: {fileID: 928407814}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &2135840595
@@ -671,36 +703,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6eb16891808144bea2830016a0ed3700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &2135840596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135840592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Events:
-    m_Signals:
-    - {fileID: 11400000, guid: 51b068ec7193f9c4798938a1e8647ab1, type: 2}
-    m_Events:
-    - m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 11400000, guid: b76e110b64149344d8481b95ec02cce4, type: 2}
-          m_TargetAssemblyTypeName: Utility.SceneChanger, Assembly-CSharp
-          m_MethodName: ChangeScene
-          m_Mode: 5
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: Main Scene
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
