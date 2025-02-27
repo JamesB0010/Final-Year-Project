@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(LockOnToFish))]
+[CustomEditor(typeof(LockOnToRipple))]
 public class LockOntoFishEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -12,7 +12,7 @@ public class LockOntoFishEditor : Editor
 
         if (GUILayout.Button("Lock On"))
         {
-            LockOnToFish t = target as LockOnToFish;
+            LockOnToRipple t = target as LockOnToRipple;
             
             t.LockOnToFish_Debug();
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.PlayerLoop;
 
-public class LockOnToFish : MonoBehaviour
+public class LockOnToRipple : MonoBehaviour
 {
     [SerializeField] private Transform rotatingPart;
 

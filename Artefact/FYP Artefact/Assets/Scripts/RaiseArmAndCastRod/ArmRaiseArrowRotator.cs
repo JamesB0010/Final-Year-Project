@@ -8,9 +8,6 @@ public class ArmRaiseArrowRotator : MonoBehaviour
     [SerializeField] private float minRot;
 
     [SerializeField] private float maxRot;
-
-    public void ArmRaisedValueChanged(float newVal)
-    {
-        transform.localRotation = Quaternion.Euler(0,0,Mathf.Lerp(minRot, maxRot, newVal));
-    }
+    
+    public void ArmRaisedValueChanged(float newVal) => transform.localRotation = Quaternion.Euler(0,0,Mathf.Lerp(minRot, maxRot, newVal));
 }
