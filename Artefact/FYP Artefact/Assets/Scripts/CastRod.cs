@@ -1,45 +1,45 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class CastRod : MonoBehaviour
 {
-    private bool readyToRaise;
-
+    [SerializeField] private UnityEvent ReadyToCast;
+    
     private bool readyToCast;
 
-    [SerializeField] private UnityEvent PrimeToCastRod;
+    private GameplayPipelineStage gameplayPipelineStage;
 
-    [SerializeField] private UnityEvent CastRodEvent;
-
-    [SerializeField] private UnityEvent FinshedCastRodEvent;
-
-    public void SetReadyToCast(bool value)
+    private void Awake()
     {
-        this.readyToRaise = value;
+        this.gameplayPipelineStage = GetComponentInParent<GameplayPipelineStage>();
     }
 
     public void ArmRaisedValueChanged(float value)
     {
-        if (!this.readyToRaise)
-            return;
-
-
-        if (value == 1 && this.readyToCast == false)
+        bool armFullyRaisedFirstTime = value == 1 && this.readyToCast == false;
+        if (armFullyRaisedFirstTime)
         {
-            this.PrimeToCastRod?.Invoke();
             this.readyToCast = true;
+            this.ReadyToCast?.Invoke();
         }
 
         if (value <= 0.6)
         {
-            this.CastRodEvent?.Invoke();
-            this.readyToRaise = false;
-            this.readyToCast = false;
-            Animator animator = GetComponentInParent<Animator>();
-            animator.GetFloat("ArmRaiseAmount").LerpTo(0f, 0.3f, val => animator.SetFloat("ArmRaiseAmount", val), pkg =>
-            {
-                this.FinshedCastRodEvent?.Invoke();
-            });
+            AnimateRodBackDown();
         }
+    }
+
+    public void SetReadyToCast(bool value)
+    {
+        this.readyToCast = value;
+    }
+
+    private void AnimateRodBackDown()
+    {
+        Animator animator = GetComponentInParent<Animator>();
+        animator.GetFloat("ArmRaiseAmount").LerpTo(0f, 0.3f, val => animator.SetFloat("ArmRaiseAmount", val),
+            pkg => this.gameplayPipelineStage.StageComplete());
     }
 }

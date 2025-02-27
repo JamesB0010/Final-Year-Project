@@ -7,40 +7,18 @@ using UnityEngine.Serialization;
 
 public class PlayerArmRaiser : MonoBehaviour
 {
-    [SerializeField] private float delayBeforeStartup;
+    [SerializeField] private float armRaiseOffset;
 
-    [SerializeField] private Transform arm;
+    [SerializeField] private UnityEvent<float> ArmRaiseAmountChanged;
     
     private eteeDeviceHolder eteeDeviceHolder;
 
     private Animator animator;
 
-    [SerializeField] private float armRaiseOffset;
-
-    [SerializeField] private UnityEvent StartArmRaiseGameSection;
-
-    [SerializeField] private UnityEvent<float> ArmRaiseAmountChanged;
-
     private void Awake()
     {
-        this.eteeDeviceHolder = GetComponent<eteeDeviceHolder>();
-        this.animator = GetComponent<Animator>();
-    }
-    public void EnteredArmRaisePhase()
-    {
-        StartCoroutine(nameof(StartUpDelayed));
-
-    }
-    private IEnumerator StartUpDelayed()
-    {
-        yield return new WaitForSeconds(delayBeforeStartup);
-        this.Startup();
-    }
-
-    private void Startup()
-    {
-        this.enabled = true;
-        this.StartArmRaiseGameSection?.Invoke();
+        this.eteeDeviceHolder = GetComponentInParent<eteeDeviceHolder>();
+        this.animator = GetComponentInParent<Animator>();
     }
     
     private void Update()

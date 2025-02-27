@@ -19,17 +19,22 @@ public class LockOnToFish : MonoBehaviour
 
     [SerializeField] private float lockOnThreashold;
 
-    [SerializeField] private UnityEvent LockedOntoFish;
-
     [SerializeField] private UnityEvent<float> StartedLockingOntoFish;
 
     [SerializeField] private UnityEvent LostLockOntoFish;
+
+    private GameplayPipelineStage gameplayStage;
 
     private float startedLockOntimestamp;
 
     private bool lockingOn = false;
     private float bestDotProduct;
     private Ripple bestRipple;
+
+    private void Awake()
+    {
+        this.gameplayStage = GetComponentInParent<GameplayPipelineStage>();
+    }
 
 
     private void Start()
@@ -89,7 +94,7 @@ public class LockOnToFish : MonoBehaviour
     private void CompleteFishLockOn()
     {
         Debug.Log("Fish locked onto!");
-        LockedOntoFish?.Invoke();
+        this.gameplayStage.StageComplete();
         RippleManager.DestroyRipple(bestRipple);
         this.enabled = false;
         this.lockingOn = false;

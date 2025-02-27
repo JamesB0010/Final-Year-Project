@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
+
+//Responsibilities
+//
 public class RotatePlayer : MonoBehaviour
 {
     [SerializeField] private float rotationMultiplier;
@@ -21,25 +24,25 @@ public class RotatePlayer : MonoBehaviour
 
     private eteeDeviceHolder eteeDeviceHolder;
 
+    private float offset;
     private void Start()
     {
-        this.eteeDeviceHolder = GetComponent<eteeDeviceHolder>();
-        this.deviceIndex = this.eteeDeviceHolder.Device == eteeAPI.LeftDevice? 0: 1;
+        this.eteeDeviceHolder = GetComponentInParent<eteeDeviceHolder>();
         this.deviceIndex = this.eteeDeviceHolder.Device.isLeft ? 0 : 1;
         eteeAPI.ResetControllerValues(deviceIndex);
     }
 
-    private float offset;
 
     void Update()
     {
-        if (eteeAPI.GetIsPinchTrackpadGesture(this.deviceIndex))
+        bool playerAttemptingRecalibration = eteeAPI.GetIsPinchTrackpadGesture(this.deviceIndex);
+        if (playerAttemptingRecalibration)
         {
-            Debug.Log("Pinch");
             offset = -this.eteeDeviceHolder.Device.euler.z;
             eteeAPI.ResetControllerValues(this.deviceIndex);
         }
         
+        //rotate the player
         this.thingToRotate.localRotation = Quaternion.Euler( ((eteeDeviceHolder.Device.euler.z + offset) * this.rotationMultiplier) + this.rotationOffset,0, 0);
         
         this.ClampRotation();
@@ -60,7 +63,6 @@ public class RotatePlayer : MonoBehaviour
                 float newRotationOffset = this.minRotation - remappedRotX;
                 if (newRotationOffset > rotationOffset)
                     rotationOffset = Mathf.Lerp(rotationOffset, newRotationOffset, Time.deltaTime * this.softClampSpeed);
-                //Debug.Log($"Difference is {this.minRotation - remappedRotX}");
             }
             remappedRotX = Mathf.Max(remappedRotX, this.minRotation);
             thingToRotate.localRotation = Quaternion.Euler(remappedRotX + 360, startRotation.y, startRotation.z);
@@ -74,6 +76,5 @@ public class RotatePlayer : MonoBehaviour
             remappedRotX = Mathf.Min(remappedRotX, this.maxRotation);
             thingToRotate.localRotation = Quaternion.Euler(remappedRotX, startRotation.y, startRotation.z);
         }
-        //Debug.Log(remappedRotX);
     }
 }

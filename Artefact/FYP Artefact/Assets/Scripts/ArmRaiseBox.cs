@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -12,22 +10,14 @@ public class ArmRaiseBox : MonoBehaviour
     [SerializeField] private float minTimeRequiredToFill;
 
     [SerializeField] private float maxTimeRequiredToFill;
-
-    private float timeRequiredToFill;
-
-    private float fillAmount;
-
-    private bool filling;
+    
+    [SerializeField] private Image image;
 
     [SerializeField] private UnityEvent Full;
     
-
-    private Image image;
-
-    private void Awake()
-    {
-        this.image = GetComponent<Image>();
-    }
+    private float timeRequiredToFill;
+    private float fillAmount;
+    private bool filling;
 
     public void RaiseArmSectionStarted()
     {
@@ -59,5 +49,11 @@ public class ArmRaiseBox : MonoBehaviour
         }
 
         this.image.color = Color.Lerp(Color.red, Color.green, Mathf.Clamp01(ValueInRangeMapper.MapRange(this.fillAmount, 0, this.timeRequiredToFill, 0, 1)));
+    }
+
+    public void ActivateBox()
+    {
+        this.image.gameObject.SetActive(true);
+        this.enabled = true;
     }
 }
