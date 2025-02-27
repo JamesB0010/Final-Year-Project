@@ -82,4 +82,13 @@ public class RaiseArmBoxFiller : MonoBehaviour
             Debug.Log("Boxes Full");
         }
     }
+
+    public void ResetBoxes()
+    {
+        this.filledBoxes = 0;
+        foreach (ArmRaiseBox box in this.boxes)
+        {
+            box.RaiseArmSectionStarted();
+        }
+    }
 }

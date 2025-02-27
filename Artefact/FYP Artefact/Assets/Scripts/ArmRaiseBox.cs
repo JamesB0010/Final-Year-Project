@@ -23,6 +23,7 @@ public class ArmRaiseBox : MonoBehaviour
     {
         this.timeRequiredToFill = Random.Range(this.minTimeRequiredToFill, this.maxTimeRequiredToFill);
         this.fillAmount = 0;
+        this.image.color = Color.red;
     }
 
     public void StartFilling()

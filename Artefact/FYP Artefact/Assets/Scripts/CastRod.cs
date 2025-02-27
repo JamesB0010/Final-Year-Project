@@ -6,6 +6,8 @@ using UnityEngine.Serialization;
 public class CastRod : MonoBehaviour
 {
     [SerializeField] private UnityEvent ReadyToCast;
+
+    [SerializeField] private UnityEvent StartedCast;
     
     private bool readyToCast;
 
@@ -25,13 +27,15 @@ public class CastRod : MonoBehaviour
             this.ReadyToCast?.Invoke();
         }
 
-        if (value <= 0.6)
+        if (value <= 0.6 && this.readyToCast == true)
         {
+            this.readyToCast = false;
+            this.StartedCast?.Invoke();
             AnimateRodBackDown();
         }
     }
 
-    public void SetReadyToCast(bool value)
+    public void SetReadyToCastRod(bool value)
     {
         this.readyToCast = value;
     }

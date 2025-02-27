@@ -35,11 +35,11 @@ MonoBehaviour:
         m_PreInfinity: 0
         m_PostInfinity: 0
         m_RotationOrder: 0
-  - m_From: SideCam
+  - m_From: CastRodCamera
     m_To: Main Camera
     m_Blend:
       m_Style: 1
-      m_Time: 2
+      m_Time: 1
       m_CustomCurve:
         serializedVersion: 2
         m_Curve: []

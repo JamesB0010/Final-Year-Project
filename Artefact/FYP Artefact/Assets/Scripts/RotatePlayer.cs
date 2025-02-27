@@ -38,14 +38,19 @@ public class RotatePlayer : MonoBehaviour
         bool playerAttemptingRecalibration = eteeAPI.GetIsPinchTrackpadGesture(this.deviceIndex);
         if (playerAttemptingRecalibration)
         {
-            offset = -this.eteeDeviceHolder.Device.euler.z;
-            eteeAPI.ResetControllerValues(this.deviceIndex);
+            Recalibrate();
         }
         
         //rotate the player
         this.thingToRotate.localRotation = Quaternion.Euler( ((eteeDeviceHolder.Device.euler.z + offset) * this.rotationMultiplier) + this.rotationOffset,0, 0);
         
         this.ClampRotation();
+    }
+
+    public void Recalibrate()
+    {
+        offset = -this.eteeDeviceHolder.Device.euler.z;
+        eteeAPI.ResetControllerValues(this.deviceIndex);
     }
 
     private void ClampRotation()
