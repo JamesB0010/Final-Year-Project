@@ -11,6 +11,6 @@ public class ArmRaiseArrowRotator : MonoBehaviour
 
     public void ArmRaisedValueChanged(float newVal)
     {
-        transform.rotation = Quaternion.Euler(0,0,Mathf.Lerp(minRot, maxRot, newVal));
+        transform.localRotation = Quaternion.Euler(0,0,Mathf.Lerp(minRot, maxRot, newVal));
     }
 }

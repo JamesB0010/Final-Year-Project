@@ -13,8 +13,6 @@ public class GameplayPipelineStage : MonoBehaviour
 
     [SerializeField] private UnityEvent StageCompleteEvent;
 
-    [SerializeField] private DelayedUnityEvent[] delayedStageCompleteEvents;
-    
 
     private PlayerGameplayStagePipeline pipeline;
 
@@ -26,10 +24,6 @@ public class GameplayPipelineStage : MonoBehaviour
     public void StageComplete()
     {
         this.StageCompleteEvent?.Invoke();
-        foreach (var e in this.delayedStageCompleteEvents)
-        {
-            e.Invoke();
-        }
         this.pipeline.Next();
     }
 

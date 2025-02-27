@@ -9,6 +9,8 @@ public class PlayerArmRaiser : MonoBehaviour
 {
     [SerializeField] private float armRaiseOffset;
 
+    [SerializeField] private bool inverted;
+
     [SerializeField] private UnityEvent<float> ArmRaiseAmountChanged;
     
     private eteeDeviceHolder eteeDeviceHolder;
@@ -34,6 +36,9 @@ public class PlayerArmRaiser : MonoBehaviour
             interpLocalRot.w = Mathf.Lerp(oldLocalRot.w, newLocalRot.w, interp);
             
             float armRaiseAmount = Mathf.Clamp01(1 - (interpLocalRot.x * -5 + this.armRaiseOffset));
+
+            if (this.inverted)
+                armRaiseAmount = 1 - armRaiseAmount;
 
             this.ArmRaiseAmountChanged?.Invoke(armRaiseAmount);
             this.animator.SetFloat("ArmRaiseAmount", armRaiseAmount);

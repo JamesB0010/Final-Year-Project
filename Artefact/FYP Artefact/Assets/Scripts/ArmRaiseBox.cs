@@ -18,6 +18,7 @@ public class ArmRaiseBox : MonoBehaviour
     private float timeRequiredToFill;
     private float fillAmount;
     private bool filling;
+    private bool full;
 
     public void RaiseArmSectionStarted()
     {
@@ -38,13 +39,14 @@ public class ArmRaiseBox : MonoBehaviour
 
     private void Update()
     {
-        if(!filling)
+        if(!filling || this.full)
             return;
 
         this.fillAmount += Time.deltaTime;
         
         if (this.fillAmount >= timeRequiredToFill)
         {
+            this.full = true;
             this.Full?.Invoke();
             this.filling = false;
         }
