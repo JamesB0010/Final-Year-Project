@@ -10,5 +10,10 @@ namespace Utility
         {
             SceneManager.LoadScene(sceneName);
         }
+
+        public void ToMainMenu()
+        {
+            SceneManager.LoadScene("Main Menu");
+        }
     }
 }

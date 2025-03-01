@@ -1,5 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/SinglePlayerGameOver/styles.uss?fileID=7433441132597879392&amp;guid=21c016b997f6f5f40907dd4b1f7aaf4f&amp;type=3#styles" />
+    <Style src="project://database/Assets/UI/MainMenu/MainMenuStyles.uss?fileID=7433441132597879392&amp;guid=9a2ab781685f40c42898e49244bc6dc9&amp;type=3#MainMenuStyles" />
     <ui:VisualElement name="Background" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Screenshot%202025-03-01%20180411.png?fileID=2800000&amp;guid=6df45c0d357f1d24a95c6477f3f9e93b&amp;type=3#Screenshot 2025-03-01 180411&quot;); justify-content: flex-start; align-items: center;">
-        <ui:Label tabindex="-1" text="Well Done!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 116px; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&amp;guid=4bc533e1c6b6190428ea64e1b2a0ecf7&amp;type=2#Kenney Future SDF&quot;); color: rgb(255, 255, 255);" />
+        <ui:Label tabindex="-1" text="Well Done!" parse-escape-sequences="true" display-tooltip-when-elided="true" class="EndScreenTitleText" />
+        <ui:Label tabindex="-1" text="You caught 0 Fish!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CaughtAmount" class="EndScreenTitleText" style="font-size: 66px; padding-top: 88px;" />
+        <ui:VisualElement name="Buffer" style="flex-grow: 0; height: 48%;" />
+        <SqueezeSelectButton Button_Text="Main Menu" name="ReturnToMainMenu" class="Player1Focused" />
     </ui:VisualElement>
 </ui:UXML>

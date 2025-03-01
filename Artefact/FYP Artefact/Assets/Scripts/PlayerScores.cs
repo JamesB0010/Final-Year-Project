@@ -9,6 +9,10 @@ public class PlayerScores : ScriptableObject
 {
     [SerializeField] private int player1Score, player2Score;
 
+    public int Player1Score => this.player1Score;
+
+    public int Player2Score => this.player2Score;
+
     public event Action<int> Player1ScoreChanged;
     
     public void IncrementPlayer1Score()

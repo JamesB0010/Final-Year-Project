@@ -1,0 +1,5 @@
+.EndScreenTitleText {
+    font-size: 116px;
+    -unity-font-definition: url("project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&guid=4bc533e1c6b6190428ea64e1b2a0ecf7&type=2#Kenney Future SDF");
+    color: rgb(255, 255, 255);
+}
