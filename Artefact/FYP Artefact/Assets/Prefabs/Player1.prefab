@@ -1,5 +1,151 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &776262525376334300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6553220001585302282}
+  - component: {fileID: 7765640782052062366}
+  m_Layer: 0
+  m_Name: AnimationDirector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6553220001585302282
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776262525376334300}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3951214039895876320}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!320 &7765640782052062366
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776262525376334300}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 375eb705c3dfb82459110d49608753ac, type: 2}
+  m_InitialState: 0
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -658437429594323461, guid: 375eb705c3dfb82459110d49608753ac, type: 2}
+    value: {fileID: 9125679264006230766}
+  m_ExposedReferences:
+    m_References: []
+--- !u!1 &1340443457284251029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3951214039895876320}
+  - component: {fileID: 7807684179558852643}
+  - component: {fileID: 9125679264006230766}
+  - component: {fileID: 1973288328697505820}
+  m_Layer: 0
+  m_Name: Ui
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3951214039895876320
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340443457284251029}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.81017745, z: -0, w: 0.58618474}
+  m_LocalPosition: {x: 7.436129, y: 132.89438, z: -53.9906}
+  m_LocalScale: {x: 117.299416, y: 117.29944, z: 117.299416}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6553220001585302282}
+  m_Father: {fileID: 3701358851693657769}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7807684179558852643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340443457284251029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PanelSettings: {fileID: 11400000, guid: 1fc087b96383f7f47ae718108a4f4f62, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 2363de3c7043075449cb54a2d5cfad2c,
+    type: 3}
+  m_SortingOrder: 0
+--- !u!114 &9125679264006230766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340443457284251029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 6287270652f55d04898f2ce5afb24ea4, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 11400000, guid: fdbe8af6654a50645b21b78fed2cfa11, type: 2}
+          m_TargetAssemblyTypeName: PlayerScores, Assembly-CSharp
+          m_MethodName: IncrementPlayer1Score
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1973288328697505820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340443457284251029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886b4d523e6a68e43995c6af2f192c53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScores: {fileID: 11400000, guid: fdbe8af6654a50645b21b78fed2cfa11, type: 2}
 --- !u!1 &2616729750995903650
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +1123,7 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -991,6 +1137,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
+      propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
       propertyPath: StageEnteredEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 7585940167278772325}
@@ -1001,12 +1152,22 @@ PrefabInstance:
       objectReference: {fileID: 7585940167278772325}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
+      propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 7765640782052062366}
+    - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
       propertyPath: StageEnteredEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
@@ -1021,6 +1182,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
+      propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
       propertyPath: StageEnteredEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
@@ -1028,6 +1194,11 @@ PrefabInstance:
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: UnityEngine.Playables.PlayableDirector, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -1042,6 +1213,11 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4922667633264307927, guid: 14202991410137142a49c726a8fc3a05,
@@ -2021,6 +2197,10 @@ PrefabInstance:
     - {fileID: 6679740673125451766, guid: 14202991410137142a49c726a8fc3a05, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 436594559330059244, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3951214039895876320}
     - targetCorrespondingSourceObject: {fileID: 1736869589947088543, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       insertIndex: -1
@@ -2061,6 +2241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &3701358851693657769 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 436594559330059244, guid: 14202991410137142a49c726a8fc3a05,
+    type: 3}
+  m_PrefabInstance: {fileID: 3842351356976184645}
+  m_PrefabAsset: {fileID: 0}
 --- !u!95 &4219807370100165554 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1143072360860710647, guid: 14202991410137142a49c726a8fc3a05,

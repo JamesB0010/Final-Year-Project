@@ -105,14 +105,4 @@ public class LockOnToRipple : MonoBehaviour
     {
         return (bestDotProduct - 0.5f) / (1 - 0.5f);
     }
-
-    #if UNITY_EDITOR
-    public void LockOnToFish_Debug()
-    {
-        if (this.bestRipple == null)
-            this.bestRipple = FindObjectOfType<Ripple>();
-        
-        this.CompleteFishLockOn();
-    }
-    #endif
 }

@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Scene.unity
     guid: c2c6cf6fd21a82c4b8644e69e8bd8e71
   - enabled: 1
-    path: Assets/Scenes/MindOurDust.unity
-    guid: ec2b7709e6320054c9b8c14a1437aa45
+    path: Assets/Scenes/SinglePlayerGameOver.unity
+    guid: ae6f1acb3a605b047b4df218ea373625
   m_configObjects: {}
