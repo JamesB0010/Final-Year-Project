@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{53ed1b27-f879-4e58-9d1d-7ff7de2437a1}">
+		<property name="assetPath">
+			<value>CaughtFish/success-fanfare-trumpets-6185.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>24</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.9119999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e37b6da7-be7e-4fee-98f1-69703ffb0033}</destination>
+		</relationship>
+	</object>
+</objects>

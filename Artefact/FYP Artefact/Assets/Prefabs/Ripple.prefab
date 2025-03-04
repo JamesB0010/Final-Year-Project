@@ -49,7 +49,7 @@ MonoBehaviour:
   wanderBounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  speed: 1.22
+  speed: 4
   timeBetweenNewWanderPos: 3
 --- !u!33 &2434666381833209961
 MeshFilter:

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{bdf6d719-5a08-458f-9de0-36ca59ecdbed}">
+		<property name="assetPath">
+			<value>CaughtFish/fanfare-1-276819.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.1600000000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e37b6da7-be7e-4fee-98f1-69703ffb0033}</destination>
+		</relationship>
+	</object>
+</objects>

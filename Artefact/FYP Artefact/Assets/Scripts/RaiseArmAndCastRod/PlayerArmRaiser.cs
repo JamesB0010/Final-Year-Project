@@ -35,7 +35,7 @@ public class PlayerArmRaiser : MonoBehaviour
             interpLocalRot.z = Mathf.Lerp(oldLocalRot.z, newLocalRot.z, interp);
             interpLocalRot.w = Mathf.Lerp(oldLocalRot.w, newLocalRot.w, interp);
             
-            float armRaiseAmount = Mathf.Clamp01(1 - (interpLocalRot.x * -5 + this.armRaiseOffset));
+            float armRaiseAmount = Mathf.Clamp01(1 - (interpLocalRot.y * -5 + this.armRaiseOffset));
 
             if (this.inverted)
                 armRaiseAmount = 1 - armRaiseAmount;

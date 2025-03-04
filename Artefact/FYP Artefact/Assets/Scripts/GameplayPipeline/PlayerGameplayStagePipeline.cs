@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -32,6 +33,11 @@ public class PlayerGameplayStagePipeline : MonoBehaviour
         }
     }
 
+    public void SkipCurrentStage()
+    {
+        this.gameplayStages[this.activeStage].StageComplete();
+    }
+
     /// <summary>
     /// should only be called from a GameplayStage
     /// </summary>
@@ -42,5 +48,33 @@ public class PlayerGameplayStagePipeline : MonoBehaviour
         this.gameplayStages[this.activeStage].gameObject.SetActive(true);
         
         this.gameplayStages[activeStage].StageEntered();
+    }
+}
+
+[CustomEditor(typeof(PlayerGameplayStagePipeline))]
+public class GameplayPipelineEditor : Editor
+{
+    private PlayerGameplayStagePipeline t;
+
+    private void Awake()
+    {
+        this.t = target as PlayerGameplayStagePipeline;
+    }
+
+    public override void OnInspectorGUI()
+    {
+        DrawSkipStageButton();
+        base.OnInspectorGUI();
+    }
+
+    private void DrawSkipStageButton()
+    {
+        if (Application.isPlaying)
+        {
+            if (GUILayout.Button("Skip gameplay stage"))
+            {
+                t.SkipCurrentStage();
+            }
+        }
     }
 }

@@ -58,5 +58,6 @@ public class ArmRaiseBox : MonoBehaviour
     {
         this.image.gameObject.SetActive(true);
         this.enabled = true;
+        this.full = false;
     }
 }

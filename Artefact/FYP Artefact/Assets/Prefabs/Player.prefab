@@ -99,7 +99,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2a51bdd1032954c90cc9ce53958cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armRaiseOffset: 0.26
+  armRaiseOffset: 0.66
+  inverted: 0
   ArmRaiseAmountChanged:
     m_PersistentCalls:
       m_Calls:
@@ -377,7 +378,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  delayedStageCompleteEvents: []
 --- !u!1 &1620802582948718566
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,7 +677,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  delayedStageCompleteEvents: []
 --- !u!1 &1687764201543319158
 GameObject:
   m_ObjectHideFlags: 0
@@ -1277,7 +1276,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f2a51bdd1032954c90cc9ce53958cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  armRaiseOffset: 0.26
+  armRaiseOffset: 0.66
+  inverted: 0
   ArmRaiseAmountChanged:
     m_PersistentCalls:
       m_Calls:
@@ -1488,7 +1488,7 @@ MonoBehaviour:
   directionArrow: {fileID: 5536886337008224001}
   dotProductExponent: 16.4
   timeRequiredToLockOntoFish: 10
-  lockOnThreashold: 0.8
+  lockOnThreashold: 0.5
   StartedLockingOntoFish:
     m_PersistentCalls:
       m_Calls:
@@ -2544,6 +2544,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3591862077485419881}
   - component: {fileID: 4916319643243585365}
+  - component: {fileID: 5856121451742217705}
   m_Layer: 6
   m_Name: Cast Rod
   m_TagString: Untagged
@@ -2646,7 +2647,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  delayedStageCompleteEvents: []
+      - m_Target: {fileID: 5856121451742217705}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5856121451742217705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7892669882696423785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 425357957
+      Data2: 1297196970
+      Data3: -105975367
+      Data4: -1203608605
+    Path: event:/CastLine
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &8239136754499201913
 GameObject:
   m_ObjectHideFlags: 0

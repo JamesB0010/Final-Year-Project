@@ -14,6 +14,11 @@ public class RaiseArmBoxFiller : MonoBehaviour
 
     private int filledBoxes;
 
+    public void ResetCurrentlyFillingBox()
+    {
+        this.currentlyFillingBox = 4;
+    }
+
     private void Awake()
     {
         this.gameplayPipelineStage = GetComponentInParent<GameplayPipelineStage>();

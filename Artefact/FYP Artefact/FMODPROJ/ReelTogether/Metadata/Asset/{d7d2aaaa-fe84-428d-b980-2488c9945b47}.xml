@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{d7d2aaaa-fe84-428d-b980-2488c9945b47}">
+		<property name="assetPath">
+			<value>CastRod/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e37b6da7-be7e-4fee-98f1-69703ffb0033}</destination>
+		</relationship>
+	</object>
+</objects>
