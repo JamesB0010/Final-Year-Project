@@ -16,6 +16,7 @@ public abstract class GameMode : ScriptableObject
     public float WaterHeight => this.waterHeight;
 
     [SerializeField] private int maxRippleCount;
+    public int MaxRippleCount => this.maxRippleCount;
 
     //A game mode is classed as being current from when setup is called
     public static GameMode CurrentGameMode { get; private set; }

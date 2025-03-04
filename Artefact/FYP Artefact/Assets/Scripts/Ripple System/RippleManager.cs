@@ -4,10 +4,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class RippleManager : MonoBehaviour
 {
+    public UnityEvent<Ripple> rippleSpawned;
+
+    public UnityEvent<Ripple> rippleDestroyed;
     private static RippleManager instance { get; set; }
 
     private List<Ripple> ripples = new List<Ripple>();
@@ -33,7 +37,12 @@ public class RippleManager : MonoBehaviour
         }
     }
 
-    public static void RegisterNewRipple(Ripple ripple) => instance.ripples.Add(ripple);
+    public static void RegisterNewRipple(Ripple ripple)
+    {
+        instance.ripples.Add(ripple);
+        instance.rippleSpawned?.Invoke(ripple);
+    }
+        
     
     private void OnDestroy()
     {
@@ -42,9 +51,10 @@ public class RippleManager : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    public static void DestroyRipple(Ripple bestRipple)
+    public static void DestroyRipple(Ripple ripple)
     {
-        instance.ripples.Remove(bestRipple);
-        Destroy(bestRipple.gameObject);
+        instance.rippleDestroyed?.Invoke(ripple);
+        instance.ripples.Remove(ripple);
+        Destroy(ripple.gameObject);
     }
 }

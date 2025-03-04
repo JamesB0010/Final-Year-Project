@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[CreateAssetMenu]
 public class PlayerGameplayStagePipeline : MonoBehaviour
 {
     private GameplayPipelineStage[] gameplayStages;
