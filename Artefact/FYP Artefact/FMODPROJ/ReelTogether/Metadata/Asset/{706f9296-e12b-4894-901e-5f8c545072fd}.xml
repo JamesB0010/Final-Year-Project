@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{706f9296-e12b-4894-901e-5f8c545072fd}">
+		<property name="assetPath">
+			<value>RaiseArm/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e37b6da7-be7e-4fee-98f1-69703ffb0033}</destination>
+		</relationship>
+	</object>
+</objects>

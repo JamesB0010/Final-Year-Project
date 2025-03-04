@@ -1,14 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
+using Utility;
 
 public class PlayerArmRaiser : MonoBehaviour
 {
-    [SerializeField] private float armRaiseOffset;
-
     [SerializeField] private bool inverted;
 
     [SerializeField] private UnityEvent<float> ArmRaiseAmountChanged;
@@ -17,25 +17,35 @@ public class PlayerArmRaiser : MonoBehaviour
 
     private Animator animator;
 
+    private Transform placeHolder;
+
     private void Awake()
     {
+        this.placeHolder = new GameObject().transform;
         this.eteeDeviceHolder = GetComponentInParent<eteeDeviceHolder>();
         this.animator = GetComponentInParent<Animator>();
     }
-    
+
     private void Update()
     {
             Quaternion newLocalRot = eteeDeviceHolder.Device.offsetToHand * eteeDeviceHolder.Device.quaternions;
             Quaternion oldLocalRot = transform.localRotation;
-            float interp = 0.2f;
+            float interp = 1f;
 
             Quaternion interpLocalRot = Quaternion.identity;
             interpLocalRot.x = Mathf.Lerp(oldLocalRot.x, newLocalRot.x, interp);
-            interpLocalRot.y = Mathf.Lerp(oldLocalRot.y, newLocalRot.y, interp);
-            interpLocalRot.z = Mathf.Lerp(oldLocalRot.z, newLocalRot.z, interp);
+            interpLocalRot.y = 0;//Mathf.Lerp(oldLocalRot.y, newLocalRot.y, interp);
+            interpLocalRot.z = 0;//Mathf.Lerp(oldLocalRot.z, newLocalRot.z, interp);
             interpLocalRot.w = Mathf.Lerp(oldLocalRot.w, newLocalRot.w, interp);
-            
-            float armRaiseAmount = Mathf.Clamp01(1 - (interpLocalRot.y * -5 + this.armRaiseOffset));
+
+            this.placeHolder.rotation = interpLocalRot;
+
+            Debug.DrawRay(this.placeHolder.position, this.placeHolder.forward);
+            Debug.DrawRay(this.placeHolder.position, Vector3.up, Color.red);
+            float armRaiseAmount = Vector3.Dot(Vector3.up, this.placeHolder.forward);
+            armRaiseAmount = 1 - armRaiseAmount.MapRange(-1, 1, 0, 1);
+            armRaiseAmount = (float)Math.Round((double)armRaiseAmount, 2, MidpointRounding.AwayFromZero);
+            Debug.Log(armRaiseAmount);
 
             if (this.inverted)
                 armRaiseAmount = 1 - armRaiseAmount;
