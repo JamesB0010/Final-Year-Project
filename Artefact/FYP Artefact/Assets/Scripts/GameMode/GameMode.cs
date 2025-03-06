@@ -1,6 +1,7 @@
 using System;
 using PlayerSpawning;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [Serializable]
 public abstract class GameMode : ScriptableObject
@@ -12,6 +13,10 @@ public abstract class GameMode : ScriptableObject
     [SerializeField] private float rippleSpawnerYRotation;
 
     [SerializeField] private float waterHeight;
+    
+    [SerializeField] private string endScreenScene;
+
+    public static void CangeToEndScreen() => SceneManager.LoadScene(CurrentGameMode.endScreenScene);
 
     public float WaterHeight => this.waterHeight;
 

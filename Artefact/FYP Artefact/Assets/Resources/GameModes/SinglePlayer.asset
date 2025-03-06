@@ -17,6 +17,7 @@ MonoBehaviour:
   rippleSpawnerSpawnLocation: {x: -397.04, y: 4.98, z: -52.78}
   rippleSpawnerYRotation: -20.447
   waterHeight: 3.646678
+  endScreenScene: SinglePlayerGameOver
   maxRippleCount: 4
   playerPrefab: {fileID: 4041434136609743891, guid: 75f4860480b2562428c89f7681575d7f,
     type: 3}
