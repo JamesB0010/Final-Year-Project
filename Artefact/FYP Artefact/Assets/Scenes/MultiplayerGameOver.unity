@@ -432,7 +432,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 1fc087b96383f7f47ae718108a4f4f62, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 4c4b8df09b4658247939ba44922ca99a,
+  sourceAsset: {fileID: 9197481963319205126, guid: 693d254c2a975f8449f7b7b9ac75cc9b,
     type: 3}
   m_SortingOrder: 0
 --- !u!114 &1285534308
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1285534305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66cfb5b293cd21144ac4e31d9d82a1cd, type: 3}
+  m_Script: {fileID: 11500000, guid: f4a471a28a9fa2247ad813bb69406c1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerScores: {fileID: 11400000, guid: fdbe8af6654a50645b21b78fed2cfa11, type: 2}

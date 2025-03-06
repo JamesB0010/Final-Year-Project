@@ -1,13 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainMenu/MainMenuStyles.uss?fileID=7433441132597879392&amp;guid=9a2ab781685f40c42898e49244bc6dc9&amp;type=3#MainMenuStyles" />
-    <ui:VisualElement name="TextPositioner" class="OptionsButtonTextPositioner">
-        <ui:Label text="Play Singleplayer" name="ButtonText" class="unity-text-element unity-label OptionButtonText" />
-    </ui:VisualElement>
-    <ui:VisualElement name="Parent" style="flex-grow: 1; position: absolute; right: 0; bottom: 0; background-color: rgba(255, 0, 0, 0); left: 0; top: 0; align-items: center; justify-content: flex-end;">
-        <ui:VisualElement name="SqueezeSliders" style="flex-grow: 0; width: 96%; height: 18%; background-color: rgba(255, 255, 255, 0);">
-            <ui:VisualElement name="Slider1" style="flex-grow: 1; background-color: rgb(0, 205, 255); width: 0; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);" />
-            <ui:VisualElement name="Slider2" style="flex-grow: 1; background-color: rgb(255, 0, 12); width: 0; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px;" />
+    <ui:VisualElement name="Parent" style="flex-grow: 1; position: absolute; right: 0; bottom: 0; background-color: rgba(255, 0, 0, 0); left: 0; top: 0; align-items: center; justify-content: flex-end; background-image: url(&quot;project://database/Assets/Sprites/KenneyUiAssetPack/Yellow/Double/button_rectangle_depth_gradient.png?fileID=2800000&amp;guid=1653ef13754f76841b464304777a4cc5&amp;type=3#button_rectangle_depth_gradient&quot;); width: auto; height: auto;">
+        <ui:VisualElement style="flex-grow: 0; height: 21%;" />
+        <ui:Label text="Play Singleplayer" name="ButtonText" class="unity-text-element unity-label OptionButtonText" style="margin-bottom: -9px;" />
+        <ui:VisualElement name="SqueezeSliders" style="flex-grow: 0; width: 96%; height: 1486px; background-color: rgba(255, 255, 255, 0);">
+            <ui:VisualElement name="Slider1" style="flex-grow: 1; background-color: rgb(0, 205, 255); width: 100%; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);" />
+            <ui:VisualElement name="Slider2" style="flex-grow: 1; background-color: rgb(255, 0, 12); width: 100%; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0); border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 1px; border-top-right-radius: 1px; border-bottom-right-radius: 1px; border-bottom-left-radius: 1px;" />
         </ui:VisualElement>
-        <ui:VisualElement name="Padding" style="flex-grow: 0; height: 13%;" />
+        <ui:VisualElement name="Padding" style="flex-grow: 0; height: 81%;" />
     </ui:VisualElement>
 </ui:UXML>
