@@ -1,4 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="HighScoresElement" src="project://database/Assets/UI/MainMenu/HighScoresElement.uxml?fileID=9197481963319205126&amp;guid=0032d89c9bd5445408958f396f3d205c&amp;type=3#HighScoresElement" />
     <Style src="project://database/Assets/UI/MainMenu/MainMenuStyles.uss?fileID=7433441132597879392&amp;guid=9a2ab781685f40c42898e49244bc6dc9&amp;type=3#MainMenuStyles" />
     <ui:VisualElement name="BackgroundImage" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Ui/MainMenu/main%20menu%20background.png?fileID=2800000&amp;guid=cb701e8d0fc09fa40904234d7943c2c9&amp;type=3#main menu background&quot;); justify-content: flex-start; -unity-background-image-tint-color: rgb(153, 153, 153);">
         <ui:VisualElement name="GameTitleBuffer" style="flex-grow: 0; height: 9%;" />
@@ -9,10 +10,11 @@
                 <ui:VisualElement name="RotatingStar2" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Sprites/KenneyUiAssetPack/Green/Double/star.png?fileID=2800000&amp;guid=5d3d35def5d8e90439fa5fb1c8db2ee4&amp;type=3#star&quot;); width: 7%; height: 52%; -unity-background-scale-mode: scale-to-fit; translate: 62% 0;" />
             </ui:VisualElement>
         </ui:VisualElement>
+        <ui:Instance template="HighScoresElement" name="HighScoresElement" style="flex-grow: 0; height: 100%;" />
     </ui:VisualElement>
     <ui:VisualElement name="InteractionsParent" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; justify-content: center;">
         <ui:VisualElement name="BufferStart" style="flex-grow: 0; width: 35%; height: 12%;" />
-        <SqueezeSelectButton name="PlaySinglePlayerContainer" Button_Text="Play Singleplayer" Playe1SqueezeAmount="50" Player1SqueezeAmount="0" Player2SqueezeAmount="0" Scene_To_Change_To="Lalalal" focusable="false" class="MoveInteractionOffScreen Player1Focused Player2Focused" />
+        <SqueezeSelectButton name="PlaySinglePlayerContainer" Button_Text="Play Singleplayer" Playe1SqueezeAmount="50" Player1SqueezeAmount="0" Player2SqueezeAmount="0" Scene_To_Change_To="Lalalal" focusable="false" class="MoveInteractionOffScreen" />
         <ui:VisualElement name="BufferBetween" style="flex-grow: 0; width: 35%; height: 12%;" />
         <SqueezeSelectButton name="PlayMultiplayerContainer" Button_Text="Play Multiplayer" class="MoveInteractionOffScreen" />
     </ui:VisualElement>

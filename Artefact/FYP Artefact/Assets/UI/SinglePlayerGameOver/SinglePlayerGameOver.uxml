@@ -4,7 +4,9 @@
     <ui:VisualElement name="Background" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/Screenshot%202025-03-01%20180411.png?fileID=2800000&amp;guid=6df45c0d357f1d24a95c6477f3f9e93b&amp;type=3#Screenshot 2025-03-01 180411&quot;); justify-content: flex-start; align-items: center;">
         <ui:Label tabindex="-1" text="Well Done!" parse-escape-sequences="true" display-tooltip-when-elided="true" class="EndScreenTitleText" />
         <ui:Label tabindex="-1" text="You caught 0 Fish!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CaughtAmount" class="EndScreenTitleText" style="font-size: 66px; padding-top: 88px;" />
-        <ui:VisualElement name="Buffer" style="flex-grow: 0; height: 48%;" />
+        <ui:VisualElement style="flex-grow: 0; height: 7%;" />
+        <ui:Label tabindex="-1" text="New Higscore!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NewHighscoreText" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&amp;guid=4bc533e1c6b6190428ea64e1b2a0ecf7&amp;type=2#Kenney Future SDF&quot;); color: rgb(255, 255, 255); font-size: 55px; text-shadow: 5.5px 4.2px 21.5px rgba(0, 0, 0, 0.54); display: flex; visibility: hidden;" />
+        <ui:VisualElement name="Buffer" style="flex-grow: 0; height: 19%;" />
         <SqueezeSelectButton Button_Text="Main Menu" name="ReturnToMainMenu" class="Player1Focused" />
     </ui:VisualElement>
 </ui:UXML>

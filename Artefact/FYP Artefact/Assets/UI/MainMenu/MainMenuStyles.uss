@@ -104,3 +104,16 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.HighScoreText {
+    font-size: 345px;
+    align-self: center;
+    -unity-text-align: middle-center;
+    text-align: center;
+    text-overflow: clip;
+    padding-left: 4px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    padding-right: 4px;
+    -unity-font-style: normal;
+}

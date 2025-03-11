@@ -34,4 +34,9 @@ public class EndScreenSingleplayerUi : MonoBehaviour
     {
         this.ReturnToMenuButton.Player1SqueezeAmount = (uint)FingerTotalForceGetter.GetGenerousPullPercent(eteeAPI.LeftDevice);
     }
+
+    public void ShowNewHighScoreText()
+    {
+        this.root.Q<TextElement>("NewHighscoreText").style.visibility = Visibility.Visible;
+    }
 }

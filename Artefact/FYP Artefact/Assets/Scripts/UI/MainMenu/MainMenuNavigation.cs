@@ -63,6 +63,16 @@ public class MainMenuNavigation : MonoBehaviour
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         this.playOptionContainers[0] = root.Q<SqueezeSelectButton>("PlaySinglePlayerContainer");
         this.playOptionContainers[1] = root.Q<SqueezeSelectButton>("PlayMultiplayerContainer");
+
+        FingerTotalForceGetter.device1HasPulledData.deviceFirstPull += () =>
+        {
+            this.playOptionContainers[this.LeftSelectedContainer].AddToClassList("Player1Focused");
+        };
+
+        FingerTotalForceGetter.device2HasPulledData.deviceFirstPull += () =>
+        {
+            this.playOptionContainers[this.RightSelectedContainer].AddToClassList("Player2Focused");
+        };
     }
 
     private void Update()
