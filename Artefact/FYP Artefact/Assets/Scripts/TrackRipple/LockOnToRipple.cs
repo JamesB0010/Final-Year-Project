@@ -23,6 +23,8 @@ public class LockOnToRipple : MonoBehaviour
 
     [SerializeField] private UnityEvent LostLockOntoFish;
 
+    [SerializeField] private UnityEvent<Vector3> LockOnFinished;
+
     private GameplayPipelineStage gameplayStage;
 
     private float startedLockOntimestamp;
@@ -94,6 +96,7 @@ public class LockOnToRipple : MonoBehaviour
     private void CompleteFishLockOn()
     {
         Debug.Log("Fish locked onto!");
+        this.LockOnFinished?.Invoke(bestRipple.transform.position);
         this.gameplayStage.StageComplete();
         RippleManager.DestroyRipple(bestRipple);
         this.enabled = false;

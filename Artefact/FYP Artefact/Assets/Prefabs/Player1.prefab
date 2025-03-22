@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &209660053181404613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1584037182010294278}
+  - component: {fileID: 7851301167906755894}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1584037182010294278
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209660053181404613}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.81017745, z: -0, w: 0.58618474}
+  m_LocalPosition: {x: -9250.181, y: -712.7784, z: -44970.973}
+  m_LocalScale: {x: 117.233284, y: 117.2333, z: 117.233284}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2033637648360718468}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7851301167906755894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 209660053181404613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &776262525376334300
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +266,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3891051589021587475
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2033637648360718468}
+  - component: {fileID: 8302649860477565324}
+  m_Layer: 6
+  m_Name: WatchFishCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2033637648360718468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3891051589021587475}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1584037182010294278}
+  m_Father: {fileID: 1074882887698490876}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8302649860477565324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3891051589021587475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 20
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 40
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 1584037182010294278}
 --- !u!1 &7585940167278772325
 GameObject:
   m_ObjectHideFlags: 0
@@ -294,6 +410,103 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 3771034570165901572}
+--- !u!1 &8192418520495710063
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1074882887698490876}
+  m_Layer: 6
+  m_Name: VirtualCameraParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1074882887698490876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8192418520495710063}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2033637648360718468}
+  m_Father: {fileID: 8483630887401674921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8493867305285178515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8483630887401674921}
+  - component: {fileID: 9141950943868468122}
+  m_Layer: 6
+  m_Name: WatchFishGetCaught
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8483630887401674921
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8493867305285178515}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1074882887698490876}
+  m_Father: {fileID: 7090961686715221844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9141950943868468122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8493867305285178515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6b638eaa5ca1b4a81c03f931fc3cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StageEnteredEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8192418520495710063}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  delayedStageEnteredEvents: []
+  StageCompleteEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  virtualCamParent: {fileID: 1074882887698490876}
 --- !u!1001 &755166687660286204
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -711,6 +924,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137112251737010511, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: LockOnFinished.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137112251737010511, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: LockOnFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 9141950943868468122}
+    - target: {fileID: 4137112251737010511, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: LockOnFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137112251737010511, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: LockOnFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnRippleLockOnFinised
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137112251737010511, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: LockOnFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WatchFishGetCaught, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4137112251737010511, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: LockOnFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4176908187480105687, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -2154,6 +2397,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7398729841165335237, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7398729841165335237, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
       propertyPath: m_FocalLength
       value: 20.78461
       objectReference: {fileID: 0}
@@ -2401,6 +2649,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1004405403306313495}
+    - targetCorrespondingSourceObject: {fileID: 6285598077770201617, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8483630887401674921}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14202991410137142a49c726a8fc3a05, type: 3}
 --- !u!4 &1411814743707228380 stripped
@@ -2496,6 +2748,12 @@ GameObject:
 --- !u!1 &6648385127772472980 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7570842615177837521, guid: 14202991410137142a49c726a8fc3a05,
+    type: 3}
+  m_PrefabInstance: {fileID: 3842351356976184645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7090961686715221844 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6285598077770201617, guid: 14202991410137142a49c726a8fc3a05,
     type: 3}
   m_PrefabInstance: {fileID: 3842351356976184645}
   m_PrefabAsset: {fileID: 0}
