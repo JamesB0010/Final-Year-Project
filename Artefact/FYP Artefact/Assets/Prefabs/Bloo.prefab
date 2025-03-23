@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2d92d0a8c1b1a4e9feb39465813e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 1
+  maxVelocity: 1.6
 --- !u!114 &-3544873370606480689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,14 +88,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
-  lookAheadDistance: 0
-  speed: 0
-  wanderRadius: 0
+  lookAheadDistance: 19.5
+  speed: 1.6
+  wanderRadius: 0.24
   targetWanderPoint:
     radLat: 0
     radLong: 0
-    displacementRange: 0
-  wanderStrength: 0
+    displacementRange: 0.19
+  wanderStrength: 0.37
+  zRotSpeed: 1.71
 --- !u!1001 &3990924642605481816
 PrefabInstance:
   m_ObjectHideFlags: 0
