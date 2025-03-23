@@ -45,7 +45,6 @@ public class PlayerArmRaiser : MonoBehaviour
             float armRaiseAmount = Vector3.Dot(Vector3.up, this.placeHolder.forward);
             armRaiseAmount = 1 - armRaiseAmount.MapRange(-1, 1, 0, 1);
             armRaiseAmount = (float)Math.Round((double)armRaiseAmount, 2, MidpointRounding.AwayFromZero);
-            Debug.Log(armRaiseAmount);
 
             if (this.inverted)
                 armRaiseAmount = 1 - armRaiseAmount;

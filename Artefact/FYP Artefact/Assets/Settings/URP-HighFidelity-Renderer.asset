@@ -51,9 +51,9 @@ MonoBehaviour:
   settings:
     material: {fileID: 2100000, guid: d7eff91adf883494db9dbd5fd180ae71, type: 2}
     renderPassEvent: 400
-    color: {r: 0.4584905, g: 1, b: 0.94645447, a: 0}
-    FogDensity: 3.77
-    alpha: 0.189
+    color: {r: 0, g: 1, b: 0.96487856, a: 0}
+    FogDensity: 0.00017
+    alpha: 0
     refraction: 0.9
     normalmap: {fileID: 2800000, guid: 08ef20a01c156e1428ca81211ca1275d, type: 3}
     UV: {x: 1, y: 1, z: 0.2, w: 0.1}

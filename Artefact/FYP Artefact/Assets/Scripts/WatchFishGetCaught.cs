@@ -23,5 +23,6 @@ public class WatchFishGetCaught : GameplayPipelineStage
         base.StageEntered();
 
         this.virtualCamParent.position = this.lastRipplePos;
+        Debug.Log(this.lastRipplePos);
     }
 }
