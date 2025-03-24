@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5355572728917609270}
   - component: {fileID: -3162284001181096079}
   - component: {fileID: -5617005881416221436}
+  - component: {fileID: 2440859285525400774}
   m_Layer: 0
   m_Name: Koi
   m_TagString: Untagged
@@ -75,6 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVelocity: 1.6
+  zRotSpeed: 1.71
+  GeneralRotationSpeed: 1.47
 --- !u!114 &-5617005881416221436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +99,22 @@ MonoBehaviour:
     radLong: 0
     displacementRange: 0.19
   wanderStrength: 0.37
-  zRotSpeed: 1.71
+--- !u!114 &2440859285525400774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237051847002874536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd761b9b9464e84f975c66d9b1f4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: -0, z: -0}
+  maxSteeringForce: 1
+  boundaryInfluenceDistance: 4.7
+  invExponent: 1
 --- !u!1001 &5645515533342449038
 PrefabInstance:
   m_ObjectHideFlags: 0

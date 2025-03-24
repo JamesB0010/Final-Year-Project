@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7090144099928065537}
   - component: {fileID: 2428585507182857390}
   - component: {fileID: -3544873370606480689}
+  - component: {fileID: -1628456484730829280}
   m_Layer: 0
   m_Name: Bloo
   m_TagString: Untagged
@@ -75,6 +76,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxVelocity: 1.6
+  zRotSpeed: 1.71
+  GeneralRotationSpeed: 1.47
 --- !u!114 &-3544873370606480689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +99,22 @@ MonoBehaviour:
     radLong: 0
     displacementRange: 0.19
   wanderStrength: 0.37
-  zRotSpeed: 1.71
+--- !u!114 &-1628456484730829280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1448002376642112327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd761b9b9464e84f975c66d9b1f4a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: -0, z: -0}
+  maxSteeringForce: 1
+  boundaryInfluenceDistance: 4.7
+  invExponent: 1
 --- !u!1001 &3990924642605481816
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -44,7 +44,6 @@ public class FishWander : FishSteeringBehaviour
 
     [SerializeField] private float wanderStrength;
 
-    [SerializeField] private float zRotSpeed;
 
     private void Awake()
     {
@@ -59,15 +58,6 @@ public class FishWander : FishSteeringBehaviour
         Vector3 steeringForce = (targetPointPos - transform.position).normalized * this.wanderStrength;
         base.velocity += steeringForce;
         base.velocity = base.velocity.normalized * Mathf.Clamp(base.velocity.magnitude, 0, this.speed);
-
-        Vector3 up = Vector3.Cross(this.velocity.normalized, transform.right);
-        transform.LookAt(targetPointPos, up);
-
-        Vector3 rot = transform.rotation.eulerAngles;
-
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(rot.x, rot.y, 0),
-            Time.deltaTime * this.zRotSpeed);
-
         this.targetWanderPoint.AddRandomDisplacement();
     }
 
