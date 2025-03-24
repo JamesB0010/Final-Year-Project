@@ -15,8 +15,10 @@
     <ui:VisualElement name="InteractionsParent" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; justify-content: center;">
         <ui:VisualElement name="BufferStart" style="flex-grow: 0; width: 35%; height: 12%;" />
         <SqueezeSelectButton name="PlaySinglePlayerContainer" Button_Text="Play Singleplayer" Playe1SqueezeAmount="50" Player1SqueezeAmount="0" Player2SqueezeAmount="0" Scene_To_Change_To="Lalalal" focusable="false" class="MoveInteractionOffScreen" />
-        <ui:VisualElement name="BufferBetween" style="flex-grow: 0; width: 35%; height: 12%;" />
+        <ui:VisualElement name="BufferBetween" style="flex-grow: 0; width: 35%; height: 6%;" />
         <SqueezeSelectButton name="PlayMultiplayerContainer" Button_Text="Play Multiplayer" class="MoveInteractionOffScreen" />
+        <ui:VisualElement name="Buffer" style="flex-grow: 0; height: 13%;" />
+        <SqueezeSelectButton name="HatSelectionContainer" Button_Text="Hat Select" class="MoveInteractionOffScreen" />
     </ui:VisualElement>
-    <ui:VisualElement name="ScreenCover" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Sprites/Ui/MoveOverScreen.jpg?fileID=2800000&amp;guid=33d8e798f456f3947891e9a7de9a6b4c&amp;type=3#MoveOverScreen&quot;); translate: -100% 0;" />
+    <ui:VisualElement name="ScreenCover" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0; background-image: url(&quot;project://database/Assets/Sprites/Ui/MoveOverScreen.jpg?fileID=2800000&amp;guid=33d8e798f456f3947891e9a7de9a6b4c&amp;type=3#MoveOverScreen&quot;); translate: -100% 0; opacity: 1;" />
 </ui:UXML>

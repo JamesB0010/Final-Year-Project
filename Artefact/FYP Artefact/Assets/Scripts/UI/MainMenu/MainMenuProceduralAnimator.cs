@@ -85,5 +85,6 @@ public class MainMenuProceduralAnimator : MonoBehaviour
     {
         this.root.Q<SqueezeSelectButton>("PlaySinglePlayerContainer").RemoveFromClassList("MoveInteractionOffScreen");
         this.root.Q<SqueezeSelectButton>("PlayMultiplayerContainer").RemoveFromClassList("MoveInteractionOffScreen");
+        this.root.Q<SqueezeSelectButton>("HatSelectionContainer").RemoveFromClassList("MoveInteractionOffScreen");
     }
 }

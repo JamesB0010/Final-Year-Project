@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class MainMenuNavigation : MonoBehaviour
 {
-    private SqueezeSelectButton [] playOptionContainers = new SqueezeSelectButton[2];
+    private SqueezeSelectButton [] playOptionContainers = new SqueezeSelectButton[3];
     
     private int leftSelectedContainer = 0;
 
@@ -23,10 +23,10 @@ public class MainMenuNavigation : MonoBehaviour
 
             if (value == -1)
             {
-                this.leftSelectedContainer = 1;
+                this.leftSelectedContainer = 2;
             }
 
-            this.leftSelectedContainer %= 2;
+            this.leftSelectedContainer %= 3;
 
             this.playOptionContainers[this.leftSelectedContainer].AddToClassList("Player1Focused");
         }
@@ -49,10 +49,10 @@ public class MainMenuNavigation : MonoBehaviour
 
             if (value == -1)
             {
-                this.rightSelectedContainer= 1;
+                this.rightSelectedContainer= 2;
             }
 
-            this.rightSelectedContainer %= 2;
+            this.rightSelectedContainer %= 3;
             
             this.playOptionContainers[this.rightSelectedContainer].AddToClassList("Player2Focused");
         }
@@ -63,6 +63,7 @@ public class MainMenuNavigation : MonoBehaviour
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
         this.playOptionContainers[0] = root.Q<SqueezeSelectButton>("PlaySinglePlayerContainer");
         this.playOptionContainers[1] = root.Q<SqueezeSelectButton>("PlayMultiplayerContainer");
+        this.playOptionContainers[2] = root.Q<SqueezeSelectButton>("HatSelectionContainer");
 
         FingerTotalForceGetter.device1HasPulledData.deviceFirstPull += () =>
         {

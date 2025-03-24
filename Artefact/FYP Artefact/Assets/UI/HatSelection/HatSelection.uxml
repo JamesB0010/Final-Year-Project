@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="HatSelection" style="flex-grow: 0; width: 31%; height: 100%; background-color: rgba(0, 192, 255, 0.62);">
+        <ui:VisualElement name="VerticalFlex" style="flex-grow: 1; align-items: center; justify-content: space-around;">
+            <ui:Label tabindex="-1" text="Select A Hat!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-definition: url(&quot;project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&amp;guid=4bc533e1c6b6190428ea64e1b2a0ecf7&amp;type=2#Kenney Future SDF&quot;); font-size: 58px; color: rgb(255, 255, 255); -unity-text-outline-color: rgb(0, 0, 0); -unity-text-outline-width: 2px;" />
+            <ui:VisualElement style="flex-grow: 0; width: 85%; height: 56%;">
+                <ui:VisualElement name="HatSelectionParent" style="flex-grow: 0; width: 100%; height: 100%; background-color: rgb(223, 246, 255); flex-direction: row; background-image: url(&quot;project://database/Assets/Sprites/WavyBackground.png?fileID=2800000&amp;guid=e4f1fbdbb89af754a82fc784bad5abc1&amp;type=3#WavyBackground&quot;); -unity-background-scale-mode: scale-and-crop;">
+                    <ui:VisualElement name="ArrowLeft" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/KenneyUiAssetPack/Green/Double/arrow_basic_w.png?fileID=2800000&amp;guid=62e6e0c81f016d049bdcc873740e4805&amp;type=3#arrow_basic_w&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:VisualElement name="Thumbnail" style="flex-grow: 0; width: 56%; background-image: url(&quot;project://database/Assets/Sprites/KenneyUiAssetPack/Grey/Double/check_square_color_cross.png?fileID=2800000&amp;guid=b6cb0a3d6bb01e946b5c05e949ba7f43&amp;type=3#check_square_color_cross&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                    <ui:VisualElement name="ArrowRight" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Sprites/KenneyUiAssetPack/Green/Double/arrow_basic_e.png?fileID=2800000&amp;guid=3a6c5d6b7abf5654885761aacb7012e1&amp;type=3#arrow_basic_e&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="ConfirmSelectionBarBackground" style="flex-grow: 0; width: 100%; height: 2%; background-color: rgb(255, 255, 255);">
+                    <ui:VisualElement name="BarFill" style="flex-grow: 0; align-self: flex-start; width: 0; height: 100%; background-color: rgb(0, 255, 41);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
