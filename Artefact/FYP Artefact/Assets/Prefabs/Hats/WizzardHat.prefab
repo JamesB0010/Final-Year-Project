@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4822051989675300698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 35.30058
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 35.300575
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 35.300556
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.053
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.08078391
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.06944045
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.75402695
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.64814764
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -81.364
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -167.77
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd009b566941d7046a55a93bf52bb966,
+        type: 3}
+      propertyPath: m_Name
+      value: WizzardHat
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cd009b566941d7046a55a93bf52bb966, type: 3}
