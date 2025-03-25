@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-class Vector3LerpPackage : LerpPackage
+public class Vector3LerpPackage : LerpPackage
 {
     public event Action<Vector3> onLerpStep;
     

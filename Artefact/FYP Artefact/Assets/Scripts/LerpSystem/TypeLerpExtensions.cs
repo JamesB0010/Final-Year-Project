@@ -45,7 +45,7 @@ public static class TypeLerpExtensions
         return package;
     }
     
-    public static void LerpTo(this Vector3 value, Vector3 target, float timeToTake = 1.0f,
+    public static Vector3LerpPackage LerpTo(this Vector3 value, Vector3 target, float timeToTake = 1.0f,
         Action<Vector3> updateCallback = null, Action<LerpPackage> finishedCb = null, AnimationCurve animCurve = null)
     {
         updateCallback ??= val => { Debug.Log(val);};
@@ -53,17 +53,20 @@ public static class TypeLerpExtensions
         finishedCb ??= pkg => { Debug.Log("Finished lerping"); };
 
         animCurve ??= GlobalLerpProcessor.linearCurve;
-        
-        GlobalLerpProcessor.AddLerpPackage(
-            new Vector3LerpPackage(
-                value,
-                target,
-                updateCallback,
-                finishedCb,
-                timeToTake,
-                animCurve
-            )
+
+        Vector3LerpPackage package = new Vector3LerpPackage(
+            value,
+            target,
+            updateCallback,
+            finishedCb,
+            timeToTake,
+            animCurve
         );
+        GlobalLerpProcessor.AddLerpPackage(
+          package  
+        );
+
+        return package;
     }
         public static void LerpTo(this Color value, Color target, float timeToTake = 1.0f,
             Action<Color> updateCallback = null, Action<LerpPackage> finishedCb = null,

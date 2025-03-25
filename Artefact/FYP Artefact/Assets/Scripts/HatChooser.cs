@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,6 +14,19 @@ public class HatChooser : MonoBehaviour
     public UnityEvent noHatSelected;
 
     private GameObject activeHat;
+
+    private StudioEventEmitter uiClickSound;
+
+    private void Awake()
+    {
+        this.uiClickSound = GetComponent<StudioEventEmitter>();
+    }
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(1.5f);
+        this.uiClickSound.enabled = true;
+    }
 
     private int hatIndex = -1;
     public int HatIndex
@@ -51,5 +66,8 @@ public class HatChooser : MonoBehaviour
         this.activeHat = Instantiate(HatPrefabs[index], hatSlot);
         this.activeHat.AddComponent<ItemShopItemChangeItemEffect>();
         this.newHatSelected?.Invoke(index);
+        
+        if(this.uiClickSound.enabled)
+            this.uiClickSound.Play();
     }
 }
