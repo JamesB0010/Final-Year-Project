@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.71716, y: 0.71716, z: 0.71716}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3524108129910872243}
@@ -75,9 +75,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2d92d0a8c1b1a4e9feb39465813e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouth: {fileID: 2140077627543542089}
   maxVelocity: 1.6
   zRotSpeed: 1.71
   GeneralRotationSpeed: 1.47
+  stopDistanceForTakingBait: 0.1
 --- !u!114 &-3544873370606480689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +117,37 @@ MonoBehaviour:
   maxSteeringForce: 1
   boundaryInfluenceDistance: 4.7
   invExponent: 1
+--- !u!1 &5754872637230624836
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140077627543542089}
+  m_Layer: 0
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2140077627543542089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5754872637230624836}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.652046, y: -0.27356187, z: 0.2735618, w: 0.6520459}
+  m_LocalPosition: {x: -0.00032531703, y: -0.0002876576, z: 0.0020999936}
+  m_LocalScale: {x: 0.01, y: 0.010000001, z: 0.01}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7486875748209340914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3990924642605481816
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,7 +213,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5801802911123705514, guid: a1e09a485acc2464980c9ae00456e0b1,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2140077627543542089}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a1e09a485acc2464980c9ae00456e0b1,
         type: 3}
@@ -215,3 +252,9 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!4 &7486875748209340914 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5801802911123705514, guid: a1e09a485acc2464980c9ae00456e0b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3990924642605481816}
+  m_PrefabAsset: {fileID: 0}

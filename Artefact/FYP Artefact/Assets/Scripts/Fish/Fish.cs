@@ -1,17 +1,28 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-public class Fish : MonoBehaviour
+public partial class Fish : MonoBehaviour
 {
     private FishSteeringBehaviour[] fishSteeringBehvaiours;
     private Rigidbody rigidBody;
+    
+    [SerializeField] private Transform mouth;
 
     [SerializeField] private float maxVelocity;
     [SerializeField] private float zRotSpeed;
     [SerializeField] private float GeneralRotationSpeed;
-    
+
+    [SerializeField] private float stopDistanceForTakingBait;
+
+
+    private OverrideSteering overrideSteeringSettings = new OverrideSteering();
+
     private void Awake()
     {
         this.fishSteeringBehvaiours = GetComponents<FishSteeringBehaviour>();
@@ -21,7 +32,21 @@ public class Fish : MonoBehaviour
 
     private void LateUpdate()
     {
-        this.rigidBody.velocity = this.SumFishSteeringBehaviourVelocities();
+        if (overrideSteeringSettings.active)
+        {
+            this.rigidBody.velocity = this.overrideSteeringSettings.overrideMoveToPosition - mouth.position;
+            if (this.rigidBody.velocity.magnitude > this.maxVelocity)
+                this.rigidBody.velocity = this.rigidBody.velocity.normalized * this.maxVelocity;
+
+            if ((this.overrideSteeringSettings.overrideMoveToPosition - mouth.position).magnitude <= this.stopDistanceForTakingBait)
+                this.overrideSteeringSettings.FishLostInterest();
+            
+            Debug.Log((this.overrideSteeringSettings.overrideMoveToPosition - mouth.position).magnitude);
+        }
+        else
+        {
+            this.rigidBody.velocity = this.SumFishSteeringBehaviourVelocities();
+        }
 
         Quaternion oldRot = transform.rotation;
         
@@ -31,7 +56,6 @@ public class Fish : MonoBehaviour
 
         transform.rotation = Quaternion.Lerp(oldRot, transform.rotation, Time.deltaTime * this.GeneralRotationSpeed);
     }
-
 
     private Vector3 SumFishSteeringBehaviourVelocities()
     {
@@ -43,5 +67,17 @@ public class Fish : MonoBehaviour
         }
 
         return sum.normalized * Mathf.Clamp(sum.magnitude, 0, this.maxVelocity);
+    }
+
+    public UniTask OverideSteeringTowards(Vector3 location)
+    {
+        this.overrideSteeringSettings.FishInterestedInPoint(location);
+        
+        return this.overrideSteeringSettings.SwimToBaitTCS.Task;
+    }
+
+    public bool HasLostInterestForLongEnough()
+    {
+        return Time.timeSinceLevelLoad - this.overrideSteeringSettings.interestedTimeStamp >= 3;
     }
 }

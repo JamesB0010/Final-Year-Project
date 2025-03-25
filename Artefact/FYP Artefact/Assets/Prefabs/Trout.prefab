@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4112747506518313756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3921327972046708882}
+  m_Layer: 0
+  m_Name: Mouth
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3921327972046708882
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4112747506518313756}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.00622, y: -0.00151, z: -0.00029}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3542755420443290281}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6942631020350464073
 GameObject:
   m_ObjectHideFlags: 0
@@ -75,9 +106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2d92d0a8c1b1a4e9feb39465813e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mouth: {fileID: 3921327972046708882}
   maxVelocity: 1.6
   zRotSpeed: 1.71
   GeneralRotationSpeed: 1.47
+  stopDistanceForTakingBait: 0.1
 --- !u!114 &645355433019078901
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -5579129975675327903, guid: c9abfc8f63da775458e4e46d855bce08,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3921327972046708882}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c9abfc8f63da775458e4e46d855bce08,
         type: 3}
@@ -230,3 +267,9 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!4 &3542755420443290281 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -5579129975675327903, guid: c9abfc8f63da775458e4e46d855bce08,
+    type: 3}
+  m_PrefabInstance: {fileID: 268130824266694856}
+  m_PrefabAsset: {fileID: 0}
