@@ -553,6 +553,10 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - delayTime: 0.5
+    OnEventInvoke:
+      m_PersistentCalls:
+        m_Calls:
         - m_Target: {fileID: 326682312947869505}
           m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
           m_MethodName: Play
@@ -1496,7 +1500,7 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -1511,7 +1515,7 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -1521,7 +1525,7 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -1542,22 +1546,22 @@ PrefabInstance:
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 7765640782052062366}
+      objectReference: {fileID: 5117651626286650940}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
-      objectReference: {fileID: 2893452539051794669}
+      objectReference: {fileID: 7212472323766352044}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[5].m_Target
       value: 
-      objectReference: {fileID: 5117651626286650940}
+      objectReference: {fileID: 2893452539051794669}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[6].m_Target
       value: 
-      objectReference: {fileID: 7212472323766352044}
+      objectReference: {fileID: 7765640782052062366}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageEnteredEvent.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
@@ -1601,7 +1605,7 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: Play
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -1611,7 +1615,7 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[5].m_MethodName
-      value: SetActive
+      value: Play
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -1631,7 +1635,7 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: UnityEngine.Playables.PlayableDirector, UnityEngine
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -1641,12 +1645,12 @@ PrefabInstance:
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[5].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: FMODUnity.StudioEventEmitter, FMODUnity
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: StageCompleteEvent.m_PersistentCalls.m_Calls.Array.data[6].m_TargetAssemblyTypeName
-      value: FMODUnity.StudioEventEmitter, FMODUnity
+      value: UnityEngine.Playables.PlayableDirector, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4916319643243585365, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
