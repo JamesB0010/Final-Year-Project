@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9118674058751597027}
   - component: {fileID: 7436236764951668233}
+  - component: {fileID: 5189090157998697210}
+  - component: {fileID: 6273712579654780484}
   m_Layer: 0
   m_Name: CoverScreen
   m_TagString: Untagged
@@ -50,6 +52,70 @@ MonoBehaviour:
   sourceAsset: {fileID: 9197481963319205126, guid: 36d1229712f958a478f893939b32e733,
     type: 3}
   m_SortingOrder: 0
+--- !u!114 &5189090157998697210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475126603089574541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: a6800449d079bd84997c86640e79e140, type: 2}
+    - {fileID: 11400000, guid: e7b3eddd4e013a94cbf434cc960ca1bd, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls: []
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6273712579654780484}
+          m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+          m_MethodName: Play
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &6273712579654780484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 475126603089574541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -1406048936
+      Data2: 1226811779
+      Data3: 2045189818
+      Data4: -86611168
+    Path: event:/SceneTransition
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &5078887590303966775
 GameObject:
   m_ObjectHideFlags: 0
@@ -97,7 +163,9 @@ PlayableDirector:
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: 4940163746642618141, guid: 13a4a781f3235514489dddde5eb5476b, type: 2}
+    value: {fileID: 5189090157998697210}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &3663229230547709439

@@ -423,6 +423,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13b0fceb23b9c64e803b1194d14ceac, type: 3}
+--- !u!114 &163053363 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6273712579654780484, guid: b13b0fceb23b9c64e803b1194d14ceac,
+    type: 3}
+  m_PrefabInstance: {fileID: 163053362}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &304739825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1686,12 +1698,27 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 51b068ec7193f9c4798938a1e8647ab1, type: 2}
+    - {fileID: 11400000, guid: e7b3eddd4e013a94cbf434cc960ca1bd, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 11400000, guid: b76e110b64149344d8481b95ec02cce4, type: 2}
           m_TargetAssemblyTypeName: Utility.SceneChanger, Assembly-CSharp
           m_MethodName: ToMainMenu
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 163053363}
+          m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+          m_MethodName: Play
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

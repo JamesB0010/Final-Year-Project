@@ -418,6 +418,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoverScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 2655784393519707111, guid: b13b0fceb23b9c64e803b1194d14ceac,
+        type: 3}
+      propertyPath: m_PlayableAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c7901785c972fad4c9e959d0170b71f7,
+        type: 2}
     - target: {fileID: 7436236764951668233, guid: b13b0fceb23b9c64e803b1194d14ceac,
         type: 3}
       propertyPath: m_ParentUI
@@ -511,6 +517,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4420c297e0baa2149af824512bb19bd3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &984101126 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5189090157998697210, guid: b13b0fceb23b9c64e803b1194d14ceac,
+    type: 3}
+  m_PrefabInstance: {fileID: 984101119}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1058533764
@@ -989,6 +1007,8 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: 4494627757208523402, guid: 72c56ebc84d38b045936584434c46b30, type: 2}
     value: {fileID: 928407814}
+  - key: {fileID: 828450773699319133, guid: 72c56ebc84d38b045936584434c46b30, type: 2}
+    value: {fileID: 984101126}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &2135840595
