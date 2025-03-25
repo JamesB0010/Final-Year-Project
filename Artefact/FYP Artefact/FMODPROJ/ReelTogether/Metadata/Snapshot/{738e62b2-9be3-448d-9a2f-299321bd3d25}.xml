@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="Snapshot" id="{738e62b2-9be3-448d-9a2f-299321bd3d25}">
+		<property name="name">
+			<value>UnderWater</value>
+		</property>
+		<relationship name="mixer">
+			<destination>{20a67eae-4a35-4367-860e-d4e768a510a6}</destination>
+		</relationship>
+		<relationship name="automatableProperties">
+			<destination>{196e357f-fbfa-4e84-9800-8d761d4c0463}</destination>
+		</relationship>
+		<relationship name="markerTracks">
+			<destination>{a5b2514c-2589-44b7-9bc9-5a53cec9fe2d}</destination>
+		</relationship>
+		<relationship name="timeline">
+			<destination>{9d00d999-7c09-4118-8fae-d8021be63953}</destination>
+		</relationship>
+		<relationship name="snapshotMasterTrack">
+			<destination>{6537c7b8-26d4-4928-90ac-f9512b7c0c0b}</destination>
+		</relationship>
+		<relationship name="snapshotProperties">
+			<destination>{4bc21699-6f1c-44b1-b945-cb25024f9ae7}</destination>
+			<destination>{96993443-619d-49e8-8788-22a25e68a538}</destination>
+			<destination>{acde511b-2564-43dd-a6f4-efd05121a2ee}</destination>
+			<destination>{3a416376-d64c-4953-9d2c-1f26dcb8e699}</destination>
+			<destination>{0162feb9-3187-485e-8717-da1b7ef92889}</destination>
+		</relationship>
+		<relationship name="snapshotTracks">
+			<destination>{0a64c2bf-4a24-4690-969e-d54e0db9b2a0}</destination>
+		</relationship>
+	</object>
+	<object class="EventAutomatableProperties" id="{196e357f-fbfa-4e84-9800-8d761d4c0463}">
+		<relationship name="modulators">
+			<destination>{7ac0c279-3aea-4abb-9f29-8c9bbe5696d6}</destination>
+		</relationship>
+	</object>
+	<object class="MarkerTrack" id="{a5b2514c-2589-44b7-9bc9-5a53cec9fe2d}" />
+	<object class="Timeline" id="{9d00d999-7c09-4118-8fae-d8021be63953}" />
+	<object class="SnapshotMasterTrack" id="{6537c7b8-26d4-4928-90ac-f9512b7c0c0b}" />
+	<object class="SnapshotProperty" id="{4bc21699-6f1c-44b1-b945-cb25024f9ae7}">
+		<property name="propertyName">
+			<value>lowGain</value>
+		</property>
+		<property name="value">
+			<value>3</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{f6256eac-c255-496c-a8c9-fdf1da738282}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{96993443-619d-49e8-8788-22a25e68a538}">
+		<property name="propertyName">
+			<value>midGain</value>
+		</property>
+		<property name="value">
+			<value>-42</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{f6256eac-c255-496c-a8c9-fdf1da738282}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{acde511b-2564-43dd-a6f4-efd05121a2ee}">
+		<property name="propertyName">
+			<value>highGain</value>
+		</property>
+		<property name="value">
+			<value>-48</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{f6256eac-c255-496c-a8c9-fdf1da738282}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{3a416376-d64c-4953-9d2c-1f26dcb8e699}">
+		<property name="propertyName">
+			<value>lowCrossover</value>
+		</property>
+		<property name="value">
+			<value>380</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{f6256eac-c255-496c-a8c9-fdf1da738282}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotProperty" id="{0162feb9-3187-485e-8717-da1b7ef92889}">
+		<property name="propertyName">
+			<value>highCrossover</value>
+		</property>
+		<property name="value">
+			<value>200</value>
+		</property>
+		<relationship name="automatableObject">
+			<destination>{f6256eac-c255-496c-a8c9-fdf1da738282}</destination>
+		</relationship>
+	</object>
+	<object class="SnapshotTrack" id="{0a64c2bf-4a24-4690-969e-d54e0db9b2a0}">
+		<relationship name="mixerStrip">
+			<destination>{72de58a6-35e7-4c60-9105-6a7985f07770}</destination>
+		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{7ac0c279-3aea-4abb-9f29-8c9bbe5696d6}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>snapshotIntensity</value>
+		</property>
+		<property name="attackTime">
+			<value>320</value>
+		</property>
+		<property name="peakValue">
+			<value>100</value>
+		</property>
+		<property name="sustainValue">
+			<value>100</value>
+		</property>
+	</object>
+</objects>

@@ -25,7 +25,7 @@ public class FishManager : MonoBehaviour
         }
         return closestFish;
     }
-
+    
     public async void LockOntoClosestFish(Vector3 hookLocation)
     {
         while (true)
