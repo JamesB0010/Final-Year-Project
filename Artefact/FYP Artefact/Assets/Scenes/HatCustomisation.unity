@@ -423,18 +423,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b13b0fceb23b9c64e803b1194d14ceac, type: 3}
---- !u!114 &163053363 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6273712579654780484, guid: b13b0fceb23b9c64e803b1194d14ceac,
-    type: 3}
-  m_PrefabInstance: {fileID: 163053362}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &304739825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1716,7 +1704,7 @@ MonoBehaviour:
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 163053363}
+        - m_Target: {fileID: 1406275915}
           m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
           m_MethodName: Play
           m_Mode: 1
@@ -1893,6 +1881,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1406275915 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6273712579654780484, guid: b13b0fceb23b9c64e803b1194d14ceac,
+    type: 3}
+  m_PrefabInstance: {fileID: 163053362}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1432532778
 GameObject:
   m_ObjectHideFlags: 0
