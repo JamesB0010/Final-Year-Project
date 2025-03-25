@@ -12,7 +12,7 @@ public partial class Fish
     
         public Vector3 overrideMoveToPosition;
 
-        public float interestedTimeStamp;
+        public float lostInterestTimeStamp = float.MinValue;
 
         private UniTaskCompletionSource swimToBaitTCS = new UniTaskCompletionSource();
 
@@ -21,14 +21,15 @@ public partial class Fish
         public void FishLostInterest()
         {
             this.active = false;
+            this.lostInterestTimeStamp = Time.timeSinceLevelLoad;
             this.SwimToBaitTCS.TrySetException(new Exception("Fish Lost Interest"));
+            this.swimToBaitTCS = new UniTaskCompletionSource();
         }
 
         public void FishInterestedInPoint(Vector3 location)
         {
             this.active = true;
             this.overrideMoveToPosition = location;
-            this.interestedTimeStamp = Time.timeSinceLevelLoad;
         }
     }
 }

@@ -61,9 +61,9 @@ public partial class Fish : MonoBehaviour
     {
         Vector3 sum = Vector3.zero;
 
-        foreach (FishSteeringBehaviour fishSteeringBehvaiour in this.fishSteeringBehvaiours)
+        foreach (FishSteeringBehaviour fishSteeringBehaviour in this.fishSteeringBehvaiours)
         {
-            sum += fishSteeringBehvaiour.velocity;
+            sum += fishSteeringBehaviour.velocity;
         }
 
         return sum.normalized * Mathf.Clamp(sum.magnitude, 0, this.maxVelocity);
@@ -78,6 +78,6 @@ public partial class Fish : MonoBehaviour
 
     public bool HasLostInterestForLongEnough()
     {
-        return Time.timeSinceLevelLoad - this.overrideSteeringSettings.interestedTimeStamp >= 3;
+        return Time.timeSinceLevelLoad - this.overrideSteeringSettings.lostInterestTimeStamp >= 7;
     }
 }

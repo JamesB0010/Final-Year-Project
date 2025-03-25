@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class FishManager : MonoBehaviour
@@ -40,6 +41,8 @@ public class FishManager : MonoBehaviour
             {
                 Debug.Log("Fish Lost Interest");
             }
+
+            await UniTask.Yield();
         }
     }
 }

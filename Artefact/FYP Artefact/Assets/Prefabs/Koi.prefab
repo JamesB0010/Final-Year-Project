@@ -79,7 +79,7 @@ MonoBehaviour:
   maxVelocity: 1.6
   zRotSpeed: 1.71
   GeneralRotationSpeed: 1.47
-  stopDistanceForTakingBait: 0.1
+  stopDistanceForTakingBait: 0.7
 --- !u!114 &-5617005881416221436
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -23230,6 +23230,7 @@ GameObject:
   m_Component:
   - component: {fileID: 707338992}
   - component: {fileID: 707338993}
+  - component: {fileID: 707338994}
   m_Layer: 0
   m_Name: TimeManager
   m_TagString: Untagged
@@ -23283,6 +23284,49 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 707338994}
+        m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &707338994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707338991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1938711218
+      Data2: 1150131171
+      Data3: -1826017382
+      Data4: 624803105
+    Path: snapshot:/UnderWater
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
 --- !u!1001 &710195185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71093,6 +71137,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoverScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 2655784393519707111, guid: b13b0fceb23b9c64e803b1194d14ceac,
+        type: 3}
+      propertyPath: m_PlayableAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c7901785c972fad4c9e959d0170b71f7,
+        type: 2}
     - target: {fileID: 9118674058751597027, guid: b13b0fceb23b9c64e803b1194d14ceac,
         type: 3}
       propertyPath: m_LocalPosition.x
