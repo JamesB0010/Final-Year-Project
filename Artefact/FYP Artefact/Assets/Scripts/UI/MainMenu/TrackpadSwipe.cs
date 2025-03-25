@@ -8,7 +8,7 @@ namespace eteeDeviceInput
 {
     public class TrackpadSwipe
     {
-        public event Action up, down;
+        public event Action up, down, left, right;
 
         public TrackpadSwipe(eteeDevice device)
         {
@@ -29,6 +29,12 @@ namespace eteeDeviceInput
                 this.up?.Invoke();
             else if (processedYInput == -1)
                 this.down?.Invoke();
+
+            float processedXInput = this.Process1DInput(input.x, ref readyX);
+            if(processedXInput == 1)
+                this.right?.Invoke();
+            else if (processedXInput == -1)
+                this.left?.Invoke();
         }
 
         private float Process1DInput(float input, ref bool readyState)

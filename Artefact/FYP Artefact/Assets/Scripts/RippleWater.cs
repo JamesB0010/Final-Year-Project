@@ -50,7 +50,7 @@ public class RippleWater : MonoBehaviour
 
     public void OnGameSetup()
     {
-        this.waterMaterial.SetVectorArray(RippleOffsetPropertyId, new Vector4[GameMode.CurrentGameMode.MaxRippleCount]);
+        this.waterMaterial.SetVectorArray(RippleOffsetPropertyId, new Vector4[GameplayGameMode.CurrentGameplayGameMode.MaxRippleCount]);
     }
 
     private void Update()

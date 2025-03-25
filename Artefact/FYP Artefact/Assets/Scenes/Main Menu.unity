@@ -187,8 +187,55 @@ Transform:
   m_Children:
   - {fileID: 1286406243}
   - {fileID: 1215867346}
+  - {fileID: 1058533765}
+  - {fileID: 782654228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &782654227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782654228}
+  - component: {fileID: 782654229}
+  m_Layer: 0
+  m_Name: PlayerHatDataPersistance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782654228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782654227}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685466883}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782654229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782654227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 993aeec5c9e128a449967ae87f4df49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hatData: {fileID: 11400000, guid: 95353e30ce00dfe4cbe116ea40d262c8, type: 2}
 --- !u!1 &928407808
 GameObject:
   m_ObjectHideFlags: 0
@@ -314,6 +361,8 @@ MonoBehaviour:
           m_StringArgument: HatCustomisation
           m_BoolArgument: 0
         m_CallState: 2
+  playerHatData: {fileID: 11400000, guid: 95353e30ce00dfe4cbe116ea40d262c8, type: 2}
+  hatDb: {fileID: 11400000, guid: b503824d60903484eaf1eec07cc14a4c, type: 2}
 --- !u!114 &928407814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +513,76 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4420c297e0baa2149af824512bb19bd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1058533764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058533765}
+  - component: {fileID: 1058533766}
+  m_Layer: 0
+  m_Name: UiPlayerInput
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058533765
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058533764}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 685466883}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058533766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058533764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b3ee29d9a3aa5344b84ee253f9a0b1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftEvents:
+    TrackpadSwipeUp:
+      m_PersistentCalls:
+        m_Calls: []
+    TrackpadSwipeDown:
+      m_PersistentCalls:
+        m_Calls: []
+    TrackpadSwipeLeft:
+      m_PersistentCalls:
+        m_Calls: []
+    TrackpadSwipeRight:
+      m_PersistentCalls:
+        m_Calls: []
+  rightEvents:
+    TrackpadSwipeUp:
+      m_PersistentCalls:
+        m_Calls: []
+    TrackpadSwipeDown:
+      m_PersistentCalls:
+        m_Calls: []
+    TrackpadSwipeLeft:
+      m_PersistentCalls:
+        m_Calls: []
+    TrackpadSwipeRight:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1215867344
 GameObject:
   m_ObjectHideFlags: 0
@@ -539,6 +658,12 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    TrackpadSwipeLeft:
+      m_PersistentCalls:
+        m_Calls: []
+    TrackpadSwipeRight:
+      m_PersistentCalls:
+        m_Calls: []
   rightEvents:
     TrackpadSwipeUp:
       m_PersistentCalls:
@@ -570,6 +695,12 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+    TrackpadSwipeLeft:
+      m_PersistentCalls:
+        m_Calls: []
+    TrackpadSwipeRight:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1 &1286406241
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,5 +11,7 @@ namespace eteeDeviceInput
     {
         public UnityEvent TrackpadSwipeUp;
         public UnityEvent TrackpadSwipeDown;
+        public UnityEvent TrackpadSwipeLeft;
+        public UnityEvent TrackpadSwipeRight;
     }
 }

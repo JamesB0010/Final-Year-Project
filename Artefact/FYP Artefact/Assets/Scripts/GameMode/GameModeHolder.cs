@@ -2,29 +2,30 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu]
 public class GameModeHolder : ScriptableObject
 {
-    [SerializeField, HideInInspector] private GameMode gameMode;
+    [SerializeField, HideInInspector] private GameMode gameplayGameMode;
 
-    public GameMode GameMode
+    public GameMode GameplayGameMode
     {
         get
         {
-            if(this.gameMode != null)
-                return this.gameMode;
+            if(this.gameplayGameMode != null)
+                return this.gameplayGameMode;
             else
             {
                 Debug.LogWarning("Using default game mode");
-                var defaultMode = Resources.Load<GameMode>("GameModes/SinglePlayer");
-                SinglePlayerGameMode castedMode = defaultMode as SinglePlayerGameMode;
+                var defaultMode = Resources.Load<GameplayGameMode>("GameModes/SinglePlayer");
+                SinglePlayerGameplayGameMode castedMode = defaultMode as SinglePlayerGameplayGameMode;
                 castedMode.Initialize(eteeAPI.LeftDevice);
-                this.gameMode = defaultMode;
-                return this.gameMode;
+                this.gameplayGameMode = defaultMode;
+                return this.gameplayGameMode;
             }
         }
-        set => this.gameMode = value;
+        set => this.gameplayGameMode = value;
     }
 }
 

@@ -47,6 +47,6 @@ public class RippleSpawner : MonoBehaviour
     {
         Vector3 spawnPosition = this.spawnBounds.RandomXZInBounds();
         
-        return new Vector3(spawnPosition.x, GameMode.CurrentGameMode.WaterHeight, spawnPosition.z);
+        return new Vector3(spawnPosition.x, GameplayGameMode.CurrentGameplayGameMode.WaterHeight, spawnPosition.z);
     }
 }

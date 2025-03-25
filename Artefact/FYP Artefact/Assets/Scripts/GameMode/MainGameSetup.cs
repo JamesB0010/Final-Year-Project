@@ -13,7 +13,7 @@ public class MainGameSetup : MonoBehaviour
 
     private void Start()
     {
-        gameModeHolder.GameMode.Setup(mainGameSpawnPoints);
+        ((GameplayGameMode)gameModeHolder.GameplayGameMode).Setup(mainGameSpawnPoints);
         this.playerScores.Reset();
         this.GameSetupEvent?.Invoke();
     }

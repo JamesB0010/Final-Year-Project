@@ -2690,7 +2690,11 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8483630887401674921}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 956109871769246038, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2285137322095787658}
   m_SourcePrefab: {fileID: 100100000, guid: 14202991410137142a49c726a8fc3a05, type: 3}
 --- !u!4 &1411814743707228380 stripped
 Transform:
@@ -2701,6 +2705,12 @@ Transform:
 --- !u!4 &1876515576103085668 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3411616128073636641, guid: 14202991410137142a49c726a8fc3a05,
+    type: 3}
+  m_PrefabInstance: {fileID: 3842351356976184645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3111201307869972707 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2197742498898261414, guid: 14202991410137142a49c726a8fc3a05,
     type: 3}
   m_PrefabInstance: {fileID: 3842351356976184645}
   m_PrefabAsset: {fileID: 0}
@@ -2740,6 +2750,32 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3842351356976184645}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4041434136609743891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 956109871769246038, guid: 14202991410137142a49c726a8fc3a05,
+    type: 3}
+  m_PrefabInstance: {fileID: 3842351356976184645}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2285137322095787658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4041434136609743891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973f93b87aec4184bac6d553c70140ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headBone: {fileID: 3111201307869972707}
+  hatDatabase: {fileID: 11400000, guid: b503824d60903484eaf1eec07cc14a4c, type: 2}
+  hatData: {fileID: 11400000, guid: 95353e30ce00dfe4cbe116ea40d262c8, type: 2}
+  gameModeHolder: {fileID: 11400000, guid: 391189056d872f945a1861b5f7021427, type: 2}
+  player1: 1
+  layerToGoOnto:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &4219807370100165554 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1143072360860710647, guid: 14202991410137142a49c726a8fc3a05,

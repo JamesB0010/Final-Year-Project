@@ -8,6 +8,8 @@ public class MainMenuButtonReactions : MonoBehaviour
     [SerializeField] private GameModeHolder gameModeHolder;
     [SerializeField] private UnityEvent buttonPressed;
     [SerializeField] private UnityEvent HatSelectionPressedEvent;
+    [SerializeField] private PlayerHatDataHolder playerHatData;
+    [SerializeField] private HatDatabase hatDb;
     public void Awake()
     {
         VisualElement root = GetComponent<UIDocument>().rootVisualElement;
@@ -27,7 +29,11 @@ public class MainMenuButtonReactions : MonoBehaviour
         
         root.Q<SqueezeSelectButton>("PlayMultiplayerContainer").ButtonPressed += () =>
         {
-            this.gameModeHolder.GameMode = Resources.Load<GameMode>("GameModes/Multiplayer");
+            MultiplayerGameplayGameMode gameMode = Resources.Load<MultiplayerGameplayGameMode>("GameModes/Multiplayer");
+            this.gameModeHolder.GameplayGameMode = gameMode;
+            gameMode.player1Hat = this.hatDb.GetHat(this.playerHatData.leftControllerHatIndex);
+            gameMode.player2Hat = this.hatDb.GetHat(this.playerHatData.rightControllerHatIndex);
+            
             this.buttonPressed?.Invoke();
         };
 
@@ -46,13 +52,22 @@ public class MainMenuButtonReactions : MonoBehaviour
     }
     private void PlaySinglePlayerPressed(eteeDevice device)
     {
-        var gameMode = Resources.Load<GameMode>("GameModes/SinglePlayer");
-        this.gameModeHolder.GameMode = gameMode;
-        ((SinglePlayerGameMode)gameMode).Initialize(device);
+        var gameMode = Resources.Load<SinglePlayerGameplayGameMode>("GameModes/SinglePlayer");
+        this.gameModeHolder.GameplayGameMode = gameMode;
+        if (device.isLeft)
+        {
+            gameMode.playerHat = hatDb.GetHat(this.playerHatData.leftControllerHatIndex);
+        }
+        else
+        {
+            gameMode.playerHat = hatDb.GetHat(this.playerHatData.rightControllerHatIndex);
+        }
+        gameMode.Initialize(device);
     }
     
     private void HatSelectionPressed(eteeDevice device)
     {
+        Resources.Load<HatSelectGameplayGameMode>("GameModes/HatSelectGameMode").Initialize(device);
         GetComponent<SignalReceiver>().ChangeReactionAtIndex(0, this.HatSelectionPressedEvent);
     }
 }

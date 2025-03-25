@@ -24,7 +24,7 @@ public class GameModeHolderEditor : Editor
     {
         this.gameModeHolder = target as GameModeHolder;
 
-        var _ = this.gameModeHolder.GameMode;
+        var _ = this.gameModeHolder.GameplayGameMode;
         
         root = this.visualTreeAsset.CloneTree();
 
@@ -50,14 +50,14 @@ public class GameModeHolderEditor : Editor
         if(this.currentGameModeInspector != null)
             inspectorParent.Remove(this.currentGameModeInspector);
         
-        this.currentGameModeInspector = new InspectorElement(this.gameModeHolder.GameMode);
+        this.currentGameModeInspector = new InspectorElement(this.gameModeHolder.GameplayGameMode);
         inspectorParent.Add(this.currentGameModeInspector);
     }
 
 
     private void SetDropDownCurrentValueText()
     {
-        root.Q<DropdownField>("CurrentSelectedGameModeDropdown").value = this.gameModeHolder.GameMode.name;
+        root.Q<DropdownField>("CurrentSelectedGameModeDropdown").value = this.gameModeHolder.GameplayGameMode.name;
     }
     private void DiscoverGameModeNames()
     {
@@ -82,7 +82,7 @@ public class GameModeHolderEditor : Editor
 
     private void SelectedGameModeDropdownChanged(ChangeEvent<string> evt)
     {
-        this.gameModeHolder.GameMode = this.gameModes[evt.newValue];
+        this.gameModeHolder.GameplayGameMode = this.gameModes[evt.newValue];
         this.DrawCurrentGameModeInspector();
     }
 }

@@ -26,7 +26,7 @@ public class HatChooserCustomEditor : Editor
 
         if (GUILayout.Button("Equip Hat"))
         {
-            this.t.EquipHat(this.hatToEquip);
+            this.t.HatIndex = this.hatToEquip;
         }
     }
 }

@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
 
         await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
         
-        GameMode.CangeToEndScreen();
+        GameplayGameMode.CangeToEndScreen();
     }
 }
 

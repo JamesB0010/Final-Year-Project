@@ -27,9 +27,13 @@ namespace eteeDeviceInput
         {
             this.leftTrackpadEvents.up += () => leftEvents.TrackpadSwipeUp?.Invoke();
             this.leftTrackpadEvents.down += () => leftEvents.TrackpadSwipeDown?.Invoke();
+            this.leftTrackpadEvents.left += () => leftEvents.TrackpadSwipeLeft?.Invoke();
+            this.leftTrackpadEvents.right += () => leftEvents.TrackpadSwipeRight?.Invoke();
 
             this.rightTrackpadEvents.up += () => rightEvents.TrackpadSwipeUp?.Invoke();
             this.rightTrackpadEvents.down += () => rightEvents.TrackpadSwipeDown?.Invoke();
+            this.rightTrackpadEvents.left += () => rightEvents.TrackpadSwipeLeft?.Invoke();
+            this.rightTrackpadEvents.right += () => rightEvents.TrackpadSwipeRight?.Invoke();
         }
 
         private void Update()
