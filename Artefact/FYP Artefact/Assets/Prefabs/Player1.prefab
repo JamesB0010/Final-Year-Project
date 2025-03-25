@@ -584,11 +584,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 1938711218
-      Data2: 1150131171
-      Data3: -1826017382
-      Data4: 624803105
-    Path: snapshot:/UnderWater
+      Data1: -305858110
+      Data2: 1077544075
+      Data3: 364853143
+      Data4: -989284662
+    Path: event:/CameraEnteredWater
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0
@@ -598,8 +598,8 @@ MonoBehaviour:
   NonRigidbodyVelocity: 0
   Params: []
   OverrideAttenuation: 0
-  OverrideMinDistance: 0
-  OverrideMaxDistance: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1001 &755166687660286204
 PrefabInstance:
   m_ObjectHideFlags: 0
