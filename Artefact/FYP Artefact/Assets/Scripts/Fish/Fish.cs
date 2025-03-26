@@ -75,6 +75,7 @@ public partial class Fish : MonoBehaviour
 
     public bool HasLostInterestForLongEnough()
     {
-        return Time.timeSinceLevelLoad - this.overrideSteeringSettings.lostInterestTimeStamp >= 7;
+        float timeSinceLostInterest = Time.timeSinceLevelLoad - this.overrideSteeringSettings.lostInterestTimeStamp;
+        return  timeSinceLostInterest >= 7;
     }
 }

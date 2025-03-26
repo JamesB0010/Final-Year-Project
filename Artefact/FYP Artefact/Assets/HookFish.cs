@@ -26,6 +26,23 @@ public class HookFish : MonoBehaviour
     private void Awake()
     {
         this.fishManager = FindObjectOfType<FishManager>();
+
+    }
+
+    private void Start()
+    { 
+        fishManager.MissedHookFish[this.playerIndex].AddListener(this.MissedHook);
+    }
+
+    private void MissedHook()
+    {
+        Vector3 fishHookPosition = this.fishHook.position;
+        this.fishHook.position.LerpTo(fishHookPosition + new Vector3(0, 2, 0), 0.2f,
+            val => this.fishHook.position = val,
+            pkg =>
+            {
+                this.fishHook.position.LerpTo(fishHookPosition, 0.4f, val => this.fishHook.position = val, null, null);
+            });
     }
 
     public void OnArmRaisedValueChanged(float newVal)
@@ -54,7 +71,6 @@ public class HookFish : MonoBehaviour
     {
         float squaredStandardDeviation = CalculateStandardDeviationSquared();
 
-        Debug.Log(squaredStandardDeviation);
         if (squaredStandardDeviation >= this.minFlickDeviation)
         {
             this.fishManager.TryHookClosestFish(this.playerIndex, this.fishHook.position);

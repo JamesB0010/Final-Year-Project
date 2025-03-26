@@ -1,18 +1,32 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FishManager : MonoBehaviour
 {
     [SerializeReference] private Fish[] fish;
     private Fish[] closestFishPlayer = new Fish[2];
+    [SerializeField] private float maxHookDistance;
+
+    private float[] hookAttemptTimestamp = {float.MaxValue, float.MaxValue};
+
+    [SerializeField] private float minTimeBetweenHookAttempts;
+    [HideInInspector] public UnityEvent[] MissedHookFish = new UnityEvent[2];
+
+    private void Awake()
+    {
+        this.MissedHookFish[0] = new UnityEvent();
+        this.MissedHookFish[1] = new UnityEvent();
+    }
 
     private Fish GetClosestFish(Vector3 position)
     {
         Fish closestFish = fish[0];
         float closestDistance = (fish[0].transform.position - position).sqrMagnitude;
-        for (int i = 1; i < fish.Length; i++)
+        for (int i = 0; i < fish.Length; i++)
         {
             if (!fish[i].HasLostInterestForLongEnough())
                 continue;
@@ -43,8 +57,19 @@ public class FishManager : MonoBehaviour
         }
     }
 
-    public void TryHookClosestFish(int playerIndex, Vector3 hookIndex)
+    public void TryHookClosestFish(int playerIndex, Vector3 hookPosition)
     {
-        Debug.Log("Try hook fish");
+        float timeSinceLastHookAttempt = Time.timeSinceLevelLoad - this.hookAttemptTimestamp[playerIndex];
+        if (timeSinceLastHookAttempt < this.minTimeBetweenHookAttempts)
+            return;
+        
+        if (Vector3.Distance(this.closestFishPlayer[playerIndex].transform.position, hookPosition) <= this.maxHookDistance)
+        {
+            Debug.Log("hook fish");
+        }
+        else
+        {
+            this.MissedHookFish[playerIndex]?.Invoke();
+        }
     }
 }

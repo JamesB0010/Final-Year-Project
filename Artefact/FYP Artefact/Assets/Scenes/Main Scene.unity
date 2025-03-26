@@ -100,7 +100,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 8dd33fc6cc6d9694f85f7ddd617e4b5a,
     type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: b781e1e981f81934089e01eccacf1786,
+  m_LightingSettings: {fileID: 4890085278179872738, guid: a463faefcf9d1d84fb8b374e58e7d55e,
     type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -10402,6 +10402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 8cf9e3e3ed8de5e44ac0bad69a94a5c5,
         type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 8cf9e3e3ed8de5e44ac0bad69a94a5c5,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: adae2e64e40db9142869a42d2bbc025b, type: 2}
@@ -12650,6 +12655,16 @@ MonoBehaviour:
   - {fileID: 1739175484}
   - {fileID: 31470281189223183}
   - {fileID: 596980718}
+  maxHookDistance: 2
+  hookAttemptTimestamp:
+  - 3.4028235e+38
+  - 3.4028235e+38
+  minTimeBetweenHookAttempts: 0.6
+  MissedHookFish:
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &331391330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17377,6 +17392,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: edc4bb32ad3a6884392c9d882eeff4b8,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: edc4bb32ad3a6884392c9d882eeff4b8,
         type: 3}
@@ -25248,6 +25268,11 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: edc4bb32ad3a6884392c9d882eeff4b8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: edc4bb32ad3a6884392c9d882eeff4b8,
+        type: 3}
+      propertyPath: m_CastShadows
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: edc4bb32ad3a6884392c9d882eeff4b8,
