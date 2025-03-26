@@ -95,6 +95,86 @@ PlayableDirector:
     value: {fileID: 9125679264006230766}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &1200488515307686976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5568686104158518302}
+  - component: {fileID: 8548319068767731579}
+  - component: {fileID: 7205471334738052614}
+  m_Layer: 6
+  m_Name: HookFish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5568686104158518302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200488515307686976}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8483630887401674921}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8548319068767731579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200488515307686976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbffe7978eabfb84c89806520fde5c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minFlickDeviation: 100
+  armBufferTimeLength: 0.1
+  attemptToHookFish:
+    m_PersistentCalls:
+      m_Calls: []
+  playerIndex: 0
+  fishHook: {fileID: 8846249488627109939}
+--- !u!114 &7205471334738052614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200488515307686976}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f2a51bdd1032954c90cc9ce53958cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inverted: 0
+  ArmRaiseAmountChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8548319068767731579}
+        m_TargetAssemblyTypeName: HookFish, Assembly-CSharp
+        m_MethodName: OnArmRaisedValueChanged
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1340443457284251029
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,6 +587,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1074882887698490876}
+  - {fileID: 5568686104158518302}
   m_Father: {fileID: 7090961686715221844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &9141950943868468122
@@ -552,6 +633,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1200488515307686976}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
   - delayTime: 0.5
     OnEventInvoke:

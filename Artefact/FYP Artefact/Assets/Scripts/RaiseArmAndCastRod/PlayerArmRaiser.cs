@@ -50,6 +50,6 @@ public class PlayerArmRaiser : MonoBehaviour
                 armRaiseAmount = 1 - armRaiseAmount;
 
             this.ArmRaiseAmountChanged?.Invoke(armRaiseAmount);
-            this.animator.SetFloat("ArmRaiseAmount", armRaiseAmount);
+            this.animator?.SetFloat("ArmRaiseAmount", armRaiseAmount);
     }
 }

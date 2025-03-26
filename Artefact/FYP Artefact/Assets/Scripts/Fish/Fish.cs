@@ -21,7 +21,7 @@ public partial class Fish : MonoBehaviour
     [SerializeField] private float stopDistanceForTakingBait;
 
 
-    private OverrideSteering overrideSteeringSettings = new OverrideSteering();
+    public OverrideSteering overrideSteeringSettings = new OverrideSteering();
 
     private void Awake()
     {
@@ -40,8 +40,6 @@ public partial class Fish : MonoBehaviour
 
             if ((this.overrideSteeringSettings.overrideMoveToPosition - mouth.position).magnitude <= this.stopDistanceForTakingBait)
                 this.overrideSteeringSettings.FishLostInterest();
-            
-            Debug.Log((this.overrideSteeringSettings.overrideMoveToPosition - mouth.position).magnitude);
         }
         else
         {
@@ -69,11 +67,10 @@ public partial class Fish : MonoBehaviour
         return sum.normalized * Mathf.Clamp(sum.magnitude, 0, this.maxVelocity);
     }
 
-    public UniTask OverideSteeringTowards(Vector3 location)
+    public OverrideSteering OverideSteeringTowards(Vector3 location)
     {
         this.overrideSteeringSettings.FishInterestedInPoint(location);
-        
-        return this.overrideSteeringSettings.SwimToBaitTCS.Task;
+        return this.overrideSteeringSettings;
     }
 
     public bool HasLostInterestForLongEnough()

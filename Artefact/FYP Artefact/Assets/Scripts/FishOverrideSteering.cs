@@ -6,7 +6,7 @@ using UnityEngine;
 
 public partial class Fish 
 {
-    private class OverrideSteering
+    public class OverrideSteering
     {
         public bool active;
     
@@ -14,16 +14,14 @@ public partial class Fish
 
         public float lostInterestTimeStamp = float.MinValue;
 
-        private UniTaskCompletionSource swimToBaitTCS = new UniTaskCompletionSource();
+        public event Action lostInterestInBait;
 
-        public UniTaskCompletionSource SwimToBaitTCS => this.swimToBaitTCS;
 
         public void FishLostInterest()
         {
             this.active = false;
             this.lostInterestTimeStamp = Time.timeSinceLevelLoad;
-            this.SwimToBaitTCS.TrySetException(new Exception("Fish Lost Interest"));
-            this.swimToBaitTCS = new UniTaskCompletionSource();
+            this.lostInterestInBait?.Invoke();
         }
 
         public void FishInterestedInPoint(Vector3 location)

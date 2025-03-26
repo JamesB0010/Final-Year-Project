@@ -6,7 +6,8 @@ using UnityEngine;
 public class FishManager : MonoBehaviour
 {
     [SerializeReference] private Fish[] fish;
-    
+    private Fish[] closestFishPlayer = new Fish[2];
+
     private Fish GetClosestFish(Vector3 position)
     {
         Fish closestFish = fish[0];
@@ -27,22 +28,23 @@ public class FishManager : MonoBehaviour
         return closestFish;
     }
     
-    public async void LockOntoClosestFish(Vector3 hookLocation)
+    public void LockOntoClosestFish(Vector3 hookLocation)
     {
-        while (true)
+        closestFishPlayer[0] = this.GetClosestFish(hookLocation);
+        if(fish == null)
+            return;
+        
+        closestFishPlayer[0].OverideSteeringTowards(hookLocation).lostInterestInBait += FishLostInterestInBait;
+        
+        void FishLostInterestInBait()
         {
-            Fish closestFish = this.GetClosestFish(hookLocation);
-            try
-            {
-                await closestFish.OverideSteeringTowards(hookLocation);
-                return;
-            }
-            catch
-            {
-                Debug.Log("Fish Lost Interest");
-            }
-
-            await UniTask.Yield();
+            closestFishPlayer[0].overrideSteeringSettings.lostInterestInBait -= FishLostInterestInBait;
+            this.LockOntoClosestFish(hookLocation);
         }
+    }
+
+    public void TryHookClosestFish(int playerIndex, Vector3 hookIndex)
+    {
+        Debug.Log("Try hook fish");
     }
 }
