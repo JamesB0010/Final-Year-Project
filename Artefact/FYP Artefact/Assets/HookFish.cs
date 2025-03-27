@@ -22,6 +22,8 @@ public class HookFish : MonoBehaviour
 
     [SerializeField] private Transform fishHook;
 
+    [SerializeField] private UnityEvent hookedFish;
+
     private FishManager fishManager;
     private void Awake()
     {
@@ -32,12 +34,19 @@ public class HookFish : MonoBehaviour
     private void Start()
     { 
         fishManager.MissedHookFish[this.playerIndex].AddListener(this.MissedHook);
+        fishManager.HookedFish[this.playerIndex].AddListener(this.OnHookedFish);
+    }
+
+    private void OnHookedFish()
+    {
+        //pass up the chain
+        this.hookedFish?.Invoke();
     }
 
     private void MissedHook()
     {
         Vector3 fishHookPosition = this.fishHook.position;
-        this.fishHook.position.LerpTo(fishHookPosition + new Vector3(0, 2, 0), 0.2f,
+        this.fishHook.position.LerpTo(fishHookPosition + new Vector3(0, 0.2f, 0), 0.2f,
             val => this.fishHook.position = val,
             pkg =>
             {

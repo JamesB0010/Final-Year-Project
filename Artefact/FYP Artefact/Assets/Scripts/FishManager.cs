@@ -11,15 +11,20 @@ public class FishManager : MonoBehaviour
     private Fish[] closestFishPlayer = new Fish[2];
     [SerializeField] private float maxHookDistance;
 
-    private float[] hookAttemptTimestamp = {float.MaxValue, float.MaxValue};
+    private float[] hookAttemptTimestamp = {float.MinValue, float.MinValue};
 
     [SerializeField] private float minTimeBetweenHookAttempts;
     [HideInInspector] public UnityEvent[] MissedHookFish = new UnityEvent[2];
+
+    [HideInInspector] public UnityEvent[] HookedFish = new UnityEvent[2];
 
     private void Awake()
     {
         this.MissedHookFish[0] = new UnityEvent();
         this.MissedHookFish[1] = new UnityEvent();
+
+        this.HookedFish[0] = new UnityEvent();
+        this.HookedFish[1] = new UnityEvent();
     }
 
     private Fish GetClosestFish(Vector3 position)
@@ -65,11 +70,12 @@ public class FishManager : MonoBehaviour
         
         if (Vector3.Distance(this.closestFishPlayer[playerIndex].transform.position, hookPosition) <= this.maxHookDistance)
         {
-            Debug.Log("hook fish");
+            this.HookedFish[playerIndex]?.Invoke();
         }
         else
         {
             this.MissedHookFish[playerIndex]?.Invoke();
+            this.hookAttemptTimestamp[playerIndex] = Time.timeSinceLevelLoad;
         }
     }
 }

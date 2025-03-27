@@ -12655,12 +12655,14 @@ MonoBehaviour:
   - {fileID: 1739175484}
   - {fileID: 31470281189223183}
   - {fileID: 596980718}
-  maxHookDistance: 2
-  hookAttemptTimestamp:
-  - 3.4028235e+38
-  - 3.4028235e+38
+  maxHookDistance: 10
   minTimeBetweenHookAttempts: 0.6
   MissedHookFish:
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  HookedFish:
   - m_PersistentCalls:
       m_Calls: []
   - m_PersistentCalls:
