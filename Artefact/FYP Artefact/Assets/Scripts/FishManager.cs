@@ -17,14 +17,13 @@ public class FishManager : MonoBehaviour
 
     [SerializeField] private float minTimeBetweenHookAttempts;
 
-
-    [SerializeField] private Transform[] reelFishStartPositions;
-    
     [HideInInspector] public UnityEvent[] MissedHookFish = new UnityEvent[2];
 
     [HideInInspector] public UnityEvent[] HookedFish = new UnityEvent[2];
 
     [SerializeField] private UnityEvent<Fish>[] StartedPossessedFishEvent = new UnityEvent<Fish>[2];
+    
+    [SerializeField] private FishStartPositions2DArray fishStartPositions;
     private void Awake()
     {
         this.MissedHookFish[0] = new UnityEvent();
@@ -68,7 +67,7 @@ public class FishManager : MonoBehaviour
             this.LockOntoClosestFish(hookLocation);
         }
     }
-
+    
     public void TryHookClosestFish(int playerIndex, Vector3 hookPosition)
     {
         float timeSinceLastHookAttempt = Time.timeSinceLevelLoad - this.hookAttemptTimestamp[playerIndex];
@@ -100,7 +99,7 @@ public class FishManager : MonoBehaviour
 
         UniTaskCompletionSource<Fish> fishMoveCompletion = new UniTaskCompletionSource<Fish>();
 
-        Vector3 startPosition = this.reelFishStartPositions[playerIndex].position;
+        Vector3 startPosition = this.fishStartPositions.transformArrays[playerIndex].transforms[0].position;
 
         fish.transform.forward = startPosition - fish.transform.position;
         
@@ -113,5 +112,24 @@ public class FishManager : MonoBehaviour
         });
 
         return fishMoveCompletion.Task;
+    }
+
+    public UniTask MoveFishToStartPoint(Fish fish, int playerIndex, int startPositionLayer)
+    {
+        UniTaskCompletionSource fishMoveTCS = new UniTaskCompletionSource();
+
+        Vector3 startPosition = this.fishStartPositions.transformArrays[playerIndex].transforms[startPositionLayer].position;
+
+        fish.transform.forward = startPosition - fish.transform.position;
+
+        fish.transform.position.LerpTo(startPosition, 2f, value =>
+        {
+            fish.transform.position = value;
+        }, pkg =>
+        {
+            fishMoveTCS.TrySetResult();
+        });
+
+        return fishMoveTCS.Task;
     }
 }

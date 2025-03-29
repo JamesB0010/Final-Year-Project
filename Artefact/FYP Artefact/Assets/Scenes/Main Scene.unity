@@ -11250,6 +11250,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 303557976}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &305840971
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 305840972}
+  m_Layer: 0
+  m_Name: Layer2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &305840972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 305840971}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -417.6, y: 0.1, z: -24.4}
+  m_LocalScale: {x: 4.981, y: 4.981, z: 4.981}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 697627991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &309635069
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12688,9 +12719,6 @@ MonoBehaviour:
   - {fileID: 596980718}
   maxHookDistance: 4
   minTimeBetweenHookAttempts: 0.6
-  reelFishStartPositions:
-  - {fileID: 863606620}
-  - {fileID: 2102806807}
   MissedHookFish:
   - m_PersistentCalls:
       m_Calls: []
@@ -12730,6 +12758,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  fishStartPositions:
+    transformArrays:
+    - transforms:
+      - {fileID: 863606620}
+      - {fileID: 1069846172}
+      - {fileID: 1480172790}
+    - transforms:
+      - {fileID: 2102806807}
+      - {fileID: 305840972}
+      - {fileID: 1187261395}
 --- !u!1001 &331391330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23082,6 +23120,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 697285717}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &697627990
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 697627991}
+  m_Layer: 0
+  m_Name: ReelStartPositionsPlayer2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &697627991
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697627990}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2102806807}
+  - {fileID: 305840972}
+  - {fileID: 1187261395}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &701760304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28887,7 +28959,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863606620}
   m_Layer: 0
-  m_Name: Player1ReelFishStartPos
+  m_Name: Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28901,12 +28973,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863606617}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -415.55, y: 2.67, z: -51.55}
   m_LocalScale: {x: 4.981, y: 4.981, z: 4.981}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1443484968}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &867824788
 PrefabInstance:
@@ -35014,6 +35086,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1069284452}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1069846171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1069846172}
+  m_Layer: 0
+  m_Name: Layer2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1069846172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069846171}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.4132636, z: -0, w: 0.9106115}
+  m_LocalPosition: {x: -403.7578, y: 2.67, z: -51.66088}
+  m_LocalScale: {x: 117.299416, y: 117.29944, z: 117.299416}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1443484968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1072746015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44537,6 +44640,37 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: 0181486c22ce4cc4c91642facaa9f590, type: 2}
+--- !u!1 &1187261394
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1187261395}
+  m_Layer: 0
+  m_Name: Layer3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1187261395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187261394}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -417.6, y: 0.1, z: -24.4}
+  m_LocalScale: {x: 4.981, y: 4.981, z: 4.981}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 697627991}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1189303003
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52159,6 +52293,40 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1442720071}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1443484967
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1443484968}
+  m_Layer: 0
+  m_Name: ReelStartPositionsPlayer1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1443484968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443484967}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 863606620}
+  - {fileID: 1069846172}
+  - {fileID: 1480172790}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1451189768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3923166969034749456, guid: eebaae2eb17398640aec875c9be0fdf0,
@@ -52769,6 +52937,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1477537286}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1480172789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1480172790}
+  m_Layer: 0
+  m_Name: Layer3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1480172790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1480172789}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1443484968}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1480799533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70457,7 +70656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102806807}
   m_Layer: 0
-  m_Name: Player2ReelFishStartPos
+  m_Name: Layer1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70471,12 +70670,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102806804}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -417.6, y: 0.1, z: -24.4}
   m_LocalScale: {x: 4.981, y: 4.981, z: 4.981}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 697627991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2104744219
 PrefabInstance:
@@ -71668,8 +71867,8 @@ SceneRoots:
   - {fileID: 1734169933}
   - {fileID: 1829350292}
   - {fileID: 1174443054}
-  - {fileID: 863606620}
-  - {fileID: 2102806807}
   - {fileID: 1414427813}
   - {fileID: 701760304}
   - {fileID: 1790665750}
+  - {fileID: 1443484968}
+  - {fileID: 697627991}

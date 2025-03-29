@@ -19,6 +19,8 @@ public class PlayerArmRaiser : MonoBehaviour
 
     private Transform placeHolder;
 
+    [SerializeField] private bool roundArmRaiseValue;
+
     private void Awake()
     {
         this.placeHolder = new GameObject().transform;
@@ -44,7 +46,7 @@ public class PlayerArmRaiser : MonoBehaviour
             Debug.DrawRay(this.placeHolder.position, Vector3.up, Color.red);
             float armRaiseAmount = Vector3.Dot(Vector3.up, this.placeHolder.forward);
             armRaiseAmount = 1 - armRaiseAmount.MapRange(-1, 1, 0, 1);
-            armRaiseAmount = (float)Math.Round((double)armRaiseAmount, 2, MidpointRounding.AwayFromZero);
+            armRaiseAmount = this.roundArmRaiseValue ? (float)Math.Round((double)armRaiseAmount, 2, MidpointRounding.AwayFromZero) : armRaiseAmount;
 
             if (this.inverted)
                 armRaiseAmount = 1 - armRaiseAmount;
