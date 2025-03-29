@@ -32,7 +32,7 @@ public partial class Fish : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (overrideSteeringSettings.active)
+        if (overrideSteeringSettings.active && this.overrideSteeringSettings.mode == OverrideSteering.OverrideSteeringMode.toBait)
         {
             this.rigidBody.velocity = this.overrideSteeringSettings.overrideMoveToPosition - mouth.position;
             if (this.rigidBody.velocity.magnitude > this.maxVelocity)
@@ -41,10 +41,13 @@ public partial class Fish : MonoBehaviour
             if ((this.overrideSteeringSettings.overrideMoveToPosition - mouth.position).magnitude <= this.stopDistanceForTakingBait)
                 this.overrideSteeringSettings.FishLostInterest();
         }
-        else
+        else if(overrideSteeringSettings.active == false)
         {
             this.rigidBody.velocity = this.SumFishSteeringBehaviourVelocities();
         }
+
+        if (this.rigidBody.velocity == Vector3.zero)
+            return;
 
         Quaternion oldRot = transform.rotation;
         
@@ -77,5 +80,12 @@ public partial class Fish : MonoBehaviour
     {
         float timeSinceLostInterest = Time.timeSinceLevelLoad - this.overrideSteeringSettings.lostInterestTimeStamp;
         return  timeSinceLostInterest >= 7;
+    }
+
+    public void PosessFish()
+    {
+        this.overrideSteeringSettings.PosessFish();
+        this.rigidBody.velocity = Vector3.zero;
+        this.rigidBody.isKinematic = true;
     }
 }

@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Events;
+using Object = UnityEngine.Object;
 
 public class FishManager : MonoBehaviour
 {
@@ -14,10 +16,15 @@ public class FishManager : MonoBehaviour
     private float[] hookAttemptTimestamp = {float.MinValue, float.MinValue};
 
     [SerializeField] private float minTimeBetweenHookAttempts;
+
+
+    [SerializeField] private Transform[] reelFishStartPositions;
+    
     [HideInInspector] public UnityEvent[] MissedHookFish = new UnityEvent[2];
 
     [HideInInspector] public UnityEvent[] HookedFish = new UnityEvent[2];
 
+    [SerializeField] private UnityEvent<Fish>[] StartedPossessedFishEvent = new UnityEvent<Fish>[2];
     private void Awake()
     {
         this.MissedHookFish[0] = new UnityEvent();
@@ -77,5 +84,34 @@ public class FishManager : MonoBehaviour
             this.MissedHookFish[playerIndex]?.Invoke();
             this.hookAttemptTimestamp[playerIndex] = Time.timeSinceLevelLoad;
         }
+    }
+
+    private Fish PossessClosestFish(int playerIndex)
+    {
+        Fish fish = this.closestFishPlayer[playerIndex];
+        fish.PosessFish();
+        this.StartedPossessedFishEvent[playerIndex]?.Invoke(fish);
+        return fish;
+    }
+
+    public UniTask<Fish> MoveTargetFishToStartPoint(int playerIndex)
+    {
+        Fish fish = this.PossessClosestFish(playerIndex);
+
+        UniTaskCompletionSource<Fish> fishMoveCompletion = new UniTaskCompletionSource<Fish>();
+
+        Vector3 startPosition = this.reelFishStartPositions[playerIndex].position;
+
+        fish.transform.forward = startPosition - fish.transform.position;
+        
+        fish.transform.position.LerpTo(startPosition, 2f, value =>
+        {
+            fish.transform.position = value;
+        }, pkg =>
+        {
+            fishMoveCompletion.TrySetResult(fish);
+        });
+
+        return fishMoveCompletion.Task;
     }
 }

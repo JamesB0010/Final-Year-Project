@@ -8,6 +8,13 @@ public partial class Fish
 {
     public class OverrideSteering
     {
+        public enum OverrideSteeringMode
+        {
+            toBait,
+            possessed
+        }
+
+        public OverrideSteeringMode mode;
         public bool active;
     
         public Vector3 overrideMoveToPosition;
@@ -27,7 +34,14 @@ public partial class Fish
         public void FishInterestedInPoint(Vector3 location)
         {
             this.active = true;
+            this.mode = OverrideSteeringMode.toBait;
             this.overrideMoveToPosition = location;
+        }
+
+        public void PosessFish()
+        {
+            this.active = true;
+            this.mode = OverrideSteeringMode.possessed;
         }
     }
 }
