@@ -74,6 +74,13 @@ public class MainMenuNavigation : MonoBehaviour
         {
             this.playOptionContainers[this.RightSelectedContainer].AddToClassList("Player2Focused");
         };
+        
+        
+        //trying to test vibration but this doesnt seem to work
+        eteeAPI.EnableHaptics();
+        
+        eteeAPI.VibrateDevice(0);
+        //also put vibrate device in update but nothing
     }
 
     private void Update()
