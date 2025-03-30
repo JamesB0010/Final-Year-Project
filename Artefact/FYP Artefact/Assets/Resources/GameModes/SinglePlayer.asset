@@ -19,5 +19,7 @@ MonoBehaviour:
   waterHeight: 3.646678
   endScreenScene: SinglePlayerGameOver
   maxRippleCount: 4
+  playerHat: {fileID: 5823472438485507566, guid: 2208dc07ef62a3140b16dc6783621902,
+    type: 3}
   playerPrefab: {fileID: 4041434136609743891, guid: 75f4860480b2562428c89f7681575d7f,
     type: 3}

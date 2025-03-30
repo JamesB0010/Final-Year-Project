@@ -21,5 +21,7 @@ MonoBehaviour:
   maxRippleCount: 6
   Player1Prefab: {fileID: 4041434136609743891, guid: 75f4860480b2562428c89f7681575d7f,
     type: 3}
-  Player2Prefab: {fileID: 4041434136609743891, guid: 25b0cc121e0839a48b2d4e38432a27a3,
+  Player2Prefab: {fileID: 4041434136609743891, guid: c117bf4ab2995f746a8fe278e7bc5a2e,
     type: 3}
+  player1Hat: {fileID: 0}
+  player2Hat: {fileID: 0}

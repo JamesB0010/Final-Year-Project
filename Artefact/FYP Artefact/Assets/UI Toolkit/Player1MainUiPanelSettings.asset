@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 19101, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: PanelSettings
+  m_Name: Player1MainUiPanelSettings
   m_EditorClassIdentifier: 
   themeUss: {fileID: -4733365628477956816, guid: 1e7084ecc04e5ae40a75257ae39f6eaa,
     type: 3}
-  m_TargetTexture: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: 60be0be5bb68be24a8aabd29d79c7415, type: 2}
   m_ScaleMode: 2
   m_ReferenceSpritePixelsPerUnit: 100
   m_Scale: 1
