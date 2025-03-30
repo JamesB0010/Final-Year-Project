@@ -9,7 +9,7 @@ using Utility;
 
 public class PlayerArmRaiser : MonoBehaviour
 {
-    [SerializeField] private bool inverted;
+    private bool inverted;
 
     [SerializeField] private UnityEvent<float> ArmRaiseAmountChanged;
     
@@ -26,6 +26,7 @@ public class PlayerArmRaiser : MonoBehaviour
         this.placeHolder = new GameObject().transform;
         this.eteeDeviceHolder = GetComponentInParent<eteeDeviceHolder>();
         this.animator = GetComponentInParent<Animator>();
+        this.inverted = !this.eteeDeviceHolder.Device.isLeft;
     }
 
     private void Update()

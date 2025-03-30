@@ -12,8 +12,10 @@ public class MoveFishBackIntoPond : MonoBehaviour
         this.fishManager = FindObjectOfType<FishManager>();
     }
 
-    public void Execute()
+    public void Execute(Fish fish)
     {
-        this.fishManager.PlaceFishBackIntoPond(transform.GetChild(0));
+        fish.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        fish.overrideSteeringSettings.active = false;
+        this.fishManager.PlaceFishBackIntoPond(fish.transform);
     }
 }

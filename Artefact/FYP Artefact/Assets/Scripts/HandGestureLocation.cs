@@ -62,7 +62,7 @@ public class HandGestureLocation : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(this.rotatePoint.rotation);
+        //Debug.Log(this.rotatePoint.rotation);
         float rotationLikeness = Quaternion.Dot(this.rotatePoint.rotation, idealRotatePointRotation);
 
         bool rotationIsWithinTolerance = rotationLikeness >= 1 - this.tolerance && rotationLikeness <= 1 + this.tolerance;
@@ -81,7 +81,7 @@ public class HandGestureLocation : MonoBehaviour
         {
             this.entered = false;
         }
-        Debug.Log(rotationLikeness);
+        //Debug.Log(rotationLikeness);
     }
 
     public void ResetValues()

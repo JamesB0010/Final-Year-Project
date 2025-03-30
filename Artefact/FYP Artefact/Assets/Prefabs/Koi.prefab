@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b2d92d0a8c1b1a4e9feb39465813e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishType: 1
   mouth: {fileID: 7665806693825214320}
   maxVelocity: 1.6
   zRotSpeed: 1.71

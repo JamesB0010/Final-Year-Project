@@ -31,16 +31,21 @@ public class HandGestureReader : MonoBehaviour
         bool handOpen = openLikeness > closedLikeness && openLikeness > rockOnLikeness;
         bool handRockOn = rockOnLikeness > closedLikeness && rockOnLikeness > openLikeness;
         
+        Debug.Log($"index: {indexPull}, middle: {middlePull}, ring: {ringPull}, pinky: {pinkyPull}");
+        
         if (handClosed)
         {
+            Debug.Log("Hand Closed");
             return HandGesture.closed;
         }
         else if (handOpen)
         {
+            Debug.Log("Hand Open");
             return HandGesture.open;
         }
         else if (handRockOn)
         {
+            Debug.Log("Hand Rock On");
             return HandGesture.rockOn;
         }
 

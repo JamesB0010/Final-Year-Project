@@ -9,6 +9,7 @@ using UnityEngine.Serialization;
 
 public partial class Fish : MonoBehaviour
 {
+    public FishTypes fishType;
     private FishSteeringBehaviour[] fishSteeringBehvaiours;
     private Rigidbody rigidBody;
     
