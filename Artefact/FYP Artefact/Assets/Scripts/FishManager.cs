@@ -24,6 +24,10 @@ public class FishManager : MonoBehaviour
     [SerializeField] private UnityEvent<Fish>[] StartedPossessedFishEvent = new UnityEvent<Fish>[2];
     
     [SerializeField] private FishStartPositions2DArray fishStartPositions;
+
+    [SerializeField] private Transform replaceFishLocation;
+
+    [SerializeField] private Transform FishParentTransform;
     private void Awake()
     {
         this.MissedHookFish[0] = new UnityEvent();
@@ -131,5 +135,11 @@ public class FishManager : MonoBehaviour
         });
 
         return fishMoveTCS.Task;
+    }
+
+    public void PlaceFishBackIntoPond(Transform fish)
+    {
+        fish.parent = this.FishParentTransform;
+        fish.position = this.replaceFishLocation.position;
     }
 }

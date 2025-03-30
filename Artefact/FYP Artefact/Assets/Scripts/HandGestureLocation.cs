@@ -24,6 +24,8 @@ public class HandGestureLocation : MonoBehaviour
     [SerializeField] private Image uiImage;
 
     [SerializeField] private UnityEvent finished;
+
+    [SerializeField] private UnityEvent fillProgress;
     
     private int progress = 0;
     private int maxProgress = 3;
@@ -41,6 +43,10 @@ public class HandGestureLocation : MonoBehaviour
             {
                 this.enabled = false;
                 this.finished?.Invoke();
+            }
+            else
+            {
+                this.fillProgress?.Invoke();
             }
 
             float t = ((float)this.progress) / this.maxProgress;
