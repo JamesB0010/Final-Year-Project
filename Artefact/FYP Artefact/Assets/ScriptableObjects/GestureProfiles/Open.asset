@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83dd39eae2e831e44807eea09442cb33, type: 3}
   m_Name: Open
   m_EditorClassIdentifier: 
-  pullAmounts: {x: 1, y: 1, z: 1, w: 1}
+  pullAmounts: {x: 30, y: 30, z: 30, w: 30}

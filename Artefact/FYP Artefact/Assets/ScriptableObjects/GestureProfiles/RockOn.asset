@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83dd39eae2e831e44807eea09442cb33, type: 3}
   m_Name: RockOn
   m_EditorClassIdentifier: 
-  pullAmounts: {x: 1, y: 150, z: 150, w: 1}
+  pullAmounts: {x: 30, y: 70, z: 70, w: 30}

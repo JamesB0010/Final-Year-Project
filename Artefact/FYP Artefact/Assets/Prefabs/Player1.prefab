@@ -463,13 +463,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1351637338504653703}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -394.25, y: 3.42, z: -63.09}
+  m_LocalRotation: {x: -0, y: 0.013607175, z: -0, w: 0.99990743}
+  m_LocalPosition: {x: 9192, y: 3.419983, z: 45817}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 755919659719758805}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 1.559, z: 0}
 --- !u!114 &3420873096592104643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,10 +483,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yRotateToX: 0
-  yRotateToY: 0
+  yRotateToY: -0.92072105
   yRotateToZ: 0
-  yRotateToW: 0
-  rotationTime: 0.5
+  yRotateToW: -0.3902213
+  rotationTime: 1
 --- !u!1 &1459240311855511838
 GameObject:
   m_ObjectHideFlags: 0
@@ -755,6 +755,98 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7548397404365936994}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1343890659599650167}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7332350928677324069}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3238505534950161436}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3776607241254391517}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 319475007106035200}
+        m_TargetAssemblyTypeName: GameplayPipelineStage, Assembly-CSharp
+        m_MethodName: StageComplete
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  player: {fileID: 3701358851693657769}
+  fishReeledInFully:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1700755645089479008}
+        m_TargetAssemblyTypeName: CollectFishParent, Assembly-CSharp
+        m_MethodName: BringFishToMe
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2061127703290350794
 GameObject:
   m_ObjectHideFlags: 0
@@ -802,12 +894,12 @@ MonoBehaviour:
   handGesture: 1
   handGestureReader: {fileID: 5072832796501796683}
   idealRotatePointRotationX: 0
-  idealRotatePointRotationY: -0.83231
+  idealRotatePointRotationY: -0.87776613
   idealRotatePointRotationZ: 0
-  idealRotatePointRotationW: -0.55431
-  rotatePoint: {fileID: 3296771461649434747}
-  tolerance: 0.0022162
-  uiImage: {fileID: 4977886371587053208}
+  idealRotatePointRotationW: 0.4790895
+  rotatePoint: {fileID: 4986969654088455638}
+  tolerance: 0.0085647
+  uiImage: {fileID: 2791283682531524320}
   finished:
     m_PersistentCalls:
       m_Calls:
@@ -818,11 +910,55 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &2270820004390492699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6612245052033465715}
+  - component: {fileID: 8493627215691656017}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6612245052033465715
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2270820004390492699}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.81017745, z: -0, w: 0.58618474}
+  m_LocalPosition: {x: -9250.181, y: -712.7784, z: -44970.973}
+  m_LocalScale: {x: 117.233284, y: 117.2333, z: 117.233284}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7652041997329367843}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8493627215691656017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2270820004390492699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2501064160485955500
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1122,50 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &3236115551356673526
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4880352770079174283}
+  - component: {fileID: 1700755645089479008}
+  m_Layer: 6
+  m_Name: FishParent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4880352770079174283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3236115551356673526}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 104, y: -353, z: 391}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2911294107788225451}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1700755645089479008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3236115551356673526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bb700288e51a904a8872031c64f25e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3313733505672979291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1034,7 +1214,7 @@ MonoBehaviour:
   yRotateToY: -0.8737869
   yRotateToZ: 0
   yRotateToW: -0.486309
-  rotationTime: 1
+  rotationTime: 1.5
 --- !u!1 &3421398782250517875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1129,15 +1309,27 @@ MonoBehaviour:
   handGesture: 2
   handGestureReader: {fileID: 5072832796501796683}
   idealRotatePointRotationX: 0
-  idealRotatePointRotationY: 0
+  idealRotatePointRotationY: -0.9127863
   idealRotatePointRotationZ: 0
-  idealRotatePointRotationW: 0
+  idealRotatePointRotationW: 0.4084376
   rotatePoint: {fileID: 3169855585894908552}
-  tolerance: 0
-  uiImage: {fileID: 7132044133622152205}
+  tolerance: 0.0014538
+  uiImage: {fileID: 7841490053535462432}
   finished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2667880708110541455}
+        m_TargetAssemblyTypeName: ReelFishInManager, Assembly-CSharp
+        m_MethodName: ReelActionComplete
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3727326402720305838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,12 +1551,12 @@ MonoBehaviour:
   handGesture: 0
   handGestureReader: {fileID: 5072832796501796683}
   idealRotatePointRotationX: 0
-  idealRotatePointRotationY: -0.9518
+  idealRotatePointRotationY: -0.9848474
   idealRotatePointRotationZ: 0
-  idealRotatePointRotationW: 0.30672
-  rotatePoint: {fileID: 3296771461649434747}
-  tolerance: 0.0023452
-  uiImage: {fileID: 8536576851334324767}
+  idealRotatePointRotationW: 0.1734235
+  rotatePoint: {fileID: 4986969654088455638}
+  tolerance: 0.0050048
+  uiImage: {fileID: 3844790866244592844}
   finished:
     m_PersistentCalls:
       m_Calls:
@@ -1375,7 +1567,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1448,6 +1640,71 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &4059765340520695839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2911294107788225451}
+  - component: {fileID: 6494595075439232720}
+  m_Layer: 6
+  m_Name: CelebrateWithFish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2911294107788225451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059765340520695839}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2910057339719212824}
+  - {fileID: 4880352770079174283}
+  m_Father: {fileID: 7090961686715221844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6494595075439232720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4059765340520695839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3578f562db7bf4cb70c27247965595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StageEnteredEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7444499187279306165}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  delayedStageEnteredEvents: []
+  StageCompleteEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4170200365694545999
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,6 +1859,37 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
+--- !u!1 &4437747293544709285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2910057339719212824}
+  m_Layer: 6
+  m_Name: Timeline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2910057339719212824
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4437747293544709285}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2911294107788225451}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4627915161474531763
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,15 +1937,27 @@ MonoBehaviour:
   handGesture: 0
   handGestureReader: {fileID: 5072832796501796683}
   idealRotatePointRotationX: 0
-  idealRotatePointRotationY: 0
+  idealRotatePointRotationY: -0.99751306
   idealRotatePointRotationZ: 0
-  idealRotatePointRotationW: 0
+  idealRotatePointRotationW: 0.07048309
   rotatePoint: {fileID: 3169855585894908552}
-  tolerance: 0
-  uiImage: {fileID: 8536576851334324767}
+  tolerance: 0.0020283
+  uiImage: {fileID: 1461361096427424174}
   finished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2667880708110541455}
+        m_TargetAssemblyTypeName: ReelFishInManager, Assembly-CSharp
+        m_MethodName: ReelActionComplete
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4705207527902713611
 GameObject:
   m_ObjectHideFlags: 0
@@ -1998,12 +2298,12 @@ MonoBehaviour:
   handGesture: 2
   handGestureReader: {fileID: 5072832796501796683}
   idealRotatePointRotationX: 0
-  idealRotatePointRotationY: -0.99537
+  idealRotatePointRotationY: -0.9685479
   idealRotatePointRotationZ: 0
-  idealRotatePointRotationW: -0.09608
-  rotatePoint: {fileID: 3296771461649434747}
-  tolerance: 0.0000136
-  uiImage: {fileID: 7132044133622152205}
+  idealRotatePointRotationW: -0.2488272
+  rotatePoint: {fileID: 4986969654088455638}
+  tolerance: 0.004512
+  uiImage: {fileID: 2545625543830162175}
   finished:
     m_PersistentCalls:
       m_Calls:
@@ -2014,7 +2314,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2294,6 +2594,78 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &7444499187279306165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7652041997329367843}
+  - component: {fileID: 5504868811245095028}
+  m_Layer: 6
+  m_Name: CollectFishVCam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7652041997329367843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444499187279306165}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.5105901, y: 0.4901928, z: 0.5097604, w: 0.48903283}
+  m_LocalPosition: {x: 101, y: -493, z: -7}
+  m_LocalScale: {x: 1.0005641, y: 1.0005646, z: 1.0005646}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6612245052033465715}
+  m_Father: {fileID: 3262962946396341210}
+  m_LocalEulerAnglesHint: {x: 267.641, y: -272.76, z: 2.779007}
+--- !u!114 &5504868811245095028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444499187279306165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 20
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 60
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 6612245052033465715}
 --- !u!1 &7548397404365936994
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,15 +2863,27 @@ MonoBehaviour:
   handGesture: 1
   handGestureReader: {fileID: 5072832796501796683}
   idealRotatePointRotationX: 0
-  idealRotatePointRotationY: 0
+  idealRotatePointRotationY: -0.93318415
   idealRotatePointRotationZ: 0
-  idealRotatePointRotationW: 0
+  idealRotatePointRotationW: -0.3593987
   rotatePoint: {fileID: 3169855585894908552}
-  tolerance: 0
-  uiImage: {fileID: 4977886371587053208}
+  tolerance: 0.0020283
+  uiImage: {fileID: 8075176976211451252}
   finished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2667880708110541455}
+        m_TargetAssemblyTypeName: ReelFishInManager, Assembly-CSharp
+        m_MethodName: ReelActionComplete
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &7855721053966400648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2712,7 +3096,19 @@ MonoBehaviour:
   delayedStageEnteredEvents: []
   StageCompleteEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8353375834035986417}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6240292346157986332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5268,6 +5664,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 52393593730724414}
+    - targetCorrespondingSourceObject: {fileID: 1736869589947088543, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7652041997329367843}
     - targetCorrespondingSourceObject: {fileID: 3411616128073636641, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       insertIndex: -1
@@ -5280,6 +5680,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4941674948611426988}
+    - targetCorrespondingSourceObject: {fileID: 6285598077770201617, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2911294107788225451}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 956109871769246038, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}

@@ -93,15 +93,17 @@ public class FishManager : MonoBehaviour
         return fish;
     }
 
-    public UniTask<Fish> MoveTargetFishToStartPoint(int playerIndex)
+    public UniTask<Fish> MoveTargetFishToStartPoint(int playerIndex, Vector3 playerPosition)
     {
         Fish fish = this.PossessClosestFish(playerIndex);
-
+        
         UniTaskCompletionSource<Fish> fishMoveCompletion = new UniTaskCompletionSource<Fish>();
 
         Vector3 startPosition = this.fishStartPositions.transformArrays[playerIndex].transforms[0].position;
 
-        fish.transform.forward = startPosition - fish.transform.position;
+        float yPos = fish.transform.position.y;
+        
+        fish.transform.forward = fish.transform.position - new Vector3(playerPosition.x, yPos, playerPosition.z);
         
         fish.transform.position.LerpTo(startPosition, 2f, value =>
         {
@@ -119,8 +121,6 @@ public class FishManager : MonoBehaviour
         UniTaskCompletionSource fishMoveTCS = new UniTaskCompletionSource();
 
         Vector3 startPosition = this.fishStartPositions.transformArrays[playerIndex].transforms[startPositionLayer].position;
-
-        fish.transform.forward = startPosition - fish.transform.position;
 
         fish.transform.position.LerpTo(startPosition, 2f, value =>
         {

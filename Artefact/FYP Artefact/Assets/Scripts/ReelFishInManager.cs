@@ -20,6 +20,10 @@ public class ReelFishInManager : MonoBehaviour
         { new UniTaskCompletionSource(), new UniTaskCompletionSource(), new UniTaskCompletionSource() };
 
     [SerializeField] private UnityEvent[] layerCompleteEvents;
+
+    [SerializeField] private Transform player;
+
+    [SerializeField] private UnityEvent<Fish> fishReeledInFully;
     
     private void Awake()
     {
@@ -28,15 +32,25 @@ public class ReelFishInManager : MonoBehaviour
 
     public async void Execute()
     {
-        Fish fish = await this.fishManager.MoveTargetFishToStartPoint(this.playerIndex);
+        Fish fish = await this.fishManager.MoveTargetFishToStartPoint(this.playerIndex, this.player.position);
         fish.transform.parent = this.reelInRotators[0].transform;
         this.reelInRotators[0].Activate();
         await this.layerCompletionTCS[0].Task;
+        Debug.Log("Layer 1 complete!");
         this.layerCompleteEvents[0]?.Invoke();
         fish.transform.parent = this.reelInRotators[1].transform;
-        Debug.Log("Layer 0 complete!");
         await this.fishManager.MoveFishToStartPoint(fish, this.playerIndex, 1);
-        //this.reelInRotators[1].Activate();
+        this.reelInRotators[1].Activate();
+        await this.layerCompletionTCS[1].Task;
+        Debug.Log("Layer 2 complete!");
+        this.layerCompleteEvents[1]?.Invoke();
+        fish.transform.parent = this.reelInRotators[2].transform;
+        await this.fishManager.MoveFishToStartPoint(fish, this.playerIndex, 2);
+        this.reelInRotators[2].Activate();
+        await this.layerCompletionTCS[2].Task;
+        this.layerCompleteEvents[2]?.Invoke();
+        Debug.Log("Layer 3 complete!");
+        this.fishReeledInFully?.Invoke(fish);
     }
 
     public void ReelActionComplete(int layer)

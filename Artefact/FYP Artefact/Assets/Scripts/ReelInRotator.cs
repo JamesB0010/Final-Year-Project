@@ -24,9 +24,6 @@ public class ReelInRotator : MonoBehaviour
 
     public void Activate()
     {
-        if (!base.enabled)
-            return;
-        
         this.yRotateFrom.LerpTo(this.yRotateTo, this.rotationTime, value =>
         {
             transform.rotation = value;
@@ -35,10 +32,5 @@ public class ReelInRotator : MonoBehaviour
             pkg.Reverse();
             GlobalLerpProcessor.AddLerpPackage(pkg);
         });
-    }
-
-    private void Update()
-    {
-        
     }
 }
