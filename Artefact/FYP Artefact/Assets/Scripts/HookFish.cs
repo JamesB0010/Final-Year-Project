@@ -118,4 +118,11 @@ public class HookFish : MonoBehaviour
 
         return varience;
     }
+
+    public void ResetValues()
+    {
+        this.armRaiseValueBuffer.Clear();
+        this.armRaiseValueBufferPointer = 0;
+        this.armRaiseBufferStartTimestamp = 0;
+    }
 }

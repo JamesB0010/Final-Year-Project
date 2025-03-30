@@ -62,4 +62,10 @@ public class ReelFishInManager : MonoBehaviour
             this.layerCompletionTCS[layer].TrySetResult();
         }
     }
+
+    public void ResetState()
+    {
+        this.reelLayersCompleteCount = new int[] { 0, 0, 0 };
+        this.layerCompletionTCS = new UniTaskCompletionSource[] { new UniTaskCompletionSource(), new UniTaskCompletionSource(), new UniTaskCompletionSource() };
+    }
 }

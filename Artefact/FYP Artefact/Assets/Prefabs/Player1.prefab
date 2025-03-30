@@ -1871,6 +1871,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 8117002726026147425}
+        m_TargetAssemblyTypeName: PlayerArmRaiser, Assembly-CSharp
+        m_MethodName: SetAnimatorArmRaiseAmount
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   delayedStageEnteredEvents:
   - delayTime: 0
     OnEventInvoke:
@@ -1951,18 +1963,6 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: FMODUnity.StudioEventEmitter, FMODUnity
         m_MethodName: Play
         m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 8117002726026147425}
-        m_TargetAssemblyTypeName: PlayerArmRaiser, Assembly-CSharp
-        m_MethodName: SetAnimatorArmRaiseAmount
-        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2089,6 +2089,7 @@ GameObject:
   - component: {fileID: 6841448643043400625}
   - component: {fileID: 930957068451109989}
   - component: {fileID: 8416317018217000093}
+  - component: {fileID: 4258779889916994575}
   m_Layer: 5
   m_Name: ReelFishInWorldUi
   m_TagString: Untagged
@@ -2164,6 +2165,28 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 1
+--- !u!114 &4258779889916994575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4321327848147742162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 480ff80242a5a0844810a239961c654e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gestureImages:
+  - {fileID: 7132044133622152205}
+  - {fileID: 8536576851334324767}
+  - {fileID: 4977886371587053208}
+  - {fileID: 7841490053535462432}
+  - {fileID: 1461361096427424174}
+  - {fileID: 8075176976211451252}
+  - {fileID: 2545625543830162175}
+  - {fileID: 3844790866244592844}
+  - {fileID: 2791283682531524320}
 --- !u!1 &4437747293544709285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2335,6 +2358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1869276736777099846}
+  - component: {fileID: 4458224234486405372}
   m_Layer: 6
   m_Name: HandGestures
   m_TagString: Untagged
@@ -2360,6 +2384,28 @@ Transform:
   - {fileID: 6898176757839940303}
   m_Father: {fileID: 4941674948611426988}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4458224234486405372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4705207527902713611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba4d41d01e2960644b95900f473e65bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handGestureLocations:
+  - {fileID: 1817896802472934391}
+  - {fileID: 4296796039118372227}
+  - {fileID: 4209809861097541577}
+  - {fileID: 3799572021140819362}
+  - {fileID: 8037746496352751790}
+  - {fileID: 3593231246337394602}
+  - {fileID: 7332350928677324069}
+  - {fileID: 3238505534950161436}
+  - {fileID: 3776607241254391517}
 --- !u!1 &4710945880831183314
 GameObject:
   m_ObjectHideFlags: 0
@@ -3596,6 +3642,186 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7228494683943374517}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7548397404365936994}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1343890659599650167}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2667880708110541455}
+        m_TargetAssemblyTypeName: ReelFishInManager, Assembly-CSharp
+        m_MethodName: ResetState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4258779889916994575}
+        m_TargetAssemblyTypeName: ResetGestureImages, Assembly-CSharp
+        m_MethodName: ResetImageColors
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4458224234486405372}
+        m_TargetAssemblyTypeName: HandGestureReset, Assembly-CSharp
+        m_MethodName: ResetValues
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1817896802472934391}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4296796039118372227}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 4209809861097541577}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 7332350928677324069}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3238505534950161436}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3776607241254391517}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8632421705640589185}
+        m_TargetAssemblyTypeName: ReelInRotator, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3359255054931808732}
+        m_TargetAssemblyTypeName: ReelInRotator, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3420873096592104643}
+        m_TargetAssemblyTypeName: ReelInRotator, Assembly-CSharp
+        m_MethodName: Deactivate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6240292346157986332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3808,7 +4034,19 @@ MonoBehaviour:
           m_CallState: 2
   StageCompleteEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8548319068767731579}
+        m_TargetAssemblyTypeName: HookFish, Assembly-CSharp
+        m_MethodName: ResetValues
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   virtualCamParent: {fileID: 1074882887698490876}
 --- !u!114 &326682312947869505
 MonoBehaviour:
@@ -4225,6 +4463,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -3.913
       objectReference: {fileID: 0}
+    - target: {fileID: 431158236813244595, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: maxTimeRequiredToFill
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 431158236813244595, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: minTimeRequiredToFill
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 436594559330059244, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4310,6 +4558,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NormalizedViewPortRect.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483555242811938504, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: maxTimeRequiredToFill
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1483555242811938504, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: minTimeRequiredToFill
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1736869589947088543, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -4485,6 +4743,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845363857129565233, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: maxTimeRequiredToFill
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845363857129565233, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: minTimeRequiredToFill
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135170570995047679, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: maxTimeRequiredToFill
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4135170570995047679, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: minTimeRequiredToFill
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4137112251737010511, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -5220,6 +5498,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -48.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159634892092082879, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: maxTimeRequiredToFill
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159634892092082879, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: minTimeRequiredToFill
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5311403744836530309, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}

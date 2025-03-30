@@ -16,6 +16,8 @@ public class ReelInRotator : MonoBehaviour
 
     [SerializeField] private float rotationTime;
 
+    [SerializeField] private QuaternionLerpPackage lerpPackage;
+
     private void Awake()
     {
         this.yRotateFrom = transform.rotation;
@@ -24,7 +26,7 @@ public class ReelInRotator : MonoBehaviour
 
     public void Activate()
     {
-        this.yRotateFrom.LerpTo(this.yRotateTo, this.rotationTime, value =>
+        this.lerpPackage = this.yRotateFrom.LerpTo(this.yRotateTo, this.rotationTime, value =>
         {
             transform.rotation = value;
         }, pkg =>
@@ -32,5 +34,12 @@ public class ReelInRotator : MonoBehaviour
             pkg.Reverse();
             GlobalLerpProcessor.AddLerpPackage(pkg);
         });
+    }
+
+    public void Deactivate()
+    {
+        GlobalLerpProcessor.RemovePackage(this.lerpPackage);
+
+        transform.rotation = this.yRotateFrom;
     }
 }

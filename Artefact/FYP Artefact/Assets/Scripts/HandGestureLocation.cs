@@ -83,4 +83,10 @@ public class HandGestureLocation : MonoBehaviour
         }
         Debug.Log(rotationLikeness);
     }
+
+    public void ResetValues()
+    {
+        this.progress = 0;
+        this.entered = false;
+    }
 }
