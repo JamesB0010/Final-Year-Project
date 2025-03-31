@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 163001635005565903, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: spawnRate
-      value: 12
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 163001635005565903, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
@@ -21,7 +21,7 @@ PrefabInstance:
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 13.204033
+      value: 20.79
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 26.682747
+      value: 40.5
       objectReference: {fileID: 0}
     - target: {fileID: 2489203842270523285, guid: d29826f8e895dfa48925e9e34cab6b3b,
         type: 3}

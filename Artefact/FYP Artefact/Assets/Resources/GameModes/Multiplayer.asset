@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rippleSpawnerPrefab: {fileID: 4662475052078880618, guid: c6eec3741eca25842a5e71ec3443a5f9,
     type: 3}
-  rippleSpawnerSpawnLocation: {x: -397.04, y: 4.98, z: -52.78}
+  rippleSpawnerSpawnLocation: {x: -399.7, y: 4.98, z: -48}
   rippleSpawnerYRotation: -20.447
   waterHeight: 3.646678
   endScreenScene: MultiplayerGameOver
