@@ -29,3 +29,7 @@ MonoBehaviour:
     type: 2}
   playerUiPanelSettings: {fileID: 11400000, guid: d693f7445f6c78e46a383edd08c1a073,
     type: 2}
+  uiFishCollectedAnimation: {fileID: 11400000, guid: c2734ec36ce857e41b1b2151ae6c97a7,
+    type: 2}
+  incrementPlayerScoreSignal: {fileID: 11400000, guid: 6287270652f55d04898f2ce5afb24ea4,
+    type: 2}

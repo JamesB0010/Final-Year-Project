@@ -20,5 +20,5 @@
             <ui:VisualElement style="flex-grow: 0; height: 63%;" />
         </ui:VisualElement>
     </ui:VisualElement>
-    <ui:VisualElement name="CenterFish" style="flex-grow: 0; position: absolute; width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/Sprites/Fish.png?fileID=2800000&amp;guid=36075c366238109479819dd8a588cd68&amp;type=3#Fish&quot;); scale: 0 0; translate: 910px 490px;" />
+    <ui:VisualElement name="CenterFish" style="flex-grow: 0; position: absolute; width: 100px; height: 100px; background-image: url(&quot;project://database/Assets/Sprites/Fish.png?fileID=2800000&amp;guid=36075c366238109479819dd8a588cd68&amp;type=3#Fish&quot;); scale: 0 0; translate: 910px 220px; left: 0; top: 0; right: 0; bottom: 0;" />
 </ui:UXML>

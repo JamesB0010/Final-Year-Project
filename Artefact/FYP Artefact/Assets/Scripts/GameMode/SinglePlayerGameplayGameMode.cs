@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using PlayerSpawning;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
@@ -22,6 +24,8 @@ public class SinglePlayerGameplayGameMode : GameplayGameMode
 
     [SerializeField] private PanelSettings playerUiPanelSettings;
     
+    [SerializeField] private TimelineAsset uiFishCollectedAnimation;
+
     public override void Setup(SceneSpawnPoints spawnPoints)
     {
         base.Setup(spawnPoints);
@@ -41,6 +45,13 @@ public class SinglePlayerGameplayGameMode : GameplayGameMode
         }
 
         player.GetComponentInChildren<RawImage>().texture = this.playerUiRenderTexture;
+
+        PlayableDirector uiAnimator = playerMainUiDoc.transform.GetChild(0).GetComponent<PlayableDirector>();
+        uiAnimator.playableAsset = this.uiFishCollectedAnimation;
+        var signalTrack = ((TimelineAsset)uiAnimator.playableAsset).GetOutputTrack(1) as SignalTrack;
+        SignalReceiver uiSignalReciever = playerMainUiDoc.GetComponent<SignalReceiver>();
+
+        uiAnimator.SetGenericBinding(signalTrack, uiSignalReciever);
         
         DisableSplitScreenOnPlayer(player);
 
