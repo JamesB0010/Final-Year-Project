@@ -5928,6 +5928,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 58609a3c72c34a648ae38e50bf32d6f8,
         type: 2}
+    - target: {fileID: 5799237841137081026, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Events.m_Events.Array.data[0].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: IncrementPlayer2Score
+      objectReference: {fileID: 0}
     - target: {fileID: 5883114676289963257, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: AwakePipeline.m_PersistentCalls.m_Calls.Array.size

@@ -9,22 +9,33 @@ public class mainGameUi : MonoBehaviour
     private VisualElement uiRoot;
 
     [SerializeField] private PlayerScores playerScores;
-    private TextElement player1ScoreText;
+    private TextElement playerScoreText;
     private TextElement countdownText;
+    
+    [SerializeField] private int playerIndex;
 
     private void Start()
     {
         this.uiRoot = GetComponent<UIDocument>().rootVisualElement;
-        this.player1ScoreText = this.uiRoot.Q<TextElement>("FishCount");
-        this.playerScores.Player1ScoreChanged += this.OnPlayer1ScoreChange;
+        this.playerScoreText = this.uiRoot.Q<TextElement>("FishCount");
+
+        bool isPlayer1 = playerIndex == 0;
+        if (isPlayer1)
+        {
+            this.playerScores.Player1ScoreChanged += this.OnPlayerScoreChange;
+        }
+        else
+        {
+            this.playerScores.Player2ScoreChanged += this.OnPlayerScoreChange;
+        }
 
         this.countdownText = this.uiRoot.Q<TextElement>("CountdownValue");
         FindObjectOfType<TimeManager>().IntTick.AddListener(this.OnIntTick);
     }
 
-    private void OnPlayer1ScoreChange(int newScore)
+    private void OnPlayerScoreChange(int newScore)
     {
-        this.player1ScoreText.text = newScore.ToString();
+        this.playerScoreText.text = newScore.ToString();
     }
 
     private void OnIntTick(int newTime)
