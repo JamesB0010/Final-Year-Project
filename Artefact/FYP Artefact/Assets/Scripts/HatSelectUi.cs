@@ -20,6 +20,8 @@ public class HatSelectUi : MonoBehaviour
     [SerializeField] private UnityEvent hatSelected;
 
     [SerializeField] private PlayerHatDataHolder playerHatData;
+
+    private bool exiting;
     
     private void Awake()
     {
@@ -34,8 +36,9 @@ public class HatSelectUi : MonoBehaviour
         float squeezePercent = FingerTotalForceGetter.GetGenerousPullPercent(this.hatSelectGameplayMode.PlayerDevice);
         this.SqueezeAmountBar.style.width = Length.Percent(squeezePercent);
 
-        if (squeezePercent == 100)
+        if (squeezePercent == 100 && !this.exiting)
         {
+            this.exiting = true;
             PlayerPrefs.SetInt("leftControllerHatIndex", this.playerHatData.leftControllerHatIndex);
             PlayerPrefs.SetInt("rightControllerHatIndex", this.playerHatData.rightControllerHatIndex);
             this.hatSelected?.Invoke();

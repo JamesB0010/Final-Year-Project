@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e47b404887604049b7d7acbc04a61e7, type: 3}
   m_Name: PlayerHatData
   m_EditorClassIdentifier: 
-  leftControllerHatIndex: -1
-  rightControllerHatIndex: -1
+  leftControllerHatIndex: 0
+  rightControllerHatIndex: 0

@@ -19,4 +19,10 @@ public class PlayerHatDataHolder : ScriptableObject
     {
         this.rightControllerHatIndex = index;
     }
+
+    public void Reset()
+    {
+        this.leftControllerHatIndex = 0;
+        this.rightControllerHatIndex = 0;
+    }
 }

@@ -16,4 +16,13 @@ public static class GameDataEditorManipulation
     {
         PlayerPrefs.SetInt("SinglePlayerHighScore", 0);
     }
+
+    [MenuItem("GameData/ResetHats")]
+    public static void ResetHats()
+    {
+        PlayerHatDataHolder hatDatHolder = Resources.Load<PlayerHatDataHolder>("PlayerHatData");
+        hatDatHolder.Reset();
+        EditorUtility.SetDirty(hatDatHolder);
+        AssetDatabase.SaveAssetIfDirty(hatDatHolder);
+    }
 }
