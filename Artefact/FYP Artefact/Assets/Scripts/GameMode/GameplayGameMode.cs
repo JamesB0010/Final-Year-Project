@@ -2,6 +2,7 @@ using System;
 using PlayerSpawning;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 [Serializable]
 public abstract class GameplayGameMode : GameMode
@@ -15,6 +16,8 @@ public abstract class GameplayGameMode : GameMode
     [SerializeField] private float waterHeight;
     
     [SerializeField] private string endScreenScene;
+
+    [SerializeField] protected VisualTreeAsset playerMainUi;
 
     public static void CangeToEndScreen() => SceneManager.LoadScene(CurrentGameplayGameMode.endScreenScene);
 

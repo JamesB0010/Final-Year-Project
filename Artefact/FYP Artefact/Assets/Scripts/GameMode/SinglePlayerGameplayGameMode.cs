@@ -1,8 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using PlayerSpawning;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 [Serializable, CreateAssetMenu]
 public class SinglePlayerGameplayGameMode : GameplayGameMode
@@ -15,6 +18,10 @@ public class SinglePlayerGameplayGameMode : GameplayGameMode
         this.PlayerDevice = playerDevice;
     }
     
+    [SerializeField] private RenderTexture playerUiRenderTexture;
+
+    [SerializeField] private PanelSettings playerUiPanelSettings;
+    
     public override void Setup(SceneSpawnPoints spawnPoints)
     {
         base.Setup(spawnPoints);
@@ -24,6 +31,16 @@ public class SinglePlayerGameplayGameMode : GameplayGameMode
         
         Vector3 spawnPos = spawnPoints.GetSpawnPoint(PlayerSpawnPoints.Player1);
         GameObject player = base.SpawnPlayer(this.playerPrefab, this.PlayerDevice, spawnPos);
+        UIDocument playerMainUiDoc = player.GetComponentInChildren<UIDocument>();
+        playerMainUiDoc.panelSettings = this.playerUiPanelSettings;
+        VisualElement clone = base.playerMainUi.CloneTree();
+        VisualElement[] children = clone.Children().ToArray();
+        for (int i = children.Length - 1; i >= 0; i--)
+        {
+            playerMainUiDoc.rootVisualElement.Add(children[i]);
+        }
+
+        player.GetComponentInChildren<RawImage>().texture = this.playerUiRenderTexture;
         
         DisableSplitScreenOnPlayer(player);
 

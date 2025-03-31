@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 public class ClearRenderTexture : MonoBehaviour
 {
-    [SerializeField] private RenderTexture renderTexture;
+    [SerializeField] public RenderTexture renderTexture;
 
     [SerializeField] private Camera camera;
 

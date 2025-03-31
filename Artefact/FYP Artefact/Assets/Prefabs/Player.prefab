@@ -803,7 +803,7 @@ GameObject:
   - component: {fileID: 6667998517679114830}
   - component: {fileID: 4442427170209263972}
   m_Layer: 5
-  m_Name: Ui
+  m_Name: UiRawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2741,8 +2741,7 @@ GameObject:
   - component: {fileID: 7398729841165335237}
   - component: {fileID: 4738994795677236927}
   - component: {fileID: 499661622991162963}
-  - component: {fileID: 3006747280039931638}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: Player1Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2894,20 +2893,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3006747280039931638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3810790703198411445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nonRigidbodyVelocity: 0
-  attenuationObject: {fileID: 0}
 --- !u!1 &3974939237593592267
 GameObject:
   m_ObjectHideFlags: 0
@@ -7137,8 +7122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PanelSettings: {fileID: 11400000, guid: 1fc087b96383f7f47ae718108a4f4f62, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 2363de3c7043075449cb54a2d5cfad2c,
-    type: 3}
+  sourceAsset: {fileID: 0}
   m_SortingOrder: 0
 --- !u!114 &5799237841137081026
 MonoBehaviour:
@@ -7269,7 +7253,7 @@ GameObject:
   - component: {fileID: 907595048193520344}
   - component: {fileID: 1318866197109299545}
   - component: {fileID: 6865949636667409746}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: WorldCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -1366,7 +1366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2033637648360718468}
   - component: {fileID: 8302649860477565324}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: WatchFishCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2986,7 +2986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7652041997329367843}
   - component: {fileID: 5504868811245095028}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: CollectFishVCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3136,7 +3136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3596806001312855734}
   - component: {fileID: 4523702162847994739}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: CastRodCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -3741,7 +3741,7 @@ GameObject:
   m_Component:
   - component: {fileID: 52393593730724414}
   - component: {fileID: 4421965175453592912}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: ReelFishInCam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4633,6 +4633,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 101044340912868238, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 1024
+      objectReference: {fileID: 0}
+    - target: {fileID: 101044340912868238, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
       propertyPath: m_NormalizedViewPortRect.y
       value: -0.5
       objectReference: {fileID: 0}
@@ -4792,10 +4797,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2
       objectReference: {fileID: 0}
+    - target: {fileID: 1204467085716609213, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1318866197109299545, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 695
+      value: 1847
       objectReference: {fileID: 0}
     - target: {fileID: 1318866197109299545, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -4996,6 +5006,11 @@ PrefabInstance:
         type: 3}
       propertyPath: minTimeRequiredToFill
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974939237593592267, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4015201418035289524, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -5466,6 +5481,11 @@ PrefabInstance:
         type: 3}
       propertyPath: delayedStageEnteredEvents.Array.data[0].OnEventInvoke.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248363140215225430, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4304703894971248325, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -6411,7 +6431,7 @@ PrefabInstance:
     - target: {fileID: 6906632342879321125, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6980621736276680388, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -6556,7 +6576,7 @@ PrefabInstance:
     - target: {fileID: 7398729841165335237, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: m_CullingMask.m_Bits
-      value: 192
+      value: 320
       objectReference: {fileID: 0}
     - target: {fileID: 7398729841165335237, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -6566,12 +6586,22 @@ PrefabInstance:
     - target: {fileID: 7570842615177837521, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7570842615177837521, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7661585225579538756, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7679471790103685182, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7746485689379442166, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -6632,6 +6662,11 @@ PrefabInstance:
         type: 3}
       propertyPath: roundArmRaiseValue
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8398315703903961160, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8624226017039641384, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -6783,12 +6818,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 9190683350260940917, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7842532448987083288, guid: 14202991410137142a49c726a8fc3a05, type: 3}
     - {fileID: 776778413815064868, guid: 14202991410137142a49c726a8fc3a05, type: 3}
     - {fileID: 2418008454896535039, guid: 14202991410137142a49c726a8fc3a05, type: 3}
     - {fileID: 6679740673125451766, guid: 14202991410137142a49c726a8fc3a05, type: 3}
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1271838239004740560, guid: 14202991410137142a49c726a8fc3a05, type: 3}
+    - {fileID: 562831397684592885, guid: 14202991410137142a49c726a8fc3a05, type: 3}
+    - {fileID: 7385255344369262910, guid: 14202991410137142a49c726a8fc3a05, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 436594559330059244, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
@@ -7548,6 +7591,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c1929b9bbd0e045b40e9157088f918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerIndex: 1
 --- !u!4 &8846249488627109939 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 01082847a3e3fea44a6dae0b64587087,

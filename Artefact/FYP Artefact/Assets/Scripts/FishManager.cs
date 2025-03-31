@@ -57,18 +57,18 @@ public class FishManager : MonoBehaviour
         return closestFish;
     }
     
-    public void LockOntoClosestFish(Vector3 hookLocation)
+    public void LockOntoClosestFish(Vector3 hookLocation, int playerIndex)
     {
-        closestFishPlayer[0] = this.GetClosestFish(hookLocation);
+        closestFishPlayer[playerIndex] = this.GetClosestFish(hookLocation);
         if(fish == null)
             return;
         
-        closestFishPlayer[0].OverideSteeringTowards(hookLocation).lostInterestInBait += FishLostInterestInBait;
+        closestFishPlayer[playerIndex].OverideSteeringTowards(hookLocation).lostInterestInBait += FishLostInterestInBait;
         
         void FishLostInterestInBait()
         {
-            closestFishPlayer[0].overrideSteeringSettings.lostInterestInBait -= FishLostInterestInBait;
-            this.LockOntoClosestFish(hookLocation);
+            closestFishPlayer[playerIndex].overrideSteeringSettings.lostInterestInBait -= FishLostInterestInBait;
+            this.LockOntoClosestFish(hookLocation, playerIndex);
         }
     }
     

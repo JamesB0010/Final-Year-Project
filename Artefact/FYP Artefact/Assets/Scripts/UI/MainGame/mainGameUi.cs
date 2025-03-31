@@ -12,7 +12,7 @@ public class mainGameUi : MonoBehaviour
     private TextElement player1ScoreText;
     private TextElement countdownText;
 
-    private void Awake()
+    private void Start()
     {
         this.uiRoot = GetComponent<UIDocument>().rootVisualElement;
         this.player1ScoreText = this.uiRoot.Q<TextElement>("FishCount");

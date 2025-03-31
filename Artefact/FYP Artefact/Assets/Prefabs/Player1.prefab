@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 101044340912868238, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
     - target: {fileID: 436594559330059244, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -63,6 +68,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player1
       objectReference: {fileID: 0}
+    - target: {fileID: 1204467085716609213, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318866197109299545, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 2743
+      objectReference: {fileID: 0}
+    - target: {fileID: 3974939237593592267, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 4015201418035289524, guid: 14202991410137142a49c726a8fc3a05,
         type: 3}
       propertyPath: camera
@@ -73,6 +93,21 @@ PrefabInstance:
       propertyPath: renderTexture
       value: 
       objectReference: {fileID: 8400000, guid: 60be0be5bb68be24a8aabd29d79c7415, type: 2}
+    - target: {fileID: 4248363140215225430, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7661585225579538756, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9190683350260940917, guid: 14202991410137142a49c726a8fc3a05,
+        type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -18,6 +18,8 @@ MonoBehaviour:
   rippleSpawnerYRotation: -20.447
   waterHeight: 3.646678
   endScreenScene: MultiplayerGameOver
+  playerMainUi: {fileID: 9197481963319205126, guid: 2363de3c7043075449cb54a2d5cfad2c,
+    type: 3}
   maxRippleCount: 6
   Player1Prefab: {fileID: 4041434136609743891, guid: 75f4860480b2562428c89f7681575d7f,
     type: 3}
@@ -25,3 +27,13 @@ MonoBehaviour:
     type: 3}
   player1Hat: {fileID: 0}
   player2Hat: {fileID: 0}
+  player1MainUiRenderTexture: {fileID: 8400000, guid: 4e9c47d7518e5c04dbe1e424cd943fab,
+    type: 2}
+  player2MainUiRenderTexture: {fileID: 8400000, guid: e8eacef0e17e3b742b10330ad32eafeb,
+    type: 2}
+  player1UiPanelSettings: {fileID: 11400000, guid: 1fc087b96383f7f47ae718108a4f4f62,
+    type: 2}
+  player2UiPanelSettings: {fileID: 11400000, guid: 58609a3c72c34a648ae38e50bf32d6f8,
+    type: 2}
+  player2Ui: {fileID: 9197481963319205126, guid: f8a61cb5d190ba64288313c19dd51ebf,
+    type: 3}

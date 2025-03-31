@@ -14,11 +14,19 @@ public class PlayerScores : ScriptableObject
     public int Player2Score => this.player2Score;
 
     public event Action<int> Player1ScoreChanged;
+
+    public event Action<int> Player2ScoreChanged;
     
     public void IncrementPlayer1Score()
     {
         this.player1Score++;
         this.Player1ScoreChanged?.Invoke(this.player1Score);
+    }
+
+    public void IncrementPlayer2Score()
+    {
+        this.player2Score++;
+        this.Player2ScoreChanged?.Invoke(this.player2Score);
     }
 
     public void Reset()
