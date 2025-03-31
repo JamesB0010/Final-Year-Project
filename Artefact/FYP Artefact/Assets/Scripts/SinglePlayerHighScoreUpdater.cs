@@ -17,5 +17,10 @@ public class SinglePlayerHighScoreUpdater : MonoBehaviour
             this.newHighscoreDetected?.Invoke();
             PlayerPrefs.SetInt("SinglePlayerHighScore", playerScores.Player1Score);
         }
+        else if (PlayerPrefs.GetInt("SinglePlayerHighScore", 0) < playerScores.Player2Score)
+        {
+            this.newHighscoreDetected?.Invoke();
+            PlayerPrefs.SetInt("SinglePlayerHighScore", playerScores.Player2Score);
+        }
     }
 }

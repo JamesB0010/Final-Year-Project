@@ -32,4 +32,9 @@ public class EndScreenMultiplayerUi : MonoBehaviour
         this.ReturnToMenuButton.Player2SqueezeAmount =
             (uint)FingerTotalForceGetter.GetGenerousPullPercent(eteeAPI.RightDevice);
     }
+    
+    public void ShowNewHighScoreText()
+    {
+        this.root.Q<TextElement>("NewHighscoreText").style.visibility = Visibility.Visible;
+    }
 }

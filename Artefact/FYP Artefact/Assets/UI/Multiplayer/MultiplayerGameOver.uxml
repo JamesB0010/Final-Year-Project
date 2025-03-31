@@ -16,4 +16,5 @@
         </ui:VisualElement>
         <SqueezeSelectButton Button_Text="Main Menu" name="ReturnToMainMenu" class="Player1Focused" />
     </ui:VisualElement>
+    <ui:Label tabindex="-1" text="New Highscore!" parse-escape-sequences="true" display-tooltip-when-elided="true" name="NewHighscoreText" style="position: absolute; left: 29%; top: 46%; right: 0; bottom: 0; -unity-font-definition: url(&quot;project://database/Assets/Fonts/Kenney%20Future%20SDF.asset?fileID=11400000&amp;guid=4bc533e1c6b6190428ea64e1b2a0ecf7&amp;type=2#Kenney Future SDF&quot;); font-size: 69px; color: rgb(255, 255, 255); visibility: hidden;" />
 </ui:UXML>
