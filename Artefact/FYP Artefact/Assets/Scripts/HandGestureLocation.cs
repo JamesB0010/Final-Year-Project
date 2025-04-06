@@ -28,7 +28,7 @@ public class HandGestureLocation : MonoBehaviour
     [SerializeField] private UnityEvent fillProgress;
     
     private int progress = 0;
-    private int maxProgress = 3;
+    private int maxProgress = 1;
 
     private bool entered;
 

@@ -238,7 +238,7 @@ MonoBehaviour:
   yRotateToY: -0.92072105
   yRotateToZ: 0
   yRotateToW: -0.3902213
-  rotationTime: 1
+  rotationTime: 5
 --- !u!1 &562831397684592885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   yRotateToY: -0.71797
   yRotateToZ: 0
   yRotateToW: -0.69608
-  rotationTime: 2
+  rotationTime: 5
 --- !u!1 &1574894842277845083
 GameObject:
   m_ObjectHideFlags: 0
@@ -2539,6 +2539,78 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &3183067957201373195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6652700641586598074}
+  - component: {fileID: 2492537460226865940}
+  m_Layer: 6
+  m_Name: ReelFishIn1Cam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6652700641586598074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183067957201373195}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.67435145, y: -0.2581427, z: 0.65690404, w: 0.21700144}
+  m_LocalPosition: {x: -1580.6489, y: -2051.4292, z: -1474.8585}
+  m_LocalScale: {x: 1.0005641, y: 1.0005643, z: 1.0005646}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5143792920973548043}
+  m_Father: {fileID: 1736869589947088543}
+  m_LocalEulerAnglesHint: {x: 39.185, y: 93.163, z: 184.666}
+--- !u!114 &2492537460226865940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3183067957201373195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 20
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 60
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 5143792920973548043}
 --- !u!1 &3198677691400430879
 GameObject:
   m_ObjectHideFlags: 0
@@ -3438,7 +3510,7 @@ MonoBehaviour:
   rotatingPart: {fileID: 1736869589947088543}
   directionArrow: {fileID: 5536886337008224001}
   dotProductExponent: 16.4
-  timeRequiredToLockOntoFish: 10
+  timeRequiredToLockOntoFish: 3
   lockOnThreashold: 0.5
   StartedLockingOntoFish:
     m_PersistentCalls:
@@ -4401,6 +4473,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5733525390465756712
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 562332636790932085}
+  - component: {fileID: 490177787167956294}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &562332636790932085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5733525390465756712}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.81017745, z: -0, w: 0.58618474}
+  m_LocalPosition: {x: -9250.181, y: -712.7784, z: -44970.973}
+  m_LocalScale: {x: 117.233284, y: 117.2333, z: 117.233284}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8701516335296304739}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &490177787167956294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5733525390465756712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5782681190094753920
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,7 +5238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6906632342879321125}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.34400368, y: -0.000004499525, z: 0.0000016402074, w: 0.93896836}
+  m_LocalRotation: {x: 0.34400368, y: -0.0000044703484, z: 0.0000016391277, w: 0.9389683}
   m_LocalPosition: {x: 0.0005593273, y: 925.93445, z: -770.1665}
   m_LocalScale: {x: 117.29952, y: 117.29944, z: 117.29951}
   m_ConstrainProportionsScale: 0
@@ -5962,13 +6078,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7661585225579538756}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 436594559330059244}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!20 &101044340912868238
 Camera:
   m_ObjectHideFlags: 0
@@ -6675,6 +6791,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3529a29f44ee3354493c417638c17127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8060199718484913176
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8701516335296304739}
+  - component: {fileID: 3411262399810853642}
+  m_Layer: 6
+  m_Name: ReelFishIn2Cam
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8701516335296304739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8060199718484913176}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6743514, y: -0.25814268, z: 0.6569041, w: 0.21700144}
+  m_LocalPosition: {x: -2759, y: 994, z: 54}
+  m_LocalScale: {x: 1.0005641, y: 1.0005643, z: 1.0005646}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 562332636790932085}
+  m_Father: {fileID: 1736869589947088543}
+  m_LocalEulerAnglesHint: {x: 39.185, y: 93.163, z: 184.666}
+--- !u!114 &3411262399810853642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8060199718484913176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_StreamingVersion: 20170927
+  m_Priority: 20
+  m_StandbyUpdate: 2
+  m_LookAt: {fileID: 0}
+  m_Follow: {fileID: 0}
+  m_Lens:
+    FieldOfView: 60
+    OrthographicSize: 10
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    LensShift: {x: 0, y: 0}
+    GateFit: 2
+    FocusDistance: 10
+    m_SensorSize: {x: 1, y: 1}
+  m_Transitions:
+    m_BlendHint: 0
+    m_InheritPosition: 0
+    m_OnCameraLive:
+      m_PersistentCalls:
+        m_Calls: []
+  m_LegacyBlendHint: 0
+  m_ComponentOwner: {fileID: 562332636790932085}
 --- !u!1 &8064114497510328245
 GameObject:
   m_ObjectHideFlags: 0
@@ -7199,6 +7387,50 @@ MonoBehaviour:
   OverrideAttenuation: 0
   OverrideMinDistance: 1
   OverrideMaxDistance: 20
+--- !u!1 &8585182976789279152
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5143792920973548043}
+  - component: {fileID: 5632169417328646330}
+  m_Layer: 0
+  m_Name: cm
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5143792920973548043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8585182976789279152}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: 0.81017745, z: -0, w: 0.58618474}
+  m_LocalPosition: {x: -9250.181, y: -712.7784, z: -44970.973}
+  m_LocalScale: {x: 117.233284, y: 117.2333, z: 117.233284}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6652700641586598074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5632169417328646330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8585182976789279152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8603082638147387215
 GameObject:
   m_ObjectHideFlags: 0
@@ -7602,7 +7834,7 @@ MonoBehaviour:
   yRotateToY: -0.8737869
   yRotateToZ: 0
   yRotateToW: -0.486309
-  rotationTime: 1.5
+  rotationTime: 5
 --- !u!1 &9189916912475837156
 GameObject:
   m_ObjectHideFlags: 0
@@ -7689,7 +7921,7 @@ GameObject:
   - component: {fileID: 2659294381268395673}
   - component: {fileID: 6158057326259177329}
   m_Layer: 6
-  m_Name: ReelFishInCam
+  m_Name: ReelFishIn3Cam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7703,8 +7935,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9190683350260940917}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.6743514, y: -0.25814268, z: 0.6569041, w: 0.21700144}
-  m_LocalPosition: {x: -2759, y: 994, z: 54}
+  m_LocalRotation: {x: -0.7040022, y: 0.122654155, z: -0.69506603, w: -0.07886878}
+  m_LocalPosition: {x: -546.2967, y: -1061.9734, z: 30.095749}
   m_LocalScale: {x: 1.0005641, y: 1.0005643, z: 1.0005646}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7732,7 +7964,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 60
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -9050,6 +9282,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4515146858765248406}
+    - targetCorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6652700641586598074}
+    - targetCorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8701516335296304739}
     - targetCorrespondingSourceObject: {fileID: 1846256759547140760, guid: 5433669d1d6d08b499b21d6944174cbd,
         type: 3}
       insertIndex: -1

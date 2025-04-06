@@ -17,6 +17,7 @@ public class PlayerHatSpawner : MonoBehaviour
 
     private void Start()
     {
+        GameObject hat;
         switch (gameModeHolder.GameplayGameMode)
         {
             case MultiplayerGameplayGameMode multiplayerGameplayGameMode:
@@ -25,14 +26,14 @@ public class PlayerHatSpawner : MonoBehaviour
                     GameObject hatPrefab = hatDatabase.GetHat(hatData.leftControllerHatIndex);
                     if(hatPrefab == null)
                         return;
-                    Instantiate(hatPrefab, this.headBone);
+                    hat = Instantiate(hatPrefab, this.headBone);
                 }
                 else
                 {
                     GameObject hatPrefab = hatDatabase.GetHat(hatData.rightControllerHatIndex);
                     if (hatPrefab == null)
                         return;
-                    Instantiate(hatPrefab, this.headBone);
+                    hat = Instantiate(hatPrefab, this.headBone);
                 }
 
                 break;
@@ -42,18 +43,21 @@ public class PlayerHatSpawner : MonoBehaviour
                     GameObject hatPrefab = hatDatabase.GetHat(this.hatData.leftControllerHatIndex);
                     if (hatPrefab == null)
                         return;
-                    Instantiate(hatPrefab, this.headBone);
+                    hat = Instantiate(hatPrefab, this.headBone);
                 }
                 else
                 {
                     GameObject hatPrefab = hatDatabase.GetHat(this.hatData.rightControllerHatIndex);
                     if (hatPrefab == null)
                         return;
-                    Instantiate(hatPrefab, this.headBone);
+                    hat = Instantiate(hatPrefab, this.headBone);
                 }
                 break;
             default:
                 return;
         }
+
+        if (!this.player1)
+            hat.layer = LayerMask.NameToLayer("PlayerAndWorldUi2");
     }
 }

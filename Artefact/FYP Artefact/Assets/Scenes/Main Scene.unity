@@ -23192,6 +23192,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player2FishingFloat
       objectReference: {fileID: 0}
+    - target: {fileID: 1326579863765030731, guid: 563b53c4ae520c74ab87e5232e100753,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307296433414826998, guid: 563b53c4ae520c74ab87e5232e100753,
+        type: 3}
+      propertyPath: m_Layer
+      value: 14
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -51351,6 +51361,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player1FishingFloat
+      objectReference: {fileID: 0}
+    - target: {fileID: 1326579863765030731, guid: 563b53c4ae520c74ab87e5232e100753,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5307296433414826998, guid: 563b53c4ae520c74ab87e5232e100753,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -141,5 +141,6 @@ public class FishManager : MonoBehaviour
     {
         fish.parent = this.FishParentTransform;
         fish.position = this.replaceFishLocation.position;
+        fish.GetChild(0).gameObject.SetActive(false);
     }
 }
