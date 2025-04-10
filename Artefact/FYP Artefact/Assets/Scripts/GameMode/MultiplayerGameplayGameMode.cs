@@ -25,9 +25,9 @@ public class MultiplayerGameplayGameMode : GameplayGameMode
 
     [SerializeField] private VisualTreeAsset player2Ui;
 
-    public override void Setup(SceneSpawnPoints spawnPoints)
+    public override void Setup(SceneSpawnPoints spawnPoints, PipelineSkipper pipelineSkipper)
     {
-        base.Setup(spawnPoints);
+        base.Setup(spawnPoints, pipelineSkipper);
         this.player1Device = eteeAPI.LeftDevice;
         this.player2Device = eteeAPI.RightDevice;
         
@@ -56,6 +56,8 @@ public class MultiplayerGameplayGameMode : GameplayGameMode
         }
         
         player2.GetComponentInChildren<RawImage>().texture = this.player2MainUiRenderTexture;
+        
+        pipelineSkipper.Setup(player1.GetComponentInChildren<PlayerGameplayStagePipeline>(), player2.GetComponentInChildren<PlayerGameplayStagePipeline>());
         
         base.SpawnRippleSpawner();
     }

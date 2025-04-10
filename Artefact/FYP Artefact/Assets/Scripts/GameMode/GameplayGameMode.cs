@@ -28,7 +28,7 @@ public abstract class GameplayGameMode : GameMode
 
     //A game mode is classed as being current from when setup is called
     public static GameplayGameMode CurrentGameplayGameMode { get; private set; }
-    public virtual void Setup(SceneSpawnPoints spawnPoints)
+    public virtual void Setup(SceneSpawnPoints spawnPoints, PipelineSkipper pipelineSkipper)
     {
         CurrentGameplayGameMode = this;
     }

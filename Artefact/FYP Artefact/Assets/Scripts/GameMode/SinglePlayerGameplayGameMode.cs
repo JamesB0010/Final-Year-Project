@@ -26,9 +26,9 @@ public class SinglePlayerGameplayGameMode : GameplayGameMode
     
     [SerializeField] private TimelineAsset uiFishCollectedAnimation;
 
-    public override void Setup(SceneSpawnPoints spawnPoints)
+    public override void Setup(SceneSpawnPoints spawnPoints, PipelineSkipper pipelineSkipper)
     {
-        base.Setup(spawnPoints);
+        base.Setup(spawnPoints, pipelineSkipper);
         
         if (this.PlayerDevice == null)
             this.PlayerDevice = eteeAPI.LeftDevice;
@@ -50,6 +50,8 @@ public class SinglePlayerGameplayGameMode : GameplayGameMode
         uiAnimator.playableAsset = this.uiFishCollectedAnimation;
         var signalTrack = ((TimelineAsset)uiAnimator.playableAsset).GetOutputTrack(1) as SignalTrack;
         SignalReceiver uiSignalReciever = playerMainUiDoc.GetComponent<SignalReceiver>();
+        
+        pipelineSkipper.Setup(player.GetComponentInChildren<PlayerGameplayStagePipeline>());
 
         uiAnimator.SetGenericBinding(signalTrack, uiSignalReciever);
         
