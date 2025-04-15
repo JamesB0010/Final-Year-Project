@@ -6,7 +6,7 @@
                 <ui:VisualElement style="flex-grow: 0; height: 30px; width: 96%; background-color: rgb(255, 255, 255);" />
             </ui:VisualElement>
             <ui:VisualElement name="HighScoreContainer" style="flex-grow: 0; justify-content: center; align-items: center; height: 86%; width: 100%;">
-                <ui:Label tabindex="-1" text="10" parse-escape-sequences="true" display-tooltip-when-elided="true" name="HighScoreText" class="HighScoreText" style="width: 100%; -unity-text-align: upper-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 452px; text-shadow: 25.2px 12.1px 48.7px rgba(0, 0, 0, 0.52);" />
+                <ui:Label tabindex="-1" text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" name="HighScoreText" class="HighScoreText" style="width: 100%; -unity-text-align: upper-center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; font-size: 452px; text-shadow: 25.2px 12.1px 48.7px rgba(0, 0, 0, 0.52);" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

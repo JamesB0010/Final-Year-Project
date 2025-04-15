@@ -29,11 +29,8 @@ public class MainMenuButtonReactions : MonoBehaviour
         
         root.Q<SqueezeSelectButton>("PlayMultiplayerContainer").ButtonPressed += () =>
         {
-            MultiplayerGameplayGameMode gameMode = Resources.Load<MultiplayerGameplayGameMode>("GameModes/Multiplayer");
-            this.gameModeHolder.GameplayGameMode = gameMode;
-            gameMode.player1Hat = this.hatDb.GetHat(this.playerHatData.leftControllerHatIndex);
-            gameMode.player2Hat = this.hatDb.GetHat(this.playerHatData.rightControllerHatIndex);
-            
+            PlayMultiplayerPressed();
+
             this.buttonPressed?.Invoke();
         };
 
@@ -50,6 +47,15 @@ public class MainMenuButtonReactions : MonoBehaviour
             this.buttonPressed?.Invoke();
         };
     }
+
+    private void PlayMultiplayerPressed()
+    {
+        MultiplayerGameplayGameMode gameMode = Resources.Load<MultiplayerGameplayGameMode>("GameModes/Multiplayer");
+        this.gameModeHolder.GameplayGameMode = gameMode;
+        gameMode.player1Hat = this.hatDb.GetHat(this.playerHatData.leftControllerHatIndex);
+        gameMode.player2Hat = this.hatDb.GetHat(this.playerHatData.rightControllerHatIndex);
+    }
+
     private void PlaySinglePlayerPressed(eteeDevice device)
     {
         var gameMode = Resources.Load<SinglePlayerGameplayGameMode>("GameModes/SinglePlayer");
