@@ -68,24 +68,26 @@ Shader "Unlit/RippleWater"
                 o.worldPos = TransformObjectToWorld(v.vertex);
                 o.vertex = TransformObjectToHClip(v.vertex);
                 o.uv = v.uv;
+
+                
                 float highestRippleStrength = 0;
                 for(int i = 0; i < _rippleCount; ++i)
                 {
-                    float2 offsettedUvs = o.uv + -.5f + _RippleOffset[i];
+                    float2 thisRippleCenter = o.uv + -.5f + _RippleOffset[i];
 
-                    float distanceFromCenter = length(offsettedUvs) * _RippleWidth;
+                    float distanceFromCenterOfRipple = length(thisRippleCenter) * _RippleWidth;
 
-                    float rippleStrength = pow(saturate(1 - distanceFromCenter), _FalloffExponent);
+                    float rippleInfluence = pow(saturate(1 - distanceFromCenterOfRipple), _FalloffExponent);
 
-                    if(rippleStrength > highestRippleStrength)
+                    if(rippleInfluence > highestRippleStrength)
                     {
-                        highestRippleStrength = rippleStrength;
+                        highestRippleStrength = rippleInfluence;
 
-                    o.rippleValue = sin(distanceFromCenter * _Frequency - _Time.y * _Speed);
+                        o.rippleValue = sin(distanceFromCenterOfRipple * _Frequency - _Time.y * _Speed);
 
-                    o.rippleValue *= pow(saturate(1 - distanceFromCenter), _FalloffExponent);
+                        o.rippleValue *= pow(saturate(1 - distanceFromCenterOfRipple), _FalloffExponent);
 
-                    o.vertex.y += _RippleHeight * o.rippleValue;
+                        o.vertex.y += _RippleHeight * o.rippleValue;
                     }
 
                 }

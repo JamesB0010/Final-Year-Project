@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a2c61f6df8c61641a71fdbf0226ec9b, type: 3}
   m_Name: eteeApiSettings
   m_EditorClassIdentifier: 
-  apiEnabled: 1
+  apiEnabled: 0
   suppressCommandSentDebugLog: 1

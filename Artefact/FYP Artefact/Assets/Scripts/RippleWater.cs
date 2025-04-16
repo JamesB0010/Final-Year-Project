@@ -21,20 +21,6 @@ public class RippleWater : MonoBehaviour
         rippleToUvSpaceOffset.Add(ripple, this.ConvertRipplePosToUvSpaceOffset(ripple.transform.position));
     }
 
-    private Vector2 ConvertRipplePosToUvSpaceOffset(Vector3 ripplePos)
-    {
-        Ray ray = new Ray(ripplePos + (Vector3.up * 1000), Vector3.down);
-        if (Physics.Raycast(ray, out RaycastHit hit))
-        {
-        Vector2 uvCoord = hit.textureCoord;
-
-        float remappedX = uvCoord.x.MapRange(0, 1, 0.5f, -0.5f);
-        float remappedY = uvCoord.y.MapRange(0, 1, 0.5f, -0.5f);
-        return new Vector2(remappedX, remappedY);
-        }
-
-        return Vector2.zero;
-    }
 
     public void OnRippleDestroyed(Ripple ripple)
     {
@@ -82,5 +68,19 @@ public class RippleWater : MonoBehaviour
         {
             this.rippleToUvSpaceOffset[tuple.Item1] = tuple.Item2;
         }
+    }
+    private Vector2 ConvertRipplePosToUvSpaceOffset(Vector3 ripplePos)
+    {
+        Ray ray = new Ray(ripplePos + (Vector3.up * 1000), Vector3.down);
+        if (Physics.Raycast(ray, out RaycastHit hit))
+        {
+        Vector2 uvCoord = hit.textureCoord;
+
+        float remappedX = uvCoord.x.MapRange(0, 1, 0.5f, -0.5f);
+        float remappedY = uvCoord.y.MapRange(0, 1, 0.5f, -0.5f);
+        return new Vector2(remappedX, remappedY);
+        }
+
+        return Vector2.zero;
     }
 }
