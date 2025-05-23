@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerRotationReseter : MonoBehaviour
+public class TransformRotationReseter : MonoBehaviour
 {
     [SerializeField] private Transform playerRoot;
     public void ResetPlayerRotation()

@@ -57,7 +57,7 @@ public class MultiplayerGameplayGameMode : GameplayGameMode
         
         player2.GetComponentInChildren<RawImage>().texture = this.player2MainUiRenderTexture;
         
-        pipelineSkipper.Setup(player1.GetComponentInChildren<PlayerGameplayStagePipeline>(), player2.GetComponentInChildren<PlayerGameplayStagePipeline>());
+        pipelineSkipper.Setup(player1.GetComponentInChildren<PlayerGameplayPipeline>(), player2.GetComponentInChildren<PlayerGameplayPipeline>());
         
         base.SpawnRippleSpawner();
     }

@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerGameplayStagePipeline : MonoBehaviour
+public class PlayerGameplayPipeline : MonoBehaviour
 {
     private GameplayPipelineStage[] gameplayStages;
 

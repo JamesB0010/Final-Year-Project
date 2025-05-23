@@ -10,11 +10,11 @@ public class GameplayPipelineStage : MonoBehaviour
     [SerializeField] private UnityEvent StageCompleteEvent;
 
 
-    private PlayerGameplayStagePipeline pipeline;
+    private PlayerGameplayPipeline pipeline;
 
     private void Awake()
     {
-        this.pipeline = GetComponentInParent<PlayerGameplayStagePipeline>();
+        this.pipeline = GetComponentInParent<PlayerGameplayPipeline>();
     }
 
     public virtual void StageComplete()

@@ -7,9 +7,9 @@ public class PipelineSkipper : MonoBehaviour
 {
     private abstract class Skipper
     {
-        public PlayerGameplayStagePipeline player1;
+        public PlayerGameplayPipeline player1;
 
-        public Skipper(PlayerGameplayStagePipeline player1Pipeline)
+        public Skipper(PlayerGameplayPipeline player1Pipeline)
         {
             this.player1 = player1Pipeline;
         }
@@ -19,7 +19,7 @@ public class PipelineSkipper : MonoBehaviour
 
     private class singlePlayerSkipper : Skipper
     {
-        public singlePlayerSkipper(PlayerGameplayStagePipeline player1Pipeline) : base(player1Pipeline)
+        public singlePlayerSkipper(PlayerGameplayPipeline player1Pipeline) : base(player1Pipeline)
         {
         }
 
@@ -32,9 +32,9 @@ public class PipelineSkipper : MonoBehaviour
 
     private class multiplayerSkipper : Skipper
     {
-        public PlayerGameplayStagePipeline player2;
+        public PlayerGameplayPipeline player2;
 
-        public multiplayerSkipper(PlayerGameplayStagePipeline player1Pipeline, PlayerGameplayStagePipeline player2Pipeline) : base(player1Pipeline)
+        public multiplayerSkipper(PlayerGameplayPipeline player1Pipeline, PlayerGameplayPipeline player2Pipeline) : base(player1Pipeline)
         {
             this.player2 = player2Pipeline;
         }
@@ -50,12 +50,12 @@ public class PipelineSkipper : MonoBehaviour
     }
 
     private Skipper skipper;
-    public void Setup(PlayerGameplayStagePipeline player1Pipeline)
+    public void Setup(PlayerGameplayPipeline player1Pipeline)
     {
         this.skipper = new singlePlayerSkipper(player1Pipeline);
     }
 
-    public void Setup(PlayerGameplayStagePipeline player1Pipeline, PlayerGameplayStagePipeline player2Pipeline)
+    public void Setup(PlayerGameplayPipeline player1Pipeline, PlayerGameplayPipeline player2Pipeline)
     {
         this.skipper = new multiplayerSkipper(player1Pipeline, player2Pipeline);
     }

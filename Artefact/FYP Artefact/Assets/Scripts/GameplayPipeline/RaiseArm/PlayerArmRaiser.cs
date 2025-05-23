@@ -33,6 +33,7 @@ public class PlayerArmRaiser : MonoBehaviour
     {
             Quaternion newLocalRot = eteeDeviceHolder.Device.offsetToHand * eteeDeviceHolder.Device.quaternions;
             Quaternion oldLocalRot = transform.localRotation;
+            
             float interp = 1f;
 
             Quaternion interpLocalRot = Quaternion.identity;

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(PlayerGameplayStagePipeline))]
+[CustomEditor(typeof(PlayerGameplayPipeline))]
 public class GameplayPipelineEditor : Editor
 {
-    private PlayerGameplayStagePipeline t;
+    private PlayerGameplayPipeline t;
 
     private void Awake()
     {
-        this.t = target as PlayerGameplayStagePipeline;
+        this.t = target as PlayerGameplayPipeline;
     }
 
     public override void OnInspectorGUI()
