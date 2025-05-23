@@ -20,9 +20,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
+
+  <img src="https://github.com/user-attachments/assets/505adf26-5b8d-4a6a-b306-b3c004f403d7" alt="Reel Together Logo" style = "width: 25%;">
 
   <h3 align="center">Reel Together</h3>
 
