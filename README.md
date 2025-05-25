@@ -118,7 +118,6 @@ How to install the project
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-
 <!-- USAGE EXAMPLES -->
 ## Usage
 
@@ -127,6 +126,20 @@ Use this space to show useful examples of how a project can be used. Additional 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+## The Team
+### Development 
+#### James Bland - Diseratation author, project artefact developer
+
+<p align = "center">
+<img src = "https://github.com/user-attachments/assets/3c65fa8e-8174-4949-a7d8-76d72f68c886" style = "width:60%">
+</p>
+
+
+### Unity For Humanity Submision
+
+
 <!-- CONTACT -->
 ## Contact
 
@@ -137,8 +150,6 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## The Team
-the team
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
