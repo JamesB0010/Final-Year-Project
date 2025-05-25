@@ -116,6 +116,29 @@ This project has been made open source. Therefore feel free to fork this reposit
 
 How to install the project 
 
+First copy the url of the repo from github
+![Step 1](https://github.com/user-attachments/assets/47b34c13-d946-4069-b6a6-faa9905b8724)
+
+Next click clone repository in github desktop 
+![step2](https://github.com/user-attachments/assets/79a8d3fd-effc-45e7-b2c9-f1acba4cd128)
+
+Enter paste the copied url into the top field and select a local folder for the repo 
+![Screenshot 2025-05-25 144816](https://github.com/user-attachments/assets/8374c3d1-0dd3-4995-a6b5-b00a2eb0f5dd)
+
+Once cloned open unity and select add project from disk
+
+![Screenshot 2025-05-25 144938](https://github.com/user-attachments/assets/a5e153e7-1c1f-47cf-a878-32d1eecedb14)
+
+Navigate to *LocalFolder*/Artefact/FYP Artefact/
+It should look like this 
+![Screenshot 2025-05-25 145053](https://github.com/user-attachments/assets/0e5b3171-8ad1-4de4-9011-169fb967fcaf)
+
+Then select add project
+
+now you should see the project in your list of projects in unity hub. 
+
+You can now open the project, (will take a little longer to open on the first time as unity is generating files and installing packages)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
