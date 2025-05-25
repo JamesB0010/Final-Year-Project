@@ -108,6 +108,7 @@ This project has been made open source. Therefore feel free to fork this reposit
 
 
 * Unity Version 2022.3.26.1f (you may upgrade if you want, although upgrading *may* introduce errors)
+* Have a pair of etee controllers and dongle (controllers used to play the game)
 * Blender (any version)
 * Fmod studio Version 2.03.06 (if you want to edit the sounds in the game)
 
@@ -119,11 +120,17 @@ How to install the project
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Documentation
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This space will cover the repo and projects file structures
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+after reading this section you should have a better understanding on what scripts are used for what and how you can go about either running the project for yourself or extending the project with your own functionality
+
+for more information please refer to the implementation section of the [Dissertation](https://github.com/JamesB0010/Final-Year-Project/blob/main/Project%20Writing/James%20Bland%2022142846%20Final%20Dissertation.pdf)
+
+### Repo File Structure
+
+### Project File Structure 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
