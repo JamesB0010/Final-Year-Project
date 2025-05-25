@@ -173,7 +173,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/Ja
 Firstly, I would like to thank my project supervisor Xi Guo for her continued support and investment in myself and the project. Due to your support a project has been created which I am exceptionally proud of. Secondly, I would like to thank my second supervisor Dr Liucheng Guo it has been a pleasure working with you and TG0. Additionally, thank you to the Real FLC community for providing the assets to be used in the project and thank you to the members of the unity for humanity grant
 team, it is truly surreal to see the project recognised by Unity. Thank you to all my family and friends who have provided their constant love and support and thank you to all the testers who have tested the project.
 
-References
+### References
 
 [1] Alankus, G., Lazar, A., May, M. and Kelleher, C., 2010, April. Towards customizable games for stroke rehabilitation. In Proceedings of the SIGCHI conference on human factors in computing systems (pp. 2113-2122).
 
@@ -243,7 +243,7 @@ References
 
 [34] Zhao, P. and Krebs, H.I., 2024, September. Enabling Home Rehabilitation with Smartphone- Powered Upper Limb Training. In 2024 10th IEEE RAS/EMBS International Conference for Biomedical Robotics and Biomechatronics (BioRob) (pp. 438-443). IEEE.
 
-Bibliography
+### Bibliography
 
 Mixamo (2025) Available at: [https://www.mixamo.com/#/] (Accessed: 05 May 2025).
 
