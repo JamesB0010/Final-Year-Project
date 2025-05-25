@@ -127,6 +127,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Acedemic Poster
+
+![James_Bland_22142846_Poster-1](https://github.com/user-attachments/assets/0b6c7e62-ce3b-43fc-8200-6835c42a1750)
 
 ## The Team
 ### Development 
@@ -167,52 +170,85 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/Ja
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Firstly, I would like to thank my project supervisor Xi Guo for her continued support and investment in myself and the project. Due to your support a project has been created which I am exceptionally proud of. Secondly, I would like to thank my second supervisor Dr Liucheng Guo it has been a pleasure working with you and TG0. Additionally, thank you to the Real FLC community for providing the assets to be used in the project and thank you to the members of the unity for humanity grant
+team, it is truly surreal to see the project recognised by Unity. Thank you to all my family and friends who have provided their constant love and support and thank you to all the testers who have tested the project.
 
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+References
+
+[1] Alankus, G., Lazar, A., May, M. and Kelleher, C., 2010, April. Towards customizable games for stroke rehabilitation. In Proceedings of the SIGCHI conference on human factors in computing systems (pp. 2113-2122).
+
+[2] Amorim, P., Santos, B.S., Dias, P., Silva, S. and Martins, H., 2020. Serious games for stroke telerehabilitation of upper limb-a review for future research. International journal of telerehabilitation, 12(2), p.65.
+
+[3] Baur, K., Schättin, A., de Bruin, E.D., Riener, R., Duarte, J.E. and Wolf, P., 2018. Trends in robot-assisted and virtual reality-assisted neuromuscular therapy: a systematic review of health-related multiplayer games. Journal of neuroengineering and rehabilitation, 15, pp.1-19.
+
+[4] Borghese, N.A., Pirovano, M., Mainetti, R. and Lanzi, P.L., 2012, September. An integrated low-cost system for at-home rehabilitation. In 2012 18th International conference on virtual systems and multimedia (pp. 553-556). IEEE.
+
+[5] Chen, C.H., Kreidler, T. and Ochsenfahrt, A., 2022. Rehago–A home-based training app using virtual reality to improve functional performance of stroke patients with mirror therapy and gamification concept: A pilot study. In Healthcare of the Future 2022 (pp. 91-95). IOS Press.
+
+[6] Choi, Y.H. and Paik, N.J., 2018. Mobile game-based virtual reality program for upper extremity stroke rehabilitation. Journal of visualized experiments: JoVE, (133), p.56241.
+
+[7] Cordeiro d'Ornellas, M., Cargnin, D.J. and Cervi Prado, A.L., 2015. Evaluating the impact of player experience in the design of a serious game for upper extremity stroke rehabilitation. In MEDINFO 2015: eHealth-enabled Health (pp. 363-367). IOS Press.
+
+[8] Day, M. (2018) Virtual Reality Exposure Therapy as a Treatment for Social Anxiety Disorders. Faculty of Computing, Engineering and the Built Environment.
+
+[9] Doumas, I., Everard, G., Dehem, S. and Lejeune, T., 2021. Serious games for upper limb rehabilitation after stroke: a meta-analysis. Journal of neuroengineering and rehabilitation, 18, pp.1- 16.
+
+[10] Feigin, V.L., Abate, M.D., Abate, Y.H., Abd ElHafeez, S., Abd-Allah, F., Abdelalim, A., Abdelkader, A., Abdelmasseh, M., Abd-Elsalam, S., Abdi, P. and Abdollahi, A., 2024. Global, regional, and national burden of stroke and its risk factors, 1990–2021: a systematic analysis for the Global Burden of Disease Study 2021. The Lancet Neurology, 23(10), pp.973-1003.
+
+[11] Ferraris, C., Amprimo, G., Vismara, L., Mauro, A. and Pettiti, G., 2023. Enhancing upper limb mobility through gamified tasks and Azure Kinect: a preliminary study in post-stroke.
+
+[12] Gelineau, A., Perrochon, A., Daviet, J.C. and Mandigout, S., 2022. Compliance with Upper Limb Home-Based Exergaming Interventions for Stroke Patients: A Narrative Review. Journal of rehabilitation medicine, 54.
+
+[13] Goff, S. (2020) Evaluation of the use of Gamification and Augmented Reality Features on Active City Tourism. Faculty of Computing, Engineering and the Built Environment.
+
+[14] Gov.Uk (2024) Statistical Digest of Rural England – Population. Available at: https://www.gov.uk/government/statistics/population-statistics-for-rural-england (Accessed: 10/10/2024) 52
+
+[15] GUESS - Phan, M.H., Keebler, J.R. and Chaparro, B.S., 2016. The development and validation of the game user experience satisfaction scale (GUESS). Human factors, 58(8), pp.1217-1247.
+
+[16] Guo, X., Edwards, A., 2024. A Case Study of using Web 3D Game Technology for a Scalable Midwifery Training Simulation, in: 2024 IEEE Gaming, Entertainment, and Media Conference (GEM). Presented at the 2024 IEEE Gaming, Entertainment, and Media Conference (GEM), pp. 1–4. https://doi.org/10.1109/GEM61861.2024.10585499
+
+[17] Hadjipanayi, C., Banakou, D. and Michael-Grigoriou, D., 2024. Virtual reality exergames for enhancing engagement in stroke rehabilitation: A narrative review. Heliyon.
+
+[18] Kecman, B., 2024. Analysis, Design and Implementation of Serious Game for Upper Limb and Cognitive Training Using Leap Motion for Multiple Sclerosis Patients (Doctoral dissertation, Technische Universität Wien).
+
+[19] Kempitiya, T., De Silva, D., Rio, E., Skarbez, R. and Alahakoon, D., 2022, July. Personalised physiotherapy rehabilitation using artificial intelligence and virtual reality gaming. In 2022 15th International Conference on Human System Interaction (HSI) (pp. 1-6). IEEE.
+
+[20] Koutsiana, E., Ladakis, I., Fotopoulos, D., Chytas, A., Kilintzis, V. and Chouvarda, I., 2020. Serious gaming technology in upper extremity rehabilitation: scoping review. JMIR Serious Games, 8(4), p.e19071.
+
+[21] Leniston-Kahsai, S., 2020. Mirror VR: The design of a fully immersive virtual reality game for upper limb rehabilitation post-stroke using mirror therapy (Doctoral dissertation, Open Access Te Herenga Waka-Victoria University of Wellington).
+
+[22] Ning, H., Wang, Z., Li, R., Zhang, Y. and Mao, L., 2022. A Review on Serious Games for Exercise Rehabilitation. arXiv preprint arXiv:2201.04984.
+
+[23] Pan, W., 2018. Improving the Motivation and Participation of Elderly Patients in Rehabilitation Program Through Social Games (Doctoral dissertation, National University of Singapore (Singapore)).
+
+[24] Pinto, J.F., Carvalho, H.R., Chambel, G.R., Ramiro, J. and Gonçalves, A., 2018, May. Adaptive gameplay and difficulty adjustment in a gamified upper-limb rehabilitation. In 2018 IEEE 6th international conference on serious games and applications for health (SeGAH) (pp. 1-8). IEEE.
+
+[25] Shahmoradi, L., Almasi, S., Ahmadi, H., Bashiri, A., Azadi, T., Mirbagherie, A., Ansari, N.N. and Honarpishe, R., 2021. Virtual reality games for rehabilitation of upper extremities in stroke patients. Journal of bodywork and movement therapies, 26, pp.113 122.
+
+[26] Strong, B.L., Zeng, B., McCarthy, P., Roula, A. and Guo, L., 2022, July. Virtual Reality Mirror Therapy (VRMT) to Improve Finger Dexterity in Post-stroke Survivors: A Preliminary Feasibility Study of a Home-based Intervention. In 35th International BCS Human-Computer Interaction Conference (pp. 1-7). BCS Learning & Development.
+
+[27] SUS (as cited in) - Naturesa, F.T., Atika, R.D., Ayu, G.A. and Leandros, R., 2023, August. User Experience Evaluation on Nucleus Farma Website Using System Usability Scale. In 2023 International Conference on Information Management and Technology (ICIMTech) (pp. 54-59). IEEE.
+
+[28] Tamayo-Serrano, P., Garbaya, S. and Blazevic, P., 2018. Gamified in-home rehabilitation for stroke survivors: analytical review. International Journal of Serious Games, 5(1), pp.2384-8766. 53
+
+[29] The University of British Columbia (2021). Available at: https://neurorehab.med.ubc.ca/grasp/grasp-manuals-and-resources/grasp-instruction-manual-2/ (Accessed: 10/10/2024)
+
+[30] Toledo-Delgado, P., PadrÃ³n, M., Santos, E. and Cairos, M., 2013. Including gamification techniques in the design of TANGO: H platform. Jurnal Teknologi, 63(3).
+
+[31] Triandafilou, K.M., Tsoupikova, D., Barry, A.J., Thielbar, K.N., Stoykov, N. and Kamper, D.G., 2018. Development of a 3D, networked multi-user virtual reality environment for home therapy after stroke. Journal of neuroengineering and rehabilitation, 15, pp.1-13.
+
+[32] Vieira, C., da Silva Pais-Vieira, C.F., Novais, J. and Perrotta, A., 2021. Serious game design and clinical improvement in physical rehabilitation: systematic review. JMIR Serious Games, 9(3), p.e20066.
+
+[33] What is a PICOC? » CEBMa [WWW Document], n.d. URL https://cebma.org/resources/frequently-asked-questions/what-is-a-picoc/ (accessed 10.29.24).
+
+[34] Zhao, P. and Krebs, H.I., 2024, September. Enabling Home Rehabilitation with Smartphone- Powered Upper Limb Training. In 2024 10th IEEE RAS/EMBS International Conference for Biomedical Robotics and Biomechatronics (BioRob) (pp. 438-443). IEEE.
+
+Bibliography
+
+Mixamo (2025) Available at: [https://www.mixamo.com/#/] (Accessed: 05 May 2025).
+
+Sketchfab (2025) Available at: [https://sketchfab.com/feed] (Accessed: 05 May 2025).
+
+The University of British Columbia (2021). Available at: https://neurorehab.med.ubc.ca/grasp/grasp-manuals-and-resources/hospital-grasp-patient-exercise-manual-form/ (Accessed: 10/10/2024)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
-
-
-![James_Bland_22142846_Poster-1](https://github.com/user-attachments/assets/0b6c7e62-ce3b-43fc-8200-6835c42a1750)
