@@ -29,13 +29,9 @@
 
   <p align="center">
     A preliminary study to create a highly motivating multiplayer game designed within the context of stroke rehabilitation
-    <br /><br>
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
   </p>
 </div>
+<br>
 
 
 
@@ -68,9 +64,20 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<p align = "center">
+<img src = "https://github.com/user-attachments/assets/e445fa59-3e45-42c1-bd95-f6694cbfa38b" style = "width:49%">
+<img src = "https://github.com/user-attachments/assets/b32c58ea-3f88-4e75-a5e5-602ce19af09a" style = "width:49%">
+</p>
 
+<p align = "center">
+<img src = "https://github.com/user-attachments/assets/55051d1a-c2f0-4f0a-abdc-f81c0277cda8" style = "width:80%">
+</p>
 
+<p align = "center">
+<img src = "https://github.com/user-attachments/assets/2096f6fe-3b44-46de-8d74-6b149535c87c" style = "width:49%">
+
+<img src = "https://github.com/user-attachments/assets/0a022730-3cea-4c89-b656-86371c0a52a3" style = "width:49%">
+</p>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,16 +85,15 @@
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+<img src = "https://github.com/user-attachments/assets/f9feceb9-b36f-491a-877a-adfa3237cac6" style = "width:100%">
+<br>
 
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+<p align = "center">
+<img src = "https://github.com/user-attachments/assets/12b01fba-bb25-4e22-b486-fe9a9d579e9b" style = "width:49%">
+
+<img src = "https://github.com/user-attachments/assets/195173bc-3e12-4f33-882b-d5185b810085" style = "width:49%">
+</p>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
