@@ -130,6 +130,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## The Team
 ### Development 
+This section is dedicated the individual(s) responsible for the development of the contents of the repo
 #### James Bland - Diseratation author, project artefact developer
 
 <p align = "center">
@@ -138,14 +139,26 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 
 ### Unity For Humanity Submision
+This section is dedicated to the individual(s) responsible for the sucessful submission of the project to the unity for humanity 2025 grant
+
+#### Dr Xi Guo - senior Lecturer at BCU, teach 3D game programming and research of gamification 
+<img src = "https://github.com/user-attachments/assets/cb770ee6-f4f4-4cac-81d0-5216c554ccf3">
+
+#### Dr. Liucheng Guo, AI researcher and innovator, holding the positions of RAEng Industrial Fellow
+
+<img src = "https://github.com/user-attachments/assets/2f063e42-a1c9-4ba4-a6fb-5f9559be544a">
+
+#### Dr Marianne Hensman, lecturer at BCU, Physiotherapist in both NHS and private healthcare
+
+<img src = "https://github.com/user-attachments/assets/ca3a9f7f-de59-43c7-8fae-1b17e80803c9">
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+James Bland - [@LinkedIn](https://www.linkedin.com/in/james-richard-bland/) - JamesRichardBland@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/JamesB0010/Final-Year-Project)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
