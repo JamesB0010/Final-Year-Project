@@ -16,9 +16,11 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
-
+<p align = "right">
+  <img src = "https://github.com/user-attachments/assets/628c6540-f985-41c3-bee4-a9a824f249c2" style = "width:10%;">
+</p>
+    
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
 
   <img src="https://github.com/user-attachments/assets/505adf26-5b8d-4a6a-b306-b3c004f403d7" alt="Reel Together Logo" style = "width: 25%;">
