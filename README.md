@@ -17,7 +17,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 <p align = "right">
-  <img src = "https://github.com/user-attachments/assets/628c6540-f985-41c3-bee4-a9a824f249c2" style = "width:10%;">
+  <img src = "https://github.com/user-attachments/assets/628c6540-f985-41c3-bee4-a9a824f249c2" style = "width:15%;">
 </p>
     
 <!-- PROJECT LOGO -->
