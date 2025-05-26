@@ -50,14 +50,21 @@
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
-        <li><a href="#Folder Structure">Folder Structure</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#documentation">Documentation</a>
+      <ul>
+        <li><a href="#repo-file-structure">Repo File Structure</a></li>
+        <li><a href="#project-file-structure">Project File Structure</a></li>
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href = "The Team">The Team</a></li>
+    <li><a href="#the-team">The Team</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
+
 
 
 
