@@ -153,8 +153,16 @@ for more information please refer to the implementation section of the [Disserta
 
 ### Repo File Structure
 
-
-
++---Artefact
+|   \---FYP Artefact - All project files for the game are within this directory. This is further broken down in the [Project File Structure](Project File Structure) section
++---Data Analysis - this contains the raw data gathered from testers as well as charts exported from this data using python scripting
+|   +---AverageChartsExport - average responses
+|   +---exported_charts - charts showing the distribution of responses for testers 
+|   +---PilotPlots - average responses from the pilot test
+|   \---plots - same as average charts exports
++---Ethic Forms - ethic forms used in the project, these were given to testers when testing 
+\---Project Writing - the dissertation word document and pdf are in here
+    \---Poster - the acedemic poster powerpoint and pdf are in here
 
 ### Project File Structure 
 
