@@ -51,7 +51,7 @@ public class SinglePlayerGameplayGameMode : GameplayGameMode
         var signalTrack = ((TimelineAsset)uiAnimator.playableAsset).GetOutputTrack(1) as SignalTrack;
         SignalReceiver uiSignalReciever = playerMainUiDoc.GetComponent<SignalReceiver>();
         
-        pipelineSkipper.Setup(player.GetComponentInChildren<PlayerGameplayStagePipeline>());
+        pipelineSkipper.Setup(player.GetComponentInChildren<PlayerGameplayPipeline>());
 
         uiAnimator.SetGenericBinding(signalTrack, uiSignalReciever);
         
