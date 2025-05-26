@@ -168,6 +168,112 @@ for more information please refer to the implementation section of the [Disserta
 
 ### Project File Structure 
 
+- **📁FYP Artefact** – Main Unity project files for the game:
+  - **📁.idea** – IDE-specific config files (likely from JetBrains Rider)
+  - **📁Assets** – Core Unity project assets:
+    - **📁Animations**
+    - **📁AnimatorControllers**
+    - **📁CameraBlends**
+    - **📁Editor**
+      - **📁GameModeHolder**
+      - **📁Gameplay Pipeline**
+      - **📁Screenshot**
+    - **📁eteeAPI** – Integration with etee controllers:
+      - **📁Assets**
+        - **📁Animation**
+          - **📁Finger Avatar Masks**
+        - **📁Images**
+        - **📁Models**
+      - **📁Editor**
+      - **📁Prefabs**
+      - **📁Resources**
+        - **📁eteeApiSettings**
+      - **📁Scenes**
+      - **📁Scripts**
+        - **📁01_SerialCommunication**
+        - **📁02_HandsVisualisation**
+        - **📁03_PlayerLoopInjection**
+        - **📁04_Settings**
+    - **📁Fonts**
+    - **📁Lighting Settings**
+    - **📁Materials**
+      - **📁FishingRod**
+        - **📁Bait**
+        - **📁Rod**
+      - **📁Village**
+    - **📁Models**
+      - **📁AppleComputer**
+      - **📁Fish**
+        - **📁Bloo**, **📁Koi**, **📁Trout**, **📁WeirdBoi**
+      - **📁Fisherman**
+      - **📁FishingFloat**
+      - **📁FishingRod**
+        - **📁Bait**, **Rod**
+      - **📁Hats** – Hat models used for customization:
+        - **📁BikeHelmet**, **📁CowboyHat**, **📁CrustyCrabHat**, **📁Fez**, **📁FNAFParty**, **📁Pirate**, **📁PoliceHat**, **📁RussianHat**, **📁TopHat**, **📁VikingHat**, **📁WizzardHat**
+      - **📁LogCabin**
+      - **📁UnderwaterFoliage**
+        - **📁Coral**, **📁Reeds**
+      - **📁Village**
+    - **📁Packages**
+      - **📁UitTimeline**
+        - **📁Editor**
+        - **📁Runtime**
+    - **📁Paro222**
+      - **📁Underwater Effects**
+    - **📁Plugins**
+      - **📁FMOD**
+      - **📁UniTask**
+    - **📁Prefabs**
+      - **📁Fish**, **📁Hats**, **📁Player**, **📁Ripple**, **📁Ui**
+    - **📁RenderTextures**
+    - **📁Resources**
+      - **📁GameModes**
+      - **📁UiToolkit**
+    - **📁Scenes**
+      - **📁HatCustomisation**, **📁Main Menu**, **📁Main Scene**
+    - **📁ScriptableObjects**
+      - **📁GestureProfiles**
+    - **📁Scripts**
+      - **📁Fish**
+      - **📁GameMode**
+      - **📁GameplayPipeline**
+        - **📁CastRod**, **📁CollectFish**, **📁HookFish**, **📁RaiseArm**, **📁ReelInFish**, **📁TrackRipple**
+      - **📁LerpSystem**
+      - **📁Managers**
+      - **📁PlayerHatCustomization**
+      - **📁PlayerScoring**
+      - **📁PlayerSpawning**
+      - **📁Ripple System**
+        - **📁Ripple**, **📁RippleSpawning**
+      - **📁UI**
+        - **📁End Screen Single Player**, **📁EndScreenMultiplayer**, **📁HatSelection**, **📁MainGame**, **📁MainMenu**
+      - **📁Utility**
+    - **📁Settings**
+    - **📁Shaders**
+    - **📁Signals**
+    - **Sprites**
+      - **📁Hands**, **📁HatThumbnails**, **📁KenneyUiAssetPack**
+      - **📁Ui**
+        - **📁MainMenu**, **📁Mind our dust**
+    - **📁StreamingAssets**
+    - **📁TextMesh Pro**
+    - **📁Textures**
+      - **📁FishingRod**
+        - **📁Bait**, **📁Rod**
+      - **📁Village**
+    - **📁Timeliens**
+      - **📁HatSelect**, **📁MainGame**, **📁MainMenu**
+    - **📁UI**
+      - **📁HatSelection**, **📁Main Game**, **📁MainMenu**, **📁Multiplayer**, **📁SinglePlayerGameOver**
+    - **📁UI Toolkit**
+      - **📁UnityThemes**
+  - **📁FMODPROJ** – FMOD project data
+  - **📁Packages**
+  - **📁ProjectSettings**
+  - **📁UIElementsSchema**
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Acedemic Poster
